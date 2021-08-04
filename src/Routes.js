@@ -4,6 +4,7 @@ import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
 import Tablets from "./components/tablet/Tablets";
+import Test from "./components/test/Test";
 
 const Routes = () => {
     return (
@@ -12,6 +13,7 @@ const Routes = () => {
             <Route path='/laptops' > <Laptops /> </Route>
             <Route path='/mobiles' > <Mobiles /> </Route>
             <Route path='/tablets' > <Tablets /> </Route>
+            <Route path='/test' > <Test /> </Route>
         </React.Fragment>
     )
 }

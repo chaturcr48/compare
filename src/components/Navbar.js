@@ -1,15 +1,14 @@
 import React from "react";
 import LoginModal from "./modal/LoginModal";
 import SignupModal from "./modal/SignupModal";
-let url='';
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-md navbar-dark fixed-top" style={{backgroundColor: 'rgb(68,88,99)'}}>
+      <nav className="navbar navbar-expand-md navbar-dark" style={{backgroundColor: 'rgb(68,88,99)'}}>
         <div className="container-fluid">
-          <a className="navbar-brand fs-4" href={url}>
-            Fixed navbar
-          </a>
+          <Link className='navbar-brand fs-4' to='/home' >Compare</Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,24 +23,16 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item fs-5 px-3">
-                <a className="nav-link active" aria-current="page" href={url}>
-                  Home
-                </a>
+                <Link className='nav-link active' aria-current='page' to='/home' >Home</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <a className="nav-link" href={url}>
-                  Laptops
-                </a>
+                <Link className='nav-link' to='/laptops' >Laptops</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <a className="nav-link" href={url}>
-                  Mobiles
-                </a>
+                <Link className='nav-link' to='/mobiles' >Mobiles</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <a className="nav-link" href={url}>
-                  Tablets
-                </a>
+                <Link className='nav-link' to='/tablets' >Tablets</Link>
               </li>
             </ul>
             <form className="d-flex">

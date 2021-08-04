@@ -1,12 +1,14 @@
 import React from "react";
 import Footer from "./components/footer/Footer";
 import Header from "./components/Header";
-import Home from "./components/homepage/Home";
+import Routes from "./Routes";
+// import { Route } from 'react-router-dom';
+
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <Home />
+      <Routes />        
       <Footer />
     </React.Fragment>
   );

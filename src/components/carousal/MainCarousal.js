@@ -38,7 +38,7 @@ const MainCarousal = () => {
   return (
     <React.Fragment>
 
-      <div className="container Large mt-4">
+      <div className="container Large mt-4 w-75">
         <div
           id="carouselExampleCaptions"
           className="carousel slide "
@@ -59,6 +59,7 @@ const MainCarousal = () => {
                 data-bs-slide-to="0"
                 className="active"
                 aria-label={item.ariaLabel}
+                key={item.id}
               ></button>
             ))}
           </div>

@@ -23,13 +23,13 @@ const SignupModal = () => {
           <div className="modal-body">
             <form>
               <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">
+                <label htmlFor="exampleInputEmail2" className="form-label">
                   Email address
                 </label>
                 <input
                   type="email"
                   className="form-control"
-                  id="exampleInputEmail1"
+                  id="exampleInputEmail2"
                   aria-describedby="emailHelp"
                 />
                 <div id="emailHelp" className="form-text">
@@ -37,29 +37,29 @@ const SignupModal = () => {
                 </div>
               </div>
               <div className="mb-3">
-                <label htmlFor="exampleInputPassword1" className="form-label">
+                <label htmlFor="exampleInputPassword2" className="form-label">
                   User_name
                 </label>
                 <input
                   type="password"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="exampleInputPassword2"
                 />
-                <label htmlFor="exampleInputPassword1" className="form-label">
+                <label htmlFor="exampleInputPassword3" className="form-label">
                   Password
                 </label>
                 <input
                   type="password"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="exampleInputPassword3"
                 />
-                <label htmlFor="exampleInputPassword1" className="form-label">
+                <label htmlFor="exampleInputPassword4" className="form-label">
                   Conferm-Password
                 </label>
                 <input
                   type="password"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="exampleInputPassword4"
                 />
               </div>
               <div className="mb-3 form-check"></div>

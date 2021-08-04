@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="row">
                 <div className="col-12 col-md">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="d-block mb-2" role="img"
+                        strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="d-block mb-2" role="img"
                         viewBox="0 0 24 24">
                         <title>Product</title>
                         <circle cx="12" cy="12" r="10" />
@@ -43,7 +43,7 @@ const Footer = () => {
                     <h5>Features</h5>
                     <ul className="list-unstyled text-small">
                         {features.map(item => (
-                             <li><a className="link-secondary" href={item.fUrl}>{item.name}</a></li>
+                             <li key={item.id} ><a className="link-secondary" href={item.fUrl}>{item.name}</a></li>
                         ))}
                     </ul>
                 </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                     <h5>Resources</h5>
                     <ul className="list-unstyled text-small">
                     {resources.map(item => (
-                             <li><a className="link-secondary" href={item.rUrl}>{item.name}</a></li>
+                             <li key={item.id} ><a className="link-secondary" href={item.rUrl}>{item.name}</a></li>
                         ))}
                     </ul>
                 </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                     <h5>Resources</h5>
                     <ul className="list-unstyled text-small">
                     {resources.map(item => (
-                             <li><a className="link-secondary" href={item.rUrl}>{item.name}</a></li>
+                             <li key={item.id} ><a className="link-secondary" href={item.rUrl}>{item.name}</a></li>
                         ))}
                     </ul>
                 </div>
@@ -67,7 +67,7 @@ const Footer = () => {
                     <h5>About</h5>
                     <ul className="list-unstyled text-small">
                     {about.map(item => (
-                             <li><a className="link-secondary" href={item.aUrl}>{item.name}</a></li>
+                             <li key={item.id} ><a className="link-secondary" href={item.aUrl}>{item.name}</a></li>
                         ))}
                     </ul>
                 </div>

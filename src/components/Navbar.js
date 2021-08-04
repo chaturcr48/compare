@@ -37,6 +37,9 @@ const Navbar = () => {
               <li className="nav-item fs-5 px-3">
                 <Link className='nav-link' to='/test' >Test</Link>
               </li>
+              <li className="nav-item fs-5 px-3">
+                <Link className='nav-link' to='/applyPagination' >Pagination</Link>
+              </li>
             </ul>
             <form className="d-flex">
               <input

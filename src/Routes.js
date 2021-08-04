@@ -4,6 +4,7 @@ import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
 import Tablets from "./components/tablet/Tablets";
+import ApplyPagination from "./components/test/ApplyPagination";
 import Test from "./components/test/Test";
 
 const Routes = () => {
@@ -14,6 +15,7 @@ const Routes = () => {
             <Route path='/mobiles' > <Mobiles /> </Route>
             <Route path='/tablets' > <Tablets /> </Route>
             <Route path='/test' > <Test /> </Route>
+            <Route path='/applyPagination' > <ApplyPagination /> </Route>
         </React.Fragment>
     )
 }

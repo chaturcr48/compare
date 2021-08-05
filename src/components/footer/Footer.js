@@ -25,8 +25,8 @@ const about = [
 const Footer = () => {
     return (
         <React.Fragment>
-            <div className="containerr" style={{backgroundColor: 'rgb(68,88,99)', color: 'white' }}>
-        <footer className=" py-5">
+            <div className="container-fluid mt-2" style={{backgroundColor: 'rgb(68,88,99)', color: 'white' }}>
+        <footer className="py-2">
             <div className="row">
                 <div className="col-12 col-md">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"

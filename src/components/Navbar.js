@@ -10,6 +10,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <Link className='navbar-brand fs-4' to='/home' >Compare</Link>
           <button
+          
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -19,7 +20,7 @@ const Navbar = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </button>abc def
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item fs-5 px-3">

@@ -10,15 +10,15 @@ const fBrand = [
     {id: '5', brand: 'xyz'},
 ]
 
-const FilterBrand = () => {
+const Storage_capacity = () => {
     return (
         <React.Fragment><br/>
-            <p><b>Brand</b></p>
-            {fBrand.map(brand => (
-                        <div className="form-check" key={brand.id}>
+            <p><b>Storage Capacity</b></p>
+            {fBrand.map(brand1 => (
+                        <div className="form-check" key={brand1.id}>
                         <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
                         <label className="form-check-label" htmlFor="flexRadioDefault1">
-                            {brand.brand}
+                            {brand1.brand}
                         </label>
                         </div>
                     ))}
@@ -26,4 +26,4 @@ const FilterBrand = () => {
         </React.Fragment>
     )
 }
-export default FilterBrand;
+export default Storage_capacity;

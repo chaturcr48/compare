@@ -12,14 +12,14 @@ const laptops = [
     {
         id: "2",
         imgUrl:
-          "https://source.unsplash.com/400x300/?laptop",
+          "https://source.unsplash.com/400x300/?LAptop",
         name: "Xiaomi Redmi Note 10",
         desc: "5G (6GB RAM +128GB)",
     },
     {
         id: "3",
         imgUrl:
-          "https://source.unsplash.com/400x300/?laptop",
+          "https://source.unsplash.com/400x300/?Laptop",
         name: "Xiaomi Redmi Note 10",
         desc: "5G (6GB RAM +128GB)",
     },

@@ -3,11 +3,10 @@ import React from "react";
 let url ='';
 
 const fBrand = [
-    {id: '1', brand: 'HP'},
-    {id: '2', brand: 'Dell'},
-    {id: '3', brand: 'Lenevo'},
-    {id: '4', brand: 'MSI'},
-    {id: '5', brand: 'xyz'},
+    {id: '1', brand: 'Upto 32 GB'},
+    {id: '2', brand: '32 - 64 GB'},
+    {id: '3', brand: '64 - 128 GB'},
+    {id: '4', brand: 'Above 128 GB'},
 ]
 
 const StorageCapacity = () => {

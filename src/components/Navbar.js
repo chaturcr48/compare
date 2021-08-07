@@ -4,6 +4,16 @@ import SignupModal from "./modal/SignupModal";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const handleTab = (event) => {
+    const tab = document.getElementsByClassName('tabs');
+    for(let i=0;i<tab.length;i++)
+    {
+      tab[i].style.color='rgba(163, 157, 160)';
+    }
+    event.currentTarget.style.color='white';
+  }
+
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-md navbar-dark" style={{backgroundColor: 'rgb(68,88,99)'}}>
@@ -22,24 +32,24 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+            <ul className="navbar-nav nav-pills me-auto mb-2 mb-md-0">
               <li className="nav-item fs-5 px-3">
-                <Link className='nav-link active' aria-current='page' to='/home' >Home</Link>
+                <Link className='nav-link tabs' onClick={handleTab} to='/home' >Home</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <Link className='nav-link' to='/laptops' >Laptops</Link>
+                <Link className='nav-link tabs' onClick={handleTab} to='/laptops' >Laptops</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <Link className='nav-link' to='/mobiles' >Mobiles</Link>
+                <Link className='nav-link tabs' onClick={handleTab} to='/mobiles' >Mobiles</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <Link className='nav-link' to='/tablets' >Tablets</Link>
+                <Link className='nav-link tabs' onClick={handleTab} to='/tablets' >Tablets</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <Link className='nav-link' to='/test' >Test</Link>
+                <Link className='nav-link tabs' onClick={handleTab} to='/test' >Test</Link>
               </li>
               <li className="nav-item fs-5 px-3">
-                <Link className='nav-link' to='/applyPagination' >Pagination</Link>
+                <Link className='nav-link tabs' onClick={handleTab} to='/applyPagination' >Pagination</Link>
               </li>
             </ul>
             <form className="d-flex">

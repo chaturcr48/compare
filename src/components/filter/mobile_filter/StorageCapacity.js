@@ -10,7 +10,7 @@ const fBrand = [
     {id: '5', brand: 'xyz'},
 ]
 
-const Storage_capacity = () => {
+const StorageCapacity = () => {
     return (
         <React.Fragment><br/>
             <p><b>Storage Capacity</b></p>
@@ -26,4 +26,4 @@ const Storage_capacity = () => {
         </React.Fragment>
     )
 }
-export default Storage_capacity;
+export default StorageCapacity;

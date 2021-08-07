@@ -6,7 +6,7 @@ const fBbrand = [
     {id: '3', BBRange: '5G '},
 ]
 
-const Broadband_generation = () => {
+const BroadbandGeneration = () => {
     return (
         <React.Fragment><br/>
             <p><b>Broadband Generation</b></p>
@@ -21,4 +21,4 @@ const Broadband_generation = () => {
         </React.Fragment>
     )
 }
-export default Broadband_generation;
+export default BroadbandGeneration;

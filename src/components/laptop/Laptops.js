@@ -1,5 +1,5 @@
 import React from "react";
-import Filter from "../filter/mobileFilter/Filter";
+import Filter from "../filter/LaptopFilter/Filter";
 
 const laptops = [
     {

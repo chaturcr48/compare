@@ -3,12 +3,12 @@ import React from "react";
 let url = "";
 
 const fBrand = [
-    {id: '1', brand: 'Samsung'},
-    {id: '2', brand: 'Xiaomi'},
-    {id: '3', brand: 'Vivo'},
+    {id: '1', brand: 'HP'},
+    {id: '2', brand: 'Dell'},
+    {id: '3', brand: 'Lenovo'},
     {id: '4', brand: 'Apple'},
-    {id: '5', brand: 'Oppo'},
-    {id: '6', brand: 'Nokia'},
+    {id: '5', brand: 'MSI'},
+    {id: '6', brand: 'Accer'},
 ]
 const FilterBrand = () => {
   return (

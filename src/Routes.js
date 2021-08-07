@@ -16,8 +16,8 @@ const Routes = () => {
             <Route path='/mobiles' > <Mobiles /> </Route>
             <Route path='/tablets' > <Tablets /> </Route>
             <Route path='/test' > <Test /> </Route>
-            <Route path='/test' > <Detail /> </Route>
             <Route path='/applyPagination' > <ApplyPagination /> </Route>
+            <Route path='/detail' > <Detail /> </Route>
         </React.Fragment>
     )
 }

@@ -21,7 +21,6 @@ const StorageCapacity = () => {
                         </label>
                         </div>
                     ))}
-                    <a href={url}>See more</a> <br />
         </React.Fragment>
     )
 }

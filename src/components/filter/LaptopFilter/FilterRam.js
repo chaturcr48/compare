@@ -4,8 +4,8 @@ const fRam = [
   { id: "1", ram: "Upto 4 Gb " },
   { id: "2", ram: "6 Gb" },
   { id: "3", ram: "8 Gb" },
-  { id: "5", ram: "12 GB" },
-  { id: "6", ram: "16 GB and Above" },
+  { id: "4", ram: "12 GB" },
+  { id: "5", ram: "16 GB and Above" },
 ];
 
 const FilterRam = () => {

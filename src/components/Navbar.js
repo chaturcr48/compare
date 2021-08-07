@@ -34,9 +34,9 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="navbar-nav nav-pills me-auto mb-2 mb-md-0">
+            <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item fs-5 ">
-                <Link className="nav-link tabs" onClick={handleTab} to="/home">
+                <Link className="nav-link active tabs" onClick={handleTab} to="/home">
                   Home
                 </Link>
               </li>

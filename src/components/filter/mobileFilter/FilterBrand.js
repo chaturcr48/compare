@@ -10,6 +10,10 @@ const fBrand = [
     {id: '5', brand: 'Oppo'},
     {id: '6', brand: 'Nokia'},
 ]
+<<<<<<< HEAD
+=======
+
+>>>>>>> c81d5da55dac19abe229beb07f2afdbf6726df43
 const FilterBrand = () => {
   return (
     <React.Fragment>

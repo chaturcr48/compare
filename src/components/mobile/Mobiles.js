@@ -5,21 +5,21 @@ const mobiles = [
     {
         id: "1",
         imgUrl:
-          "https://source.unsplash.com/400x300/?mobile",
+          "https://source.unsplash.com/400x300/?Mobile",
         name: "Xiaomi Redmi Note 10",
         desc: "5G (6GB RAM +128GB)",
     },
     {
         id: "2",
         imgUrl:
-          "https://source.unsplash.com/400x300/?mobile",
+          "https://source.unsplash.com/400x300/?MObile",
         name: "Xiaomi Redmi Note 10",
         desc: "5G (6GB RAM +128GB)",
     },
     {
         id: "3",
         imgUrl:
-          "https://source.unsplash.com/400x300/?mobile",
+          "https://source.unsplash.com/400x300/?MOBile",
         name: "Xiaomi Redmi Note 10",
         desc: "5G (6GB RAM +128GB)",
     },
@@ -37,7 +37,7 @@ const Mobile = () => {
                 </div>
                 </div>
                 <div className='col-9'>
-                    <div> Showing 1 – 20 of 2000 results for "tablet".</div> 
+                    <div> Showing 1 – 20 of 2000 results for "Mobiles".</div> 
                     <div className="my-2" style={{gridRow: '1/2'}}>
                         {mobiles.map(mobile => (
                             <div className="card mb-3" key={mobile.id} style={{maxWidth: '800px', border: 'none'}}>

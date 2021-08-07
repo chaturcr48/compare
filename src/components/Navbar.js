@@ -1,26 +1,28 @@
 import React from "react";
 import LoginModal from "./modal/LoginModal";
 import SignupModal from "./modal/SignupModal";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
   const handleTab = (event) => {
-    const tab = document.getElementsByClassName('tabs');
-    for(let i=0;i<tab.length;i++)
-    {
-      tab[i].style.color='rgba(163, 157, 160)';
+    const tab = document.getElementsByClassName("tabs");
+    for (let i = 0; i < tab.length; i++) {
+      tab[i].style.color = "rgba(163, 157, 160)";
     }
-    event.currentTarget.style.color='white';
-  }
+    event.currentTarget.style.color = "white";
+  };
 
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-md navbar-dark" style={{backgroundColor: 'rgb(68,88,99)'}}>
+      <nav
+        className="navbar navbar-expand-md navbar-dark"
+        style={{ backgroundColor: "rgb(68,88,99)" }}
+      >
         <div className="container-fluid">
-          <Link className='navbar-brand fs-4' to='/home' >Compare</Link>
+          <Link className="navbar-brand fs-4" to="/home">
+            Compare
+          </Link>
           <button
-          
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -33,23 +35,60 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav nav-pills me-auto mb-2 mb-md-0">
-              <li className="nav-item fs-5 px-3">
-                <Link className='nav-link tabs' onClick={handleTab} to='/home' >Home</Link>
+              <li className="nav-item fs-5 ">
+                <Link className="nav-link tabs" onClick={handleTab} to="/home">
+                  Home
+                </Link>
               </li>
-              <li className="nav-item fs-5 px-3">
-                <Link className='nav-link tabs' onClick={handleTab} to='/laptops' >Laptops</Link>
+              <li className="nav-item fs-5 ">
+                <Link
+                  className="nav-link tabs"
+                  onClick={handleTab}
+                  to="/laptops"
+                >
+                  Laptops
+                </Link>
               </li>
-              <li className="nav-item fs-5 px-3">
-                <Link className='nav-link tabs' onClick={handleTab} to='/mobiles' >Mobiles</Link>
+              <li className="nav-item fs-5 ">
+                <Link
+                  className="nav-link tabs"
+                  onClick={handleTab}
+                  to="/mobiles"
+                >
+                  Mobiles
+                </Link>
               </li>
-              <li className="nav-item fs-5 px-3">
-                <Link className='nav-link tabs' onClick={handleTab} to='/tablets' >Tablets</Link>
+              <li className="nav-item fs-5 ">
+                <Link
+                  className="nav-link tabs"
+                  onClick={handleTab}
+                  to="/tablets"
+                >
+                  Tablets
+                </Link>
               </li>
-              <li className="nav-item fs-5 px-3">
-                <Link className='nav-link tabs' onClick={handleTab} to='/test' >Test</Link>
+              <li className="nav-item fs-5 ">
+                <Link className="nav-link tabs" onClick={handleTab} to="/test">
+                  Test
+                </Link>
               </li>
-              <li className="nav-item fs-5 px-3">
-                <Link className='nav-link tabs' onClick={handleTab} to='/applyPagination' >Pagination</Link>
+              <li className="nav-item fs-5 ">
+                <Link
+                  className="nav-link tabs"
+                  onClick={handleTab}
+                  to="/applyPagination"
+                >
+                  Pagination
+                </Link>
+              </li>
+              <li className="nav-item fs-5 ">
+                <Link
+                  className="nav-link tabs"
+                  onClick={handleTab}
+                  to="/detail"
+                >
+                  Detail
+                </Link>
               </li>
             </ul>
             <form className="d-flex">
@@ -74,7 +113,7 @@ const Navbar = () => {
                   type="button"
                   data-bs-toggle="modal"
                   data-bs-target="#loginModal"
-                  style={{color: 'white'}}
+                  style={{ color: "white" }}
                 >
                   Login
                 </button>
@@ -85,15 +124,10 @@ const Navbar = () => {
                   type="button"
                   data-bs-toggle="modal"
                   data-bs-target="#signupModal"
-                  style={{color: 'white'}}
+                  style={{ color: "white" }}
                 >
                   Signup
                 </button>
-              </li>
-              <li className="text-center">
-                <div className="container">
-                  <i className="fa fa-bell" style={{ color: "white" }}></i>
-                </div>
               </li>
             </ul>
           </div>

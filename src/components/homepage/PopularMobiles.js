@@ -42,29 +42,25 @@ const items = [
 const PopularMobiles = () => {
   return (
     <React.Fragment>
-      <div className="container my-5 mx-2 max-width">
+      <div className="container mt-3">
         <h3>Popular Mobiles</h3>
-        <div className="container">
-          <div className="row">
-            {items.map((item) => (
-              <div className="card mx-1 width" key={item.id}>
-                <img
-                  src={item.imgUrl}
-                  className="card-img-top my-1"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
-                  <p className="card-text">{item.desc}</p>
-                  <a href={url} className="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
+        <div className="row">
+          {items.map((item) => (
+            <div className="card mx-1 width" key={item.id}>
+              <img src={item.imgUrl} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{item.name}</h5>
+                <p className="card-text">{item.desc}</p>
+                <a href={url} className="btn btn-primary">
+                  Go somewhere
+                </a>
               </div>
-            ))}
-            <div className="show_more">
-              <a href={url}>Show more</a>
             </div>
+          ))}
+          <div className="">
+            <a className="float-end" href={url}>
+              Show more
+            </a>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ const laptops = [
     },
 ]
 
-const Laptop = () => {
+const Laptops = () => {
     return (
         <React.Fragment>
             <div className='row mt-4 mx-4'>
@@ -60,4 +60,4 @@ const Laptop = () => {
         </React.Fragment>
     )
 }
-export default Laptop;
+export default Laptops;

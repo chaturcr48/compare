@@ -118,9 +118,6 @@ const MainCarousal = () => {
           </button>
         </div>
       </div>
-    
-    
-    
     </React.Fragment>
   );
 };

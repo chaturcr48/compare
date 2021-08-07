@@ -2,11 +2,13 @@ import React from "react";
 
 
 const fBrand = [
-    {id: '1', brand: 'Upto 500 GB'},
-    {id: '2', brand: '1 TB'},
-    {id: '3', brand: '2 TB'},
-    {id: '4', brand: '3 TB'},
-    {id: '5', brand: '4TB and Above'},
+    {id: '1', brand: 'under 2 GB'},
+    {id: '2', brand: '2 - 8 GB '},
+    {id: '3', brand: '8 - 16 GB '},
+    {id: '4', brand: '16 - 64 GB'},
+    {id: '5', brand: '64 - 128 GB'},
+    {id: '6', brand: '128 -256 GB'},
+    {id: '7', brand: 'Above 256 GB'},
 ]
 
 const StorageCapacity = () => {

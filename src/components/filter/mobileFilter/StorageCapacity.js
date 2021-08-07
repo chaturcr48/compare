@@ -1,6 +1,5 @@
 import React from "react";
 
-let url ='';
 
 const fBrand = [
     {id: '1', brand: 'Upto 32 GB'},

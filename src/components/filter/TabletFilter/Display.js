@@ -2,22 +2,20 @@ import React from "react";
 
 let url = "";
 
-const fBrand = [
-    {id: '1', brand: 'Samsung'},
-    {id: '2', brand: 'Xiaomi'},
-    {id: '3', brand: 'Vivo'},
-    {id: '4', brand: 'Apple'},
-    {id: '5', brand: 'Oppo'},
-    {id: '6', brand: 'Nokia'},
+const fqal = [
+    {id: '1', qal: 'Full HD'},
+    {id: '2', qal: 'HD'},
+    {id: '3', qal: 'Quad HD'},
+    {id: '4', qal: 'SD'},
 ]
-const FilterBrand = () => {
+const Display = () => {
   return (
     <React.Fragment>
       <br />
       <p>
-        <b>Brand</b>
+        <b>Display Size</b>
       </p>
-      {fBrand.map((brand) => (
+      {fqal.map((brand) => (
         <div className="form-check" key={brand.id}>
           <input
             className="form-check-input"
@@ -26,12 +24,12 @@ const FilterBrand = () => {
             id="flexRadioDefault1"
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
-            {brand.brand}
+            {brand.qal}
           </label>
         </div>
       ))}
-      <a href={url}>See more</a><br/>
+      <a href={url}>See more</a>
     </React.Fragment>
   );
 };
-export default FilterBrand;
+export default Display;

@@ -2,23 +2,23 @@ import React from "react";
 
 let url ='';
 
-const fBrand = [
-    {id: '1', brand: 'HP'},
-    {id: '2', brand: 'Dell'},
-    {id: '3', brand: 'Lenevo'},
-    {id: '4', brand: 'MSI'},
-    {id: '5', brand: 'xyz'},
+const fstores = [
+    {id: '1', stores: 'Amazon'},
+    {id: '2', stores: 'Flipkart'},
+    {id: '3', stores: 'Tatacliq'},
+    {id: '4', stores: 'Shopclues'},
+    {id: '5', stores: 'Reliance digital'}
 ]
 
-const FilterBrand = () => {
+const Stores = () => {
     return (
         <React.Fragment><br/>
-            <p><b>Brand</b></p>
-            {fBrand.map(brand => (
-                        <div className="form-check" key={brand.id}>
+            <p><b>Stores</b></p>
+            {fstores.map(stores1 => (
+                        <div className="form-check" key={stores1.id}>
                         <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
                         <label className="form-check-label" htmlFor="flexRadioDefault1">
-                            {brand.brand}
+                            {stores1.stores}
                         </label>
                         </div>
                     ))}
@@ -26,4 +26,4 @@ const FilterBrand = () => {
         </React.Fragment>
     )
 }
-export default FilterBrand;
+export default Stores;

@@ -1,5 +1,5 @@
 import React from "react";
-import Filter from "../filter/mobile_filter/Filter";
+import Filter from "../filter/mobileFilter/Filter";
 
 const mobiles = [
   {

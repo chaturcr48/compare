@@ -23,7 +23,7 @@ const Calling = () => {
             {range.calling}
           </label>
         </div>
-      ))}<a href={url}>See more</a>
+      ))}
     </React.Fragment>
   );
 };

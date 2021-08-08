@@ -32,12 +32,21 @@ const Laptops = () => {
             className="filter container"
             style={{
               display: "inline-block",
+<<<<<<< HEAD
               minWidth: "30px",     
               width: "18.5vw",
               backgroundColor: "rgb(240,240,240)",
               padding: "2vw",
               overflow: "hidden",
               border : "2px solid rgb(68,88,99)",
+=======
+              minWidth: "30px",
+              width: "19.1vw",
+              backgroundColor: "rgb(240,240,240)",
+              padding: "2vw",
+              overflow: "hidden",
+              border: "2px solid rgb(68,88,99)",
+>>>>>>> 3e14cfae5c0692834d6161997324ebf78c0d722b
               borderRadius: "1vw",
               fontFamily: "Quicksand",
             }}

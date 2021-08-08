@@ -17,7 +17,7 @@ const OperatingSystem = () => {
                             {range.os}
                         </label>
                         </div>
-                    ))}
+                    ))}<br/>
         </React.Fragment>
     )
 }

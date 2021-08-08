@@ -9,7 +9,7 @@ const Users = () => {
       setIsLoading(true);
       setError(null);
       try {
-        const response = await fetch('https://compare-demo-api-default-rtdb.firebaseio.com/users.json');
+        const response = await fetch('https://synkrino-e13d6-default-rtdb.firebaseio.com/users.json');
         if (!response.ok) {
           throw new Error('Something went wrong!');
         }

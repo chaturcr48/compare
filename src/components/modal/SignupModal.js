@@ -1,4 +1,33 @@
-const SignupModal = () => {
+import React, { useRef } from 'react';
+
+const SignupModal = (props) => {
+
+  const usernameRef = useRef("");
+  const mobileNumberRef = useRef("");
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+
+  async function submitHandler(event) {
+    event.preventDefault();
+    const user = {
+      username: usernameRef.current.value,
+      mobileNumber: mobileNumberRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value
+    };
+    const response = await fetch(
+      "https://compare-demo-api-default-rtdb.firebaseio.com/users.json",
+      {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    await response.json();
+  }
+
   return (
     <div
       className="modal fade"
@@ -21,8 +50,26 @@ const SignupModal = () => {
             ></button>
           </div>
           <div className="modal-body">
-            <form>
-              <div className="mb-3">
+            <form onSubmit={submitHandler}>
+              <div className="">
+                <label htmlFor="exampleInputUsername" className="form-label">
+                  Choose a Username
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="exampleInputUsername"
+                  ref={usernameRef}
+                />
+                <label htmlFor="exampleInputPhoneNumber" className="form-label">
+                  Mobile Number
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="exampleInputPhoneNumber"
+                  ref={mobileNumberRef}
+                />
                 <label htmlFor="exampleInputEmail2" className="form-label">
                   Email address
                 </label>
@@ -30,20 +77,7 @@ const SignupModal = () => {
                   type="email"
                   className="form-control"
                   id="exampleInputEmail2"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" className="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <div className="mb-3">
-                <label htmlFor="exampleInputPassword2" className="form-label">
-                  User_name
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="exampleInputPassword2"
+                  ref={emailRef}
                 />
                 <label htmlFor="exampleInputPassword3" className="form-label">
                   Password
@@ -52,14 +86,7 @@ const SignupModal = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword3"
-                />
-                <label htmlFor="exampleInputPassword4" className="form-label">
-                  Conferm-Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="exampleInputPassword4"
+                  ref={passwordRef}
                 />
               </div>
               <div className="mb-3 form-check"></div>
@@ -68,7 +95,7 @@ const SignupModal = () => {
               </button>
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-secondary ml-3"
                 data-bs-dismiss="modal"
               >
                 Close

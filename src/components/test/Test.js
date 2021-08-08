@@ -6,6 +6,7 @@ const Test = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
+    // fetch("https://compare-demo-api-default-rtdb.firebaseio.com/users")
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then(

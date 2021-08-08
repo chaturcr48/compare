@@ -7,7 +7,7 @@ import StorageCapacity from "./StorageCapacity";
 import Stars from "./Stars";
 import Stores from "./Stores";
 import RearCamera from "./RearCamera";
-import FrontCamera from "./FrontCamera";
+// import FrontCamera from "./FrontCamera";
 
 const Filter = () => {
     return (
@@ -16,10 +16,10 @@ const Filter = () => {
             <FilterBrand />
             <FilterRam />
             <StorageCapacity />
-            <Stars/>
-            <Stores/>
-            <RearCamera/>
-            <FrontCamera/>
+            <Stars />
+            <Stores />
+            <RearCamera />
+            {/* <FrontCamera /> */}
             <BroadbandGeneration />
         </React.Fragment>
     )

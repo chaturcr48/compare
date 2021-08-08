@@ -2,10 +2,10 @@ import React from "react";
 
 const fres = [
     {id: '1', mp: 'Under 5 MP'},
-    {id: '3', mp: '5 - 13 MP'},
-    {id: '5', mp: '13 - 32 MP'},
-    {id: '6', mp: '32 - 40 MP'},
-    {id: '6', mp: 'Over 40 MP'},
+    {id: '2', mp: '5 - 13 MP'},
+    {id: '3', mp: '13 - 32 MP'},
+    {id: '4', mp: '32 - 40 MP'},
+    {id: '5', mp: 'Over 40 MP'},
 ]
 
 const RearCamera = () => {

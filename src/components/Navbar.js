@@ -3,7 +3,7 @@ import LoginModal from "./modal/LoginModal";
 import SignupModal from "./modal/SignupModal";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const handleTab = (event) => {
     const tab = document.getElementsByClassName("tabs");
     for (let i = 0; i < tab.length; i++) {
@@ -85,9 +85,9 @@ const Navbar = () => {
                 <Link
                   className="nav-link tabs"
                   onClick={handleTab}
-                  to="/detail"
+                  to="users"
                 >
-                  Detail
+                  Users
                 </Link>
               </li>
             </ul>

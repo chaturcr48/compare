@@ -1,7 +1,5 @@
 import React from "react";
 
-let url = "";
-
 const fBrand = [
     {id: '1', brand: 'Under 7 inches'},
     {id: '2', brand: '7 - 8.7 inches'},
@@ -29,7 +27,6 @@ const ScreenSize = () => {
           </label>
         </div>
       ))}
-      <a href={url}>See more</a>
     </React.Fragment>
   );
 };

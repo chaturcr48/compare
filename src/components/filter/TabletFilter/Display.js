@@ -1,6 +1,5 @@
 import React from "react";
 
-let url = "";
 
 const fqal = [
     {id: '1', qal: 'Full HD'},
@@ -11,7 +10,6 @@ const fqal = [
 const Display = () => {
   return (
     <React.Fragment>
-      <br />
       <p>
         <b>Display Size</b>
       </p>
@@ -28,7 +26,6 @@ const Display = () => {
           </label>
         </div>
       ))}
-      <a href={url}>See more</a>
     </React.Fragment>
   );
 };

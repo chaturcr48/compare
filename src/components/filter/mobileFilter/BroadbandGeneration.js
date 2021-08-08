@@ -8,7 +8,7 @@ const fBbrand = [
 
 const BroadbandGeneration = () => {
     return (
-        <React.Fragment><br/>
+        <React.Fragment>
             <p><b>Broadband Generation</b></p>
                     {fBbrand.map(range => (
                         <div className="form-check" key={range.id}>

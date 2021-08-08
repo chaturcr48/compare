@@ -9,7 +9,7 @@ const fres = [
 const Camera = () => {
     return (
         <React.Fragment><br/>
-             <p><b>Primary Camera Resolution</b></p>
+             <p><b>Camera Resolution</b></p>
             {fres.map(res => (
                         <div className="form-check" key={res.id}>
                         <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -17,8 +17,7 @@ const Camera = () => {
                             {res.mp}
                         </label>
                         </div>
-                    ))}
-                    <br/>
+                    ))}<br/>
         </React.Fragment>
     )
 }

@@ -25,7 +25,7 @@ const Price = () => {
             {range.pRange}
           </label>
         </div>
-      ))}
+      ))}<br/>
     </React.Fragment>
   );
 };

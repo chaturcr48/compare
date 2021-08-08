@@ -19,7 +19,7 @@ const Brands = () => {
         <div className="form-check" key={range.id}>
           <input
             className="form-check-input"
-            type="radio"
+            type="checkbox"
             name="flexRadioDefault"
             id="flexRadioDefault1"
           />

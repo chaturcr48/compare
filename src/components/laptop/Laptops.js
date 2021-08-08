@@ -1,5 +1,6 @@
 import React from "react";
 import Filter from "../filter/LaptopFilter/Filter";
+import './laptop.css'
 
 const laptops = [
   {
@@ -25,14 +26,20 @@ const laptops = [
 const Laptops = () => {
   return (
     <React.Fragment>
-      <div className="row mt-4 mx-4">
+      <div className="row mt-4 mx-1">
         <div className="col-3 pl-4">
           <div
             className="filter container"
             style={{
-              gridRow: "1/10",
               display: "inline-block",
               minWidth: "30px",
+              width: "19.1vw",
+              backgroundColor: "rgb(240,240,240)",
+              padding: "2vw",
+              overflow: "hidden",
+              border: "2px solid rgb(68,88,99)",
+              borderRadius: "1vw",
+              fontFamily: "Quicksand",
             }}
           >
             <h4>Filters</h4>

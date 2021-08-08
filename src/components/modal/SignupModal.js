@@ -16,7 +16,7 @@ const SignupModal = (props) => {
       password: passwordRef.current.value
     };
     const response = await fetch(
-      "https://compare-demo-api-default-rtdb.firebaseio.com/users.json",
+      "https://synkrino-e13d6-default-rtdb.firebaseio.com/users.json",
       {
         method: "POST",
         body: JSON.stringify(user),

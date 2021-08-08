@@ -13,5 +13,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COMPARE_DEMO_API }}'
-          projectId: compare-demo-api
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SYNKRINO_E13D6 }}'
+          projectId: synkrino-e13d6

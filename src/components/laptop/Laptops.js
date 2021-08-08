@@ -1,6 +1,10 @@
 import React from "react";
+<<<<<<< HEAD
 import Filter from "../filter/LaptopFilter/Filter";
 import './laptop.css'
+=======
+import Filter from "../filter/laptopFilter/Filter";
+>>>>>>> 7703bd07ed4d6936a2fd5563f8337f7f4509d39b
 
 const laptops = [
   {

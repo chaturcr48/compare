@@ -1,23 +1,22 @@
 import React from "react";
 
-const fRam = [
-  { id: "1", ram: "1 GB" },
-  { id: "2", ram: "3 GB" },
-  { id: "3", ram: "4 GB" },
-  { id: "4", ram: "6 GB" },
-  { id: "5", ram: "8 GB" },
-  { id: "6", ram: "12 GB" },
-];
+let url = "";
 
-const FilterRam = () => {
+const fqal = [
+    {id: '1', qal: 'Full HD'},
+    {id: '2', qal: 'HD'},
+    {id: '3', qal: 'Quad HD'},
+    {id: '4', qal: 'SD'},
+]
+const Display = () => {
   return (
     <React.Fragment>
       <br />
       <p>
-        <b>Ram</b>
+        <b>Display Size</b>
       </p>
-      {fRam.map((ram) => (
-        <div className="form-check" key={ram.id}>
+      {fqal.map((brand) => (
+        <div className="form-check" key={brand.id}>
           <input
             className="form-check-input"
             type="checkbox"
@@ -25,11 +24,12 @@ const FilterRam = () => {
             id="flexRadioDefault1"
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
-            {ram.ram}
+            {brand.qal}
           </label>
         </div>
       ))}
+      <a href={url}>See more</a>
     </React.Fragment>
   );
 };
-export default FilterRam;
+export default Display;

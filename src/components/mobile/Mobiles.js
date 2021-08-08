@@ -2,26 +2,28 @@ import React from "react";
 import Filter from "../filter/mobileFilter/Filter";
 
 const mobiles = [
-  {
-    id: "1",
-    imgUrl: "https://source.unsplash.com/400x300/?Mobile",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "2",
-    imgUrl: "https://source.unsplash.com/400x300/?MObile",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "3",
-    imgUrl: "https://source.unsplash.com/400x300/?MOBile",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-];
-
+    {
+        id: "1",
+        imgUrl:
+          "https://source.unsplash.com/400x300/?Mobile",
+        name: "Xiaomi Redmi Note 10",
+        desc: "5G (6GB RAM +128GB)",
+    },
+    {
+        id: "2",
+        imgUrl:
+          "https://source.unsplash.com/400x300/?MObile",
+        name: "Xiaomi Redmi Note 10",
+        desc: "5G (6GB RAM +128GB)",
+    },
+    {
+        id: "3",
+        imgUrl:
+          "https://source.unsplash.com/400x300/?MOBile",
+        name: "Xiaomi Redmi Note 10",
+        desc: "5G (6GB RAM +128GB)",
+    },
+]
 const Mobiles = () => {
   return (
     <React.Fragment>

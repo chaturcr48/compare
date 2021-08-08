@@ -22,7 +22,7 @@ const Stores = () => {
                         </label>
                         </div>
                     ))}
-                    <a href={url}>See more</a><br/>
+                    <a href={url}>See more</a>
         </React.Fragment>
     )
 }

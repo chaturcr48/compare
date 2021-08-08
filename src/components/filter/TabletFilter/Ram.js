@@ -1,15 +1,13 @@
 import React from "react";
 
 const fRam = [
-  { id: "1", ram: "1 GB" },
-  { id: "2", ram: "3 GB" },
-  { id: "3", ram: "4 GB" },
-  { id: "4", ram: "6 GB" },
-  { id: "5", ram: "8 GB" },
-  { id: "6", ram: "12 GB" },
+  { id: "1", ram: "Upto 2 GB" },
+  { id: "2", ram: "2 - 4 GB" },
+  { id: "3", ram: "4 - 8 GB" },
+  { id: "4", ram: "Above 8 GB" },
 ];
 
-const FilterRam = () => {
+const Ram = () => {
   return (
     <React.Fragment>
       <br />
@@ -32,4 +30,4 @@ const FilterRam = () => {
     </React.Fragment>
   );
 };
-export default FilterRam;
+export default Ram;

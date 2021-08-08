@@ -1,12 +1,11 @@
 import React from "react";
 
 const fRam = [
-  { id: "1", ram: "1 GB" },
-  { id: "2", ram: "3 GB" },
-  { id: "3", ram: "4 GB" },
-  { id: "4", ram: "6 GB" },
-  { id: "5", ram: "8 GB" },
-  { id: "6", ram: "12 GB" },
+  { id: "1", ram: "Upto 4 Gb " },
+  { id: "2", ram: "6 Gb" },
+  { id: "3", ram: "8 Gb" },
+  { id: "4", ram: "12 GB" },
+  { id: "5", ram: "16 GB and Above" },
 ];
 
 const FilterRam = () => {

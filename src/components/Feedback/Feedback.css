@@ -1,0 +1,42 @@
+.center{
+
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    margin-top: -300px;
+    width: 50%;
+}
+
+.intcolor1{
+    color: green;
+}
+.intcolor2{
+    color: rgb(38, 180, 216);
+}
+.intcolor3{
+    color: rgb(173, 35, 162);
+}
+.intcolor4{
+    color: rgb(214, 211, 48);
+}
+.intcolor5{
+    color: rgba(248, 24, 24, 0.836);
+}
+.intcolor1:hover{
+    color: green;
+}
+.intcolor2:hover{
+    color: rgb(38, 180, 216);
+}
+.intcolor3:hover{
+    color: rgb(173, 35, 162);
+}
+.intcolor4:hover{
+    color: rgb(214, 211, 48);
+}
+.intcolor5:hover{
+    color: rgba(248, 24, 24, 0.836);
+}
+.float{
+    float: right;
+}

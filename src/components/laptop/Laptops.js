@@ -1,9 +1,8 @@
 import React from "react";
 import Filter from "../filter/LaptopFilter/Filter";
-<<<<<<< HEAD
 import './laptop.css'
 import LapDes from './LapDes'
-=======
+
 import './laptop.css';
 
 const laptops = [
@@ -25,8 +24,7 @@ const laptops = [
     name: "Xiaomi Redmi Note 10",
     desc: "5G (6GB RAM +128GB)",
   },
-];
->>>>>>> 090e6781cb77a1abaf8cf1f3e3dcd9b55425c37a
+]
 
 const Laptops = () => {
   return (

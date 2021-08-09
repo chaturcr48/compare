@@ -9,8 +9,8 @@ import PopularTelevision from "./PopularTelevision";
 const Home = () => {
     return (
         <React.Fragment>
-            <MobileSlider />
             <MainCarousal />
+            <MobileSlider />
             <PopularMobiles />
             <PopulatLaptop />
             <PopularTelevision />

@@ -6,7 +6,7 @@
 .header a:hover,
 .header a.active {
   color: white;
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
 }
 .header li{
     padding: 0px 5px;

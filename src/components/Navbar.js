@@ -101,6 +101,15 @@ const Navbar = (props) => {
                   Feedback
                 </NavLink>
               </li>
+              <li className="nav-item fs-5 ">
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
+                  to="/details"
+                >
+                  Details
+                </NavLink>
+              </li>
             </ul>
             <form className="d-flex">
               <input

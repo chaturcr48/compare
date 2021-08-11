@@ -9,8 +9,8 @@ import PopulatTablets from "./PopularTablets";
 const Home = () => {
     return (
         <React.Fragment>
-            {/* <MobileSlider /> */}
             <MainCarousal />
+            {/* <MobileSlider /> */}
             <PopularMobiles />
             <PopulatLaptop />
             {/* <PopularTelevision /> */}

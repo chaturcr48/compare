@@ -1,6 +1,6 @@
 import React from "react";
 import Filter from "../filter/TabletFilter/Filter";
-import './tablet.css'
+import './tablet.css';
 
 const tablets = [
   {

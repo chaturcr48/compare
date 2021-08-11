@@ -5,13 +5,13 @@ const mainCarousalImgLink = [
   {
     id: "2",
     imgUrl:
-      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202005/mibookpro_0.jpeg?ikxsywW.QZ5qY0zj7GdEv9Yo7M1oOtpo&size=770:433",
+      "https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg",
     ariaLabel: "Slide 2",
   },
   {
     id: "3",
     imgUrl:
-      "https://i.pcmag.com/imagery/roundups/02naaOkVLe7DIiejFUyDPJp-31..1588859331.jpg",
+      "https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg",
     ariaLabel: "Slide 3",
   },
   {
@@ -38,7 +38,7 @@ const MainCarousal = () => {
   return (
     <React.Fragment>
 
-      <div className="container Large mt-4 w-75">
+      <div className="container">
         <div
           id="carouselExampleCaptions"
           className="carousel slide "
@@ -66,9 +66,10 @@ const MainCarousal = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="https://i.pcmag.com/imagery/roundups/02naaOkVLe7DIiejFUyDPJp-31..1588859331.jpg"
+                src="https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg"
                 className="d-block w-100"
                 alt="..."
+                style={{height: '350px'}}
               />
               <div className="carousel-caption d-none d-md-block">
                 <h3>Compare products specifications</h3>
@@ -84,6 +85,7 @@ const MainCarousal = () => {
                   src={item.imgUrl}
                   className="d-block w-100"
                   alt="imageNotFound..."
+                  style={{height: '350px'}}
                 />
                 <div className="carousel-caption d-none d-md-block">
                   <h3>Compare product price.</h3>

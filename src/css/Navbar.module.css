@@ -1,0 +1,13 @@
+.header a {
+  color: rgba(255, 255, 255, 0.514);
+  text-decoration: none;
+}
+
+.header a:hover,
+.header a.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+.header li{
+    padding: 0px 5px;
+}

@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <React.Fragment>
       <header className={classes.header}>
       <nav
-        className="navbar navbar-expand-md navbar-dark"
+        className="navbar navbar-expand-lg navbar-dark"
         style={{ backgroundColor: "rgb(68,88,99)" }}
       >
         <div className="container-fluid">
@@ -45,7 +45,7 @@ const Navbar = (props) => {
                 <NavLink
                   activeClassName={classes.active}
                   className="nav-NavLink"
-                  to="/laptops"
+                  to="/laptop"
                 >
                   Laptops
                 </NavLink>

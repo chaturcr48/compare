@@ -1,0 +1,40 @@
+.filter{
+    height: 500px;
+}
+@media only screen and (max-width: 320px) {
+    .filter{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 360px){
+    .filter{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 361px) and (max-width: 375px){
+    .filter{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+    .filter{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 412px) and (max-width: 414px){
+    .filter{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 415px) and (max-width: 425px){
+    .filter{
+        font-size: 11px;
+
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
+}
+@media only screen and (min-width: 769px){
+    
+}

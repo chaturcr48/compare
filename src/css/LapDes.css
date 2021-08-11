@@ -1,0 +1,35 @@
+.image:hover{
+    border: 2px solid rgb(68,88,99);
+}
+.title a{
+    text-decoration: none;
+    color: rgb(68,88,99);
+}
+.title a:hover{
+    color: rgba(68, 88, 99, 0.61);
+}
+
+@media only screen and (max-width: 320px) {
+    
+}
+@media only screen and (min-width: 321px) and (max-width: 360px){
+    
+}
+@media only screen and (min-width: 361px) and (max-width: 375px){
+    
+}
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+
+}
+@media only screen and (min-width: 412px) and (max-width: 414px){
+
+}
+@media only screen and (min-width: 415px) and (max-width: 425px){
+    
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
+}
+@media only screen and (min-width: 769px){
+    
+}

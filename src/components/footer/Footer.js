@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../../css/Footer.css";
 
-let url = "";
 const features = [
   { id: "1", fUrl: "", name: "Contact Us" },
   { id: "2", fUrl: "", name: "About Us" },
@@ -23,58 +24,72 @@ const about = [
   { id: "4", aUrl: "", name: "HELP" },
 ];
 
-
 const Footer = () => {
-  let footerstyle={
-    color:"white",
-    padding: "2px 0px"
-  }
+  let footerstyle = {
+    color: "white",
+    padding: "2px 0px",
+  };
   return (
     <React.Fragment>
-      <div
-        className="container-fluid mt-3 py-4 px-5"
-        style={{ backgroundColor: "rgb(68,88,99)", color: "white" }}
-      >
-        
-        <div className="row px-5 my-4 mx-3">
-          <div className="col-4 pl-4">
+      <div className="container-fluid mt-2 bg-color">
+        <div className="row">
+          <i className="fa fa-globe globe-icon"></i>
+        </div>
+        <div className="row pt-2">
+          <div className="col">
             <h4>Features</h4>
             <ul className="list-unstyled text-small">
               {features.map((item) => (
                 <li key={item.id}>
-                  <a style={footerstyle} className="nav-link no-decor px-0" href={item.fUrl}>
+                  <Link
+                    style={footerstyle}
+                    className="nav-link no-decor px-0"
+                    to="/footer-detail"
+                  >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="col-4">
+          <div className="col">
             <h4>Resources</h4>
             <ul className="list-unstyled text-small">
               {resources.map((item) => (
                 <li key={item.id}>
-                  <a style={footerstyle} className="nav-link no-decor px-0" href={item.rUrl}>
+                  <a
+                    style={footerstyle}
+                    className="nav-link no-decor px-0"
+                    href={item.rUrl}
+                  >
                     {item.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="col-4 pl-5">
+          <div className="col">
             <h4>About</h4>
             <ul className="list-unstyled text-small">
               {about.map((item) => (
                 <li key={item.id}>
-                  <a style={footerstyle} className="nav-link no-decor px-0" href={item.aUrl}>
+                  <a
+                    style={footerstyle}
+                    className="nav-link no-decor px-0"
+                    href={item.aUrl}
+                  >
                     {item.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="py-2" ><a style={{color:"white"}} href={url}>
-              Back to top <i className="fa fa-angle-double-up"></i></a>            
           </div>
+        </div>
+        <div className="row">
+          <div className="pb-2">
+            <Link style={{ color: "white" }} to="" className="float-end">
+              Back to top <i className="fa fa-angle-double-up"></i>
+            </Link>
           </div>
         </div>
       </div>

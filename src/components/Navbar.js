@@ -81,6 +81,7 @@ const Navbar = (props) => {
                   Pagination
                 </Link>
               </li>
+              
               <li className="nav-item fs-5 ">
                 <Link
                   className="nav-link tabs"

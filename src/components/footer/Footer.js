@@ -1,8 +1,9 @@
 import React from "react";
+import Details from '../Details/Details'
 
 let url = "";
 const features = [
-  { id: "1", fUrl: "", name: "Contact Us" },
+  { id: "1", fUrl: {Details}, name: "Contact Us" },
   { id: "2", fUrl: "", name: "About Us" },
   { id: "3", fUrl: "", name: "Careers" },
   { id: "4", fUrl: "", name: "Feedback" },
@@ -22,7 +23,6 @@ const about = [
   { id: "3", aUrl: "", name: "Privacy" },
   { id: "4", aUrl: "", name: "HELP" },
 ];
-
 
 const Footer = () => {
   let footerstyle={

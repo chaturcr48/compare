@@ -1,10 +1,12 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Details from "./components/Details/Details";
 import Feedback from "./components/Feedback/Feedback";
+import FooterDetail from "./components/footer/FooterDetail";
 import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
+import LaptopDetail from "./components/pages/LaptopDetail";
 import Tablets from "./components/tablet/Tablets";
 import ApplyPagination from "./components/test/ApplyPagination";
 import Test from "./components/test/Test";
@@ -13,8 +15,9 @@ import Users from "./components/users/Users";
 const Routes = () => {
     return (
         <React.Fragment>
+            <Switch>
             <Route path='/home' > <Home /> </Route>
-            <Route path='/laptops' > <Laptops /> </Route>
+            <Route path='/laptop' exact > <Laptops /> </Route>
             <Route path='/mobiles' > <Mobiles /> </Route>
             <Route path='/tablets' > <Tablets /> </Route>
             <Route path='/test' > <Test /> </Route>
@@ -22,6 +25,9 @@ const Routes = () => {
             <Route path='/users' > <Users /> </Route>
             <Route path='/feedback' > <Feedback /> </Route>
             <Route path='/details' > <Details /> </Route>
+            <Route path='/laptop/:laptopId' > <LaptopDetail /> </Route>
+            <Route path='/footer-detail' > <FooterDetail /> </Route>
+            </Switch>
         </React.Fragment>
     )
 }

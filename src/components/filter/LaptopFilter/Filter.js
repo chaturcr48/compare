@@ -1,4 +1,5 @@
 import React from "react";
+import '../../../css/Filter.css';
 import FilterBrand from "./FilterBrand";
 import FilterPrice from "./FilterPrice";
 import FilterRam from "./FilterRam";
@@ -9,17 +10,19 @@ import Weight from "./Weight";
 import OperatingSystem from "./OperatingSystem";
 
 const Filter = () => {
-    return (
-        <React.Fragment>
-            <FilterPrice />
-            <FilterBrand />
-            <FilterRam />
-            <StorageCapacity />
-            <Stores />
-            <Weight />
-            <OperatingSystem/>
-            <Stars />
-        </React.Fragment>
-    )
-}
+  return (
+    <React.Fragment>
+      <div className='filter overflow-auto'>
+        <FilterPrice />
+        <FilterBrand />
+        <FilterRam />
+        <StorageCapacity />
+        <Stores />
+        <Weight />
+        <OperatingSystem />
+        <Stars />
+      </div>
+    </React.Fragment>
+  );
+};
 export default Filter;

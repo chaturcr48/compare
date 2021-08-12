@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "../../css/Footer.css";
 
 const features = [
-  { id: "1", fUrl: "", name: "Contact Us" },
+  { id: "1", fUrl: "", name: "Team" },
   { id: "2", fUrl: "", name: "About Us" },
-  { id: "3", fUrl: "", name: "Careers" },
+  { id: "3", fUrl: "", name: "Contact Us" },
   { id: "4", fUrl: "", name: "Feedback" },
 ];
 const resources = [

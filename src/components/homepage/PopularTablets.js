@@ -31,37 +31,7 @@ const items = [
     imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
     name: "Xiaomi Redmi Note 10",
     desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "6",
-    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "7",
-    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "8",
-    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "9",
-    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "10",
-    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
+  }
 ];
 
 const PopulatTablets = () => {

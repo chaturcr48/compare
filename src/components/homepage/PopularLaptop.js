@@ -36,21 +36,7 @@ const items = [
       "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202005/mibookpro_0.jpeg?ikxsywW.QZ5qY0zj7GdEv9Yo7M1oOtpo&size=770:433",
     name: "Xiaomi Redmi Note 10",
     desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "6",
-    imgUrl:
-      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202005/mibookpro_0.jpeg?ikxsywW.QZ5qY0zj7GdEv9Yo7M1oOtpo&size=770:433",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
-  {
-    id: "7",
-    imgUrl:
-      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202005/mibookpro_0.jpeg?ikxsywW.QZ5qY0zj7GdEv9Yo7M1oOtpo&size=770:433",
-    name: "Xiaomi Redmi Note 10",
-    desc: "5G (6GB RAM +128GB)",
-  },
+  }
 ];
 
 const PopulatLaptop = () => {

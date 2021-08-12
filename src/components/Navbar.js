@@ -15,7 +15,7 @@ const Navbar = (props) => {
         >
           <div className="container-fluid">
             <NavLink className="navbar-brand fs-4" to="/">
-              <img src={img} alt="" style={{ width: "35px" }} />
+              <img src={img} alt="" style={{ width: "50px" }} />
             </NavLink>
             <button
               className="navbar-toggler"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Contact from "./components/Contact";
 import Details from "./components/Details/Details";
 import Feedback from "./components/Feedback/Feedback";
 import FooterDetail from "./components/footer/FooterDetail";
@@ -27,6 +28,7 @@ const Routes = () => {
             <Route path='/details' > <Details /> </Route>
             <Route path='/laptop/:laptopId' > <LaptopDetail /> </Route>
             <Route path='/footer-detail' > <FooterDetail /> </Route>
+            <Route path='/contactus' > <Contact /> </Route>
             </Switch>
         </React.Fragment>
     )

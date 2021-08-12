@@ -14,7 +14,7 @@ const LaptopDetail = () => {
           <div className="col">
             <div className="row">
               <img
-                src="https://source.unsplash.com/400x400/?nature,water"
+                src={detail.imgUrl}
                 className="big-img"
                 alt="..."
               />
@@ -75,10 +75,11 @@ const LaptopDetail = () => {
               </div>
               <div>
                 Price:&nbsp;
-                <strong style={{ color: "green" }}>INR&nbsp;34323.87</strong>
+                <strong style={{ color: "green" }}>INR&nbsp; {detail.Discounted_price}</strong>
+                <span class="text-decoration-line-through ml-1"> {detail.MRP_Price} </span>
               </div>
               <div>
-                Capacity:&nbsp; <strong>16GB RAM | 512GB SSD</strong>
+                Capacity:&nbsp; <strong>{detail.RAM} RAM | {detail.SSD_Capacity} SSD</strong>
               </div>
             </div>
             <div className="row mt-2 stores">
@@ -176,39 +177,39 @@ const LaptopDetail = () => {
               <tbody>
                 <tr>
                   <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td>{detail.Sales_Package}</td>
                 </tr>
                 <tr>
                   <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td>{detail.Model_Number}</td>
                 </tr>
                 <tr>
                   <td>Part Number</td>
-                  <td>Thornton</td>
+                  <td>{detail.Part_Number}</td>
                 </tr>
                 <tr>
                   <td>Series</td>
-                  <td>Thornton</td>
+                  <td>{detail.Series} </td>
                 </tr>
                 <tr>
                   <td>Color</td>
-                  <td>Thornton</td>
+                  <td>{detail.Color} </td>
                 </tr>
                 <tr>
                   <td>Type</td>
-                  <td>Thornton</td>
+                  <td>{detail.Type}</td>
                 </tr>
                 <tr>
                   <td>Suitable For</td>
-                  <td>Thornton</td>
+                  <td>{detail.Suitable_For} </td>
                 </tr>
                 <tr>
                   <td>Battery Cell</td>
-                  <td>Thornton</td>
+                  <td>{detail.Battery_Cell} </td>
                 </tr>
                 <tr>
                   <td>MS Office Provided</td>
-                  <td>Thornton</td>
+                  <td>{detail.MS_Office_Provided} </td>
                 </tr>
               </tbody>
             </table>

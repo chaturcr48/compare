@@ -8,8 +8,7 @@ const Laptops = () => {
     <React.Fragment>
       <div className="container mt-4">
         <div className="row">
-          <div className="bg-info filter-container">
-              <h4>Filters</h4>
+          <div className="filter-container">
               <Filter />
           </div>
           <div className="lapDes-container">

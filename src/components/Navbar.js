@@ -11,7 +11,7 @@ const Navbar = (props) => {
       <header className={classes.header}>
         <nav
           className="navbar navbar-expand-lg navbar-dark"
-          style={{ backgroundColor: "rgb(68,88,99)" }}
+          style={{ backgroundColor: "rgb(77,88,99)" }}
         >
           <div className="container-fluid">
             <NavLink className="navbar-brand fs-4" to="/">
@@ -66,21 +66,6 @@ const Navbar = (props) => {
                     Tablets
                   </NavLink>
                 </li>
-                {/* <li className="nav-item fs-5 ">
-                <NavLink activeClassName={classes.active} className="nav-NavLink tabs" onClick={handleTab} to="/test">
-                  Test
-                </NavLink>
-              </li> */}
-                {/* <li className="nav-item fs-5 ">
-                <NavLink
-                activeClassName={classes.active}
-                  className="nav-NavLink"
-                  onClick={handleTab}
-                  to="/applyPagination"
-                >
-                  Pagination
-                </NavLink>
-              </li> */}
                 <li className="nav-item fs-5 ">
                   <NavLink
                     activeClassName={classes.active}
@@ -88,24 +73,6 @@ const Navbar = (props) => {
                     to="users"
                   >
                     Users
-                  </NavLink>
-                </li>
-                <li className="nav-item fs-5 ">
-                  <NavLink
-                    activeClassName={classes.active}
-                    className="nav-NavLink"
-                    to="feedback"
-                  >
-                    Feedback
-                  </NavLink>
-                </li>
-                <li className="nav-item fs-5 ">
-                  <NavLink
-                    activeClassName={classes.active}
-                    className="nav-NavLink"
-                    to="/details"
-                  >
-                    Details
                   </NavLink>
                 </li>
                 <li className="nav-item fs-5 ">

@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Contact from "./components/Contact";
-import Details from "./components/Details/Details";
-import Feedback from "./components/Feedback/Feedback";
 import FooterDetail from "./components/footer/FooterDetail";
 import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
@@ -24,8 +22,6 @@ const Routes = () => {
             <Route path='/test' > <Test /> </Route>
             <Route path='/applyPagination' > <ApplyPagination /> </Route>
             <Route path='/users' > <Users /> </Route>
-            <Route path='/feedback' > <Feedback /> </Route>
-            <Route path='/details' > <Details /> </Route>
             <Route path='/laptop/:laptopId' > <LaptopDetail /> </Route>
             <Route path='/footer-detail' > <FooterDetail /> </Route>
             <Route path='/contactus' > <Contact /> </Route>

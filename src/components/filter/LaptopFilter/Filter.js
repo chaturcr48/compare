@@ -12,7 +12,8 @@ import OperatingSystem from "./OperatingSystem";
 const Filter = () => {
   return (
     <React.Fragment>
-      <div className='filter overflow-auto'>
+      <div className='filter overflow-auto p-2'>
+        <h4>Filters</h4>
         <FilterPrice />
         <FilterBrand />
         <FilterRam />

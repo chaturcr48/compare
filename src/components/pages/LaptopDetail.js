@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import Data from "../laptop/Data.json";
-import '../../css/DetailPage.css';
+import Data from "../laptop/finalData.json";
+import "../../css/DetailPage.css";
 let url = "";
 
 const LaptopDetail = () => {
@@ -13,11 +13,7 @@ const LaptopDetail = () => {
         <div className="row">
           <div className="col">
             <div className="row">
-              <img
-                src={detail.imgUrl}
-                className="big-img"
-                alt="..."
-              />
+              <img src={detail.imgUrl} className="big-img" alt="..." />
             </div>
             <div className="row mt-1">
               <div className="col-3">
@@ -75,11 +71,19 @@ const LaptopDetail = () => {
               </div>
               <div>
                 Price:&nbsp;
-                <strong style={{ color: "green" }}>INR&nbsp; {detail.Discounted_price}</strong>
-                <span class="text-decoration-line-through ml-1"> {detail.MRP_Price} </span>
+                <strong style={{ color: "green" }}>
+                  INR&nbsp; {detail.Discounted_price}
+                </strong>
+                <span class="text-decoration-line-through ml-1">
+                  {" "}
+                  {detail.MRP_Price}{" "}
+                </span>
               </div>
               <div>
-                Capacity:&nbsp; <strong>{detail.RAM} RAM | {detail.SSD_Capacity} SSD</strong>
+                Capacity:&nbsp;{" "}
+                <strong>
+                  {detail.RAM} RAM | {detail.SSD_Capacity} SSD
+                </strong>
               </div>
             </div>
             <div className="row mt-2 stores">
@@ -159,109 +163,94 @@ const LaptopDetail = () => {
             </div>
           </div>
         </div>
-
-        <div className="row mt-2">
-          <h4>Specification</h4>
+        <div className="specification-heading">Specification</div>
+        <div className="row">
           <div className="col">
+            <div className="specification-heading">General</div>
             <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>General</b>
-                  </td>
-                  <td>
-                    <b>General</b>
-                  </td>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>Sales Package</td>
+                  <td className="table-feature">Sales Package</td>
                   <td>{detail.Sales_Package}</td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
+                  <td className="table-feature">Model Number</td>
                   <td>{detail.Model_Number}</td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
+                  <td className="table-feature">Part Number</td>
                   <td>{detail.Part_Number}</td>
                 </tr>
                 <tr>
-                  <td>Series</td>
+                  <td className="table-feature">Series</td>
                   <td>{detail.Series} </td>
                 </tr>
                 <tr>
-                  <td>Color</td>
+                  <td className="table-feature">Color</td>
                   <td>{detail.Color} </td>
                 </tr>
                 <tr>
-                  <td>Type</td>
+                  <td className="table-feature">Type</td>
                   <td>{detail.Type}</td>
                 </tr>
                 <tr>
-                  <td>Suitable For</td>
+                  <td className="table-feature">Suitable For</td>
                   <td>{detail.Suitable_For} </td>
                 </tr>
                 <tr>
-                  <td>Battery Cell</td>
+                  <td className="table-feature">Battery Cell</td>
                   <td>{detail.Battery_Cell} </td>
                 </tr>
                 <tr>
-                  <td>MS Office Provided</td>
+                  <td className="table-feature">MS Office Provided</td>
                   <td>{detail.MS_Office_Provided} </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        <div className="row">
           <div className="col">
+            <div className="specification-heading">
+              Processor And Memory Features
+            </div>
             <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>Processor And Memory Features</b>
-                  </td>
-                  <td>
-                    <b>Features</b>
-                  </td>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td className='table-feature'>Processor Brand</td>
+                  <td>{detail.Processor_Brand}</td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>Processor Name</td>
+                  <td>{detail.Processor_Name}</td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>Processor Generation</td>
+                  <td>{detail.Processor_Generation}</td>
                 </tr>
                 <tr>
-                  <td>Series</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>SSD</td>
+                  <td>{detail.SSD} </td>
                 </tr>
                 <tr>
-                  <td>Color</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>SSD Capacity</td>
+                  <td>{detail.SSD_Capacity} </td>
                 </tr>
                 <tr>
-                  <td>Type</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>RAM</td>
+                  <td>{detail.RAM}</td>
                 </tr>
                 <tr>
-                  <td>Suitable For</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>RAM Type</td>
+                  <td>{detail.RAM_Type} </td>
                 </tr>
                 <tr>
-                  <td>Battery Cell</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>Processor Variant</td>
+                  <td>{detail.Processor_Variant} </td>
                 </tr>
                 <tr>
-                  <td>MS Office Provided</td>
-                  <td>Thornton</td>
+                  <td className='table-feature'>Clock Speed</td>
+                  <td>{detail.Clock_Speed} </td>
                 </tr>
               </tbody>
             </table>
@@ -269,85 +258,36 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
+            <div className="specification-heading">Additional Features</div>
             <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>Operating System</b>
-                  </td>
-                  <td>
-                    <b>System</b>
-                  </td>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td>Disk Drive</td>
+                  <td>{detail.Disk_Drive}</td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td>Web Camera</td>
+                  <td>{detail.Web_Camera}</td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
-                  <td>Thornton</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="col">
-            <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>D And A Features</b>
-                  </td>
-                  <td>
-                    <b>Features</b>
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td>Keyboard</td>
+                  <td>{detail.Keyboard}</td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td>Backlit Keyboard</td>
+                  <td>{detail.Backlit_Keyboard} </td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
-                  <td>Thornton</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="col">
-            <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>Warranty</b>
-                  </td>
-                  <td>
-                    <b>Warranty</b>
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td>Pointer Device</td>
+                  <td>{detail.Pointer_Device} </td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td>Included Software</td>
+                  <td>{detail.Included_Software}</td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
-                  <td>Thornton</td>
+                  <td>Additional Features</td>
+                  <td>{detail.Additional_Features} </td>
                 </tr>
               </tbody>
             </table>
@@ -355,81 +295,151 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
+            <div className="specification-heading">Warranty</div>
             <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>Port And Slot Features</b>
-                  </td>
-                  <td>
-                    <b>Features</b>
-                  </td>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td>Warranty Summary</td>
+                  <td>{detail.Warranty_Summary}</td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td>Warranty Service Type</td>
+                  <td>{detail.Warranty_Service_Type}</td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
-                  <td>Thornton</td>
+                  <td>Covered In Warranty</td>
+                  <td>{detail.Covered_in_Warranty}</td>
                 </tr>
                 <tr>
-                  <td>Series</td>
-                  <td>Thornton</td>
+                  <td>Not Covered in Warrenty</td>
+                  <td>{detail.Not_Covered_in_Warranty} </td>
                 </tr>
                 <tr>
-                  <td>Color</td>
-                  <td>Thornton</td>
+                  <td>Domestic Warranty</td>
+                  <td>{detail.Domestic_Warranty} </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        <div className="row">
           <div className="col">
+            <div className="specification-heading">Connectivity Features</div>
             <table className="table">
-              <thead>
-                <tr>
-                  <td>
-                    <b>Additional Features</b>
-                  </td>
-                  <td>
-                    <b>Additional Features</b>
-                  </td>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>Sales Package</td>
-                  <td>Model Number</td>
+                  <td>Wireless LAN</td>
+                  <td>{detail.Wireless_LAN}</td>
                 </tr>
                 <tr>
-                  <td>Model Number</td>
-                  <td>Thornton</td>
+                  <td>Bluetooth</td>
+                  <td>{detail.Bluetooth}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="specification-heading">Dimensions</div>
+            <table className="table">
+              <tbody>
+                <tr>
+                  <td>Dimensions</td>
+                  <td>{detail.Dimensions}</td>
                 </tr>
                 <tr>
-                  <td>Part Number</td>
-                  <td>Thornton</td>
+                  <td>Weight</td>
+                  <td>{detail.Weight}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="specification-heading">Operating System</div>
+            <table className="table">
+              <tbody>
+                <tr>
+                  <td>OS Architecture</td>
+                  <td>{detail.OS_Architecture}</td>
                 </tr>
                 <tr>
-                  <td>Series</td>
-                  <td>Thornton</td>
+                  <td>Operating System</td>
+                  <td>{detail.Operating_System}</td>
                 </tr>
                 <tr>
-                  <td>Color</td>
-                  <td>Thornton</td>
+                  <td>System Architecture</td>
+                  <td>{detail.System_Architecture}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="row">
+          <div className="specification-heading">
+            Display And Audio Features
+          </div>
+          <div className="col">
+            <table className="table">
+              <tbody>
+                <tr>
+                  <td>Touch Screen</td>
+                  <td>{detail.Touchscreen}</td>
                 </tr>
                 <tr>
-                  <td>Type</td>
-                  <td>Thornton</td>
+                  <td>Screen Size</td>
+                  <td>{detail.Screen_Size}</td>
                 </tr>
                 <tr>
-                  <td>Suitable For</td>
-                  <td>Thornton</td>
+                  <td>Screen Resolution</td>
+                  <td>{detail.Screen_Resolution}</td>
+                </tr>
+                <tr>
+                  <td>Screen Type</td>
+                  <td>{detail.Screen_Type}</td>
+                </tr>
+                <tr>
+                  <td>Speakers</td>
+                  <td>{detail.Speakers}</td>
+                </tr>
+                <tr>
+                  <td>Internal Mic</td>
+                  <td>{detail.Internal_Mic}</td>
+                </tr>
+                <tr>
+                  <td>Sound Properties</td>
+                  <td>{detail.Sound_Properties}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="specification-heading">Port And Slot Features</div>
+            <table className="table">
+              <tbody>
+                <tr>
+                  <td>Mic In</td>
+                  <td>{detail.Mic_In}</td>
+                </tr>
+                <tr>
+                  <td>USB Port</td>
+                  <td>{detail.USB_Port}</td>
+                </tr>
+                <tr>
+                  <td>HDMI Port</td>
+                  <td>{detail.HDMI_Port}</td>
+                </tr>
+                <tr>
+                  <td>Multi Card Slot</td>
+                  <td>{detail.Multi_Card_Slot}</td>
+                </tr>
+                <tr>
+                  <td>Hardware Interface</td>
+                  <td>{detail.Hardware_Interface}</td>
                 </tr>
               </tbody>
             </table>

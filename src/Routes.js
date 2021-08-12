@@ -1,5 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import Details from "./components/Details/Details";
+import Feedback from "./components/Feedback/Feedback";
 import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
@@ -18,6 +20,8 @@ const Routes = () => {
             <Route path='/test' > <Test /> </Route>
             <Route path='/applyPagination' > <ApplyPagination /> </Route>
             <Route path='/users' > <Users /> </Route>
+            <Route path='/feedback' > <Feedback /> </Route>
+            <Route path='/details' > <Details /> </Route>
         </React.Fragment>
     )
 }

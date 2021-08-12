@@ -12,14 +12,9 @@ const Laptops = () => {
           <div
             className="filter container"
             style={{
-              display: "inline-block",
-              minWidth: "30px",     
-              width: "18.5vw",
               backgroundColor: "rgb(240,240,240)",
               padding: "2vw",
-              overflow: "hidden",
               border : "2px solid rgb(68,88,99)",
-              borderRadius: "1vw",
               fontFamily: "Quicksand",
             }}
           >

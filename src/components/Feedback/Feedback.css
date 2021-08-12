@@ -1,11 +1,11 @@
-.center{
+/* .center{
 
     position: fixed;
     top: 50%;
     left: 30%;
     margin-top: -300px;
     width: 50%;
-}
+} */
 
 .intcolor1{
     color: green;
@@ -37,6 +37,6 @@
 .intcolor5:hover{
     color: rgba(248, 24, 24, 0.836);
 }
-.float{
+/* .float{
     float: right;
-}
+} */

@@ -1,27 +1,24 @@
 import React from "react";
 import LoginModal from "./modal/LoginModal";
 import SignupModal from "./modal/SignupModal";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import classes from "../css/Navbar.module.css";
 
 const Navbar = (props) => {
-  const handleTab = (event) => {
-    const tab = document.getElementsByClassName("tabs");
-    for (let i = 0; i < tab.length; i++) {
-      tab[i].style.color = "rgba(163, 157, 160)";
-    }
-    event.currentTarget.style.color = "white";
-  };
-
   return (
     <React.Fragment>
+      <header className={classes.header}>
       <nav
         className="navbar navbar-expand-md navbar-dark"
         style={{ backgroundColor: "rgb(68,88,99)" }}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand fs-4" to="/home">
+          <NavLink
+            className="navbar-brand fs-4"
+            to="/"
+          >
             Compare
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -35,61 +32,83 @@ const Navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
-              <li className="nav-item fs-5 ">
-                <Link className="nav-link active tabs" onClick={handleTab} to="/home">
+              <li className="nav-item fs-5">
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
+                  to="/home"
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item fs-5 ">
-                <Link
-                  className="nav-link tabs"
-                  onClick={handleTab}
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
                   to="/laptops"
                 >
                   Laptops
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item fs-5 ">
-                <Link
-                  className="nav-link tabs"
-                  onClick={handleTab}
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
                   to="/mobiles"
                 >
                   Mobiles
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item fs-5 ">
-                <Link
-                  className="nav-link tabs"
-                  onClick={handleTab}
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
                   to="/tablets"
                 >
                   Tablets
-                </Link>
+                </NavLink>
               </li>
-              <li className="nav-item fs-5 ">
-                <Link className="nav-link tabs" onClick={handleTab} to="/test">
+              {/* <li className="nav-item fs-5 ">
+                <NavLink activeClassName={classes.active} className="nav-NavLink tabs" onClick={handleTab} to="/test">
                   Test
-                </Link>
-              </li>
-              <li className="nav-item fs-5 ">
-                <Link
-                  className="nav-link tabs"
+                </NavLink>
+              </li> */}
+              {/* <li className="nav-item fs-5 ">
+                <NavLink
+                activeClassName={classes.active}
+                  className="nav-NavLink"
                   onClick={handleTab}
                   to="/applyPagination"
                 >
                   Pagination
-                </Link>
-              </li>
-              
+                </NavLink>
+              </li> */}
               <li className="nav-item fs-5 ">
-                <Link
-                  className="nav-link tabs"
-                  onClick={handleTab}
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
                   to="users"
                 >
                   Users
-                </Link>
+                </NavLink>
+              </li>
+              <li className="nav-item fs-5 ">
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
+                  to="feedback"
+                >
+                  Feedback
+                </NavLink>
+              </li>
+              <li className="nav-item fs-5 ">
+                <NavLink
+                  activeClassName={classes.active}
+                  className="nav-NavLink"
+                  to="/details"
+                >
+                  Details
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex">
@@ -119,7 +138,7 @@ const Navbar = (props) => {
                   Login
                 </button>
               </li>
-              <li>
+              <li className="nav-item fs-5">
                 <button
                   className="btn btn-outline-secondary  "
                   type="button"
@@ -134,6 +153,7 @@ const Navbar = (props) => {
           </div>
         </div>
       </nav>
+      </header>
       <LoginModal />
       <SignupModal />
     </React.Fragment>

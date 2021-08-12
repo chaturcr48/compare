@@ -5,7 +5,7 @@ const fBrand = [
     {id: '2', brand: '7 - 8.7 inches'},
     {id: '3', brand: '8.7 - 10.2 MP'},
     {id: '4', brand: '10.2 - 12 inches'},
-    {id: '4', brand: 'Over 12 inches'},
+    {id: '5', brand: 'Over 12 inches'},
 ]
 const ScreenSize = () => {
   return (

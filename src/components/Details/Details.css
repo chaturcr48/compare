@@ -1,53 +1,32 @@
-.card{
-    padding-left: 250px;
-}
 
-.card-body{
-    padding-left: 100px;
-}
-.col-md-4{
-    margin-top: 100px;
-}
-.card-body{
-    float: right;
-    width: 55%;
-    padding-right: 80px;
-    padding-top: 60px;  
-}
-.image{
-    width: 45%;
-    float:left;
-    position: fixed;
-    padding-left: 170px;
-    padding-right: 10px;
-    padding-top: 70px;
-}
 
-.table{
-    border-top: 1px dotted black;
+.abc{
+    width: 15vw;
 }
-.img{
-    float: left;
-    position: fixed;
-    padding-left: 38px;
-    padding-top: 70px;
+.pos{
+    position:fixed;
+    display: inline-block;
+    margin-left: 7vw;
+    width: 34vw;
 }
-
-.button1{
-    background-color: rgb(190, 176, 149);
+.pos1{
+    position:fixed;
+    display: inline-block;
 }
-
-.rowBorder{
-    border: 1px solid black;
+.padding{
+    display: inline-block;
+    padding-left: 40vw;
 }
-.rowBorder1{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+@media screen and (max-width:800px)
+{
+    .padding{
+        padding-left: 0vw;
+    }
+    .pos{
+        position: relative;
+        width: 60vw;
+    }
+    .pos1{
+        position: relative;
+    }
 }
-
-.rowBorder2{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-}
-

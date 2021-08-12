@@ -20,23 +20,67 @@ const items = [
     name: "Xiaomi Redmi Note 10",
     desc: "5G (6GB RAM +128GB)",
   },
+  {
+    id: "4",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
+  {
+    id: "5",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
+  {
+    id: "6",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
+  {
+    id: "7",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
+  {
+    id: "8",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
+  {
+    id: "9",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
+  {
+    id: "10",
+    imgUrl: "https://cdn.mos.cms.futurecdn.net/nrgKnzWePRJkQNXzo66bXM.jpg",
+    name: "Xiaomi Redmi Note 10",
+    desc: "5G (6GB RAM +128GB)",
+  },
 ];
 
 const PopulatTablets = () => {
   return (
     <React.Fragment>
-      <div className="container mt-3">
+      <div className="container mt-2">
         <h3>Popular Tablets</h3>
-        <div className="row">
+        <div className="row row-cols-5 g-4">
           {items.map((item) => (
-            <div className="card mx-1 width" key={item.id}>
-              <img src={item.imgUrl} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">{item.name} </h5>
-                <p className="card-text">{item.desc} </p>
-                <a href={url} className="btn btn-primary">
-                  Go somewhere
-                </a>
+            <div className="col">
+              <div className="card" key={item.id}>
+                <img src={item.imgUrl} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">{item.name} </h5>
+                  <p className="card-text">{item.desc} </p>
+                  <a href={url} className="btn btn-primary">
+                    Go somewhere
+                  </a>
+                </div>
               </div>
             </div>
           ))}

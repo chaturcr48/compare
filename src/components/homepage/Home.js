@@ -1,6 +1,6 @@
 import React from "react";
 import MainCarousal from "../carousal/MainCarousal";
-// import MobileSlider from "./MobileSlider";
+//import MobileSlider from "./MobileSlider";
 import PopulatLaptop from "./PopularLaptop";
 import PopularMobiles from "./PopularMobiles";
 import PopulatTablets from "./PopularTablets";

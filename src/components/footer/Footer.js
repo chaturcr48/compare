@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../css/Footer.css";
+// import Details from '../Details/Details'
+import Team from './Team'
+import Feedback from '../Feedback/Feedback'
 
 const features = [
-  { id: "1", fUrl: {Details}, name: "Contact Us" },
+  { id: "1", fUrl: {Team}, name: "Team" },
   { id: "2", fUrl: "", name: "About Us" },
-  { id: "3", fUrl: "", name: "Careers" },
-  { id: "4", fUrl: "", name: "Feedback" },
+  { id: "3", fUrl: "", name: "Contact Us" },
+  { id: "4", fUrl: {Feedback}, name: "Feedback" },
 ];
 const resources = [
   { id: "1", rUrl: "https://www.amazon.com/", name: "Amazon" },
@@ -18,7 +21,7 @@ const resources = [
 ];
 
 const about = [
-  { id: "1", aUrl: "", name: "Team" },
+  { id: "1", aUrl: {Team}, name: "Team" },
   { id: "2", aUrl: "", name: "Services" },
   { id: "3", aUrl: "", name: "Privacy" },
   { id: "4", aUrl: "", name: "HELP" },

@@ -36,7 +36,7 @@ export const Details = () => {
         </div>
         <div className="card pr-1 py-2 py-3 border-0 pos">
             <div class="card-body px-2 py-1">
-              <img className="abc" src="https://source.unsplash.com/400x400/?Laptop" className=" img-fluid" alt="..." />
+              <img className="abc img-fluid" src="https://source.unsplash.com/400x400/?Laptop" alt="..." />
             </div>
         </div>
 

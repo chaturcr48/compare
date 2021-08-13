@@ -5,8 +5,7 @@
 }
 
 .paginationItem {
-  background: white;
-  border: 2px solid rgb(68, 88, 99);
+  border: 2px solid rgb(77, 88, 99);
   padding: 10px 15px;
   border-radius: 50%;
   height: 45px;
@@ -16,7 +15,7 @@
   cursor: pointer;
 }
 .paginationItem:hover {
-  background-color: rgb(68,88,99);
+  background-color: rgb(77,88,99);
   color: white;
 }
 
@@ -29,28 +28,27 @@
 
 .prev,
 .next {
-  background: white;
   border: none;
   padding: 10px;
   color: blue;
-  box-shadow: 0 0 3px rgb(68, 88, 99);
+  box-shadow: 0 0 3px rgb(77, 88, 99);
   margin: 0 10px;
   cursor: pointer;
 }
 .prev:hover{
-  background-color: rgb(68,88,99);
+  background-color: rgb(77,88,99);
   color: white;
 }
 .next:hover {
-  background-color: rgb(68,88,99);
+  background-color: rgb(77,88,99);
   color: white;
 }
 
 .paginationItem.active {
-  border: 1px solid rgb(68, 88, 99);
+  border: 1px solid rgb(77, 88, 99);
   color: white;
   pointer-events: none;
-  background-color: rgb(68, 88, 99);
+  background-color: rgb(77, 88, 99);
 }
 
 .prev.disabled,

@@ -1,13 +1,12 @@
-// import React from "react";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Data from "./finalData.json";
 import "../../css/LapDes.css";
 
 const dataLimit = 20;
 const pageLimit = 5;
 
-export const LapDes = () => {
+export const LapDes = (props) => {
+  const Data = props.data;
   const [pages] = useState(Math.round(Data.length / dataLimit));
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -89,33 +88,31 @@ export const LapDes = () => {
         ))}
       </div>
 
-      <div>
-        <div className="pagination mt-2">
+      <div className="pagination mt-2">
+        <button
+          onClick={goToPreviousPage}
+          className={`prev ${currentPage === 1 ? "disabled" : ""}`}
+        >
+          prev
+        </button>
+        {getPaginationGroup().map((item, index) => (
           <button
-            onClick={goToPreviousPage}
-            className={`prev ${currentPage === 1 ? "disabled" : ""}`}
+            key={index}
+            onClick={changePage}
+            className={`paginationItem ${
+              currentPage === item ? "active" : null
+            }`}
           >
-            prev
+            <span>{item}</span>
           </button>
-          {getPaginationGroup().map((item, index) => (
-            <button
-              key={index}
-              onClick={changePage}
-              className={`paginationItem ${
-                currentPage === item ? "active" : null
-              }`}
-            >
-              <span>{item}</span>
-            </button>
-          ))}
-          <button
-            onClick={goToNextPage}
-            className={`next ${currentPage === pages ? "disabled" : ""}`}
-          >
-            next
-          </button>
-            <span>Total Page({pages})</span>
-        </div>
+        ))}
+        <button
+          onClick={goToNextPage}
+          className={`next ${currentPage === pages ? "disabled" : ""}`}
+        >
+          next
+        </button>
+        <span>Total Page({pages})</span>
       </div>
     </React.Fragment>
   );

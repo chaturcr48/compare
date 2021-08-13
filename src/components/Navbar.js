@@ -29,7 +29,7 @@ const Navbar = (props) => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
-              <ul className="navbar-nav me-auto mb-2 mb-md-0">
+              <ul className="navbar-nav me-auto mb-2">
                 <li className="nav-item fs-5">
                   <NavLink
                     activeClassName={classes.active}
@@ -75,15 +75,6 @@ const Navbar = (props) => {
                     Users
                   </NavLink>
                 </li>
-                <li className="nav-item fs-5 ">
-                  <NavLink
-                    activeClassName={classes.active}
-                    className="nav-NavLink"
-                    to="/contactus"
-                  >
-                    Contact Us
-                  </NavLink>
-                </li>
               </ul>
               <form className="d-flex">
                 <input
@@ -103,7 +94,7 @@ const Navbar = (props) => {
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li>
                   <button
-                    className="btn btn-outline-secondary mx-2 "
+                    className="btn btn-outline-secondary mr-2 login-button"
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#loginModal"
@@ -114,7 +105,7 @@ const Navbar = (props) => {
                 </li>
                 <li className="nav-item fs-5">
                   <button
-                    className="btn btn-outline-secondary  "
+                    className="btn btn-outline-secondary signup-button"
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#signupModal"

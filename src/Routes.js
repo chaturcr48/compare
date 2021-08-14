@@ -18,7 +18,8 @@ const Routes = () => {
     return (
         <React.Fragment>
             <Switch>
-            <Route path='/home' > <Home /> </Route>
+            <Route path='/' exact> <Home /> </Route>
+            <Route path='/home'> <Home /> </Route>
             <Route path='/mobiles' exact> <Mobiles /> </Route>
             <Route path='/mobiles/:mobileId' > <MobileDetail /> </Route>
             <Route path='/tablets' exact> <Tablets /> </Route>

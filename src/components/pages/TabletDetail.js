@@ -1,19 +1,19 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import Data from "../laptop/finalData.json";
-import "../../css/DetailPage.css";
+import TabletData from "../tablet/TabletData.json";
 let url = "";
 
-const LaptopDetail = () => {
+const TabletDetail = () => {
   const params = useParams();
-  const detail = Data[params.laptopId];
+  const detail = TabletData[params.tabletId];
+
   return (
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
           <div className="col">
             <div className="row">
-              <img src={detail.imgUrl} className="big-img" alt="..." />
+              <img src="" className="big-img" alt="..." />
             </div>
             <div className="row mt-1">
               <div className="col-3">
@@ -49,12 +49,7 @@ const LaptopDetail = () => {
           <div className="col">
             <div className="row py-2">
               <div>
-                <h5 className="">
-                  {detail.Brand}
-                  {detail.Series} {detail.Type} {detail.OS_Architecture}{" "}
-                  {detail.Processor_Brand} {detail.Processor_Name}{" "}
-                  {detail.Processor_Generation}
-                </h5>
+                <h5>{detail.Brand}</h5>
               </div>
               <div>
                 <Link to="">Visit the HP store</Link>
@@ -217,39 +212,39 @@ const LaptopDetail = () => {
             <table className="table">
               <tbody>
                 <tr>
-                  <td className='table-feature'>Processor Brand</td>
+                  <td className="table-feature">Processor Brand</td>
                   <td>{detail.Processor_Brand}</td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>Processor Name</td>
+                  <td className="table-feature">Processor Name</td>
                   <td>{detail.Processor_Name}</td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>Processor Generation</td>
+                  <td className="table-feature">Processor Generation</td>
                   <td>{detail.Processor_Generation}</td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>SSD</td>
+                  <td className="table-feature">SSD</td>
                   <td>{detail.SSD} </td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>SSD Capacity</td>
+                  <td className="table-feature">SSD Capacity</td>
                   <td>{detail.SSD_Capacity} </td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>RAM</td>
+                  <td className="table-feature">RAM</td>
                   <td>{detail.RAM}</td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>RAM Type</td>
+                  <td className="table-feature">RAM Type</td>
                   <td>{detail.RAM_Type} </td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>Processor Variant</td>
+                  <td className="table-feature">Processor Variant</td>
                   <td>{detail.Processor_Variant} </td>
                 </tr>
                 <tr>
-                  <td className='table-feature'>Clock Speed</td>
+                  <td className="table-feature">Clock Speed</td>
                   <td>{detail.Clock_Speed} </td>
                 </tr>
               </tbody>
@@ -449,4 +444,4 @@ const LaptopDetail = () => {
     </React.Fragment>
   );
 };
-export default LaptopDetail;
+export default TabletDetail;

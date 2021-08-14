@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../../css/LapDes.css";
 
 const dataLimit = 20;
 const pageLimit = 5;
 
-export const LapDes = (props) => {
+const TabDes = (props) => {
   const Data = props.data;
   const [pages] = useState(Math.round(Data.length / dataLimit));
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,53 +36,28 @@ export const LapDes = (props) => {
     let start = Math.floor((currentPage - 1) / pageLimit) * pageLimit;
     return new Array(pageLimit).fill().map((_, idx) => start + idx + 1);
   };
-
   return (
     <React.Fragment>
-      <div>
-        {getPaginatedData().map((Data) => (
+      <div className="my-2" style={{ gridRow: "1/2" }}>
+        {getPaginatedData().map((tablet) => (
           <div
-            className="card full-card"
-            key={Data.id}
-            style={{ border: "none" }}
+            className="card mb-3"
+            key={tablet.id}
+            style={{ maxWidth: "800px", border: "none" }}
           >
-            <div className="row">
-              <div className="col-md-4 image">
-                <Link to={"/laptop/" + Data.id}>
-                  <img src={Data.imgUrl} className="img-fluid" alt="..." />
-                </Link>
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img src="" className="img-fluid rounded-start" alt="..." />
               </div>
               <div className="col-md-8">
-                <div className="px-2">
-                  <h5 className="card-title title">
-                    <Link to={"/laptop/" + Data.id}>
-                      {Data.Brand} {Data.Series} {Data.Type}
-                      {Data.OS_Architecture} {Data.Processor_Brand}
-                      {Data.Processor_Name} {Data.Processor_Generation}
-                    </Link>
-                  </h5>
-                  <ul className="card-text">
-                    <li>
-                      Storage : {Data.SSD_Capacity} SSD {Data.HDD_Capacity} HDD
-                    </li>
-                    <li>
-                      Ram : {Data.RAM} {Data.RAM_Type}
-                    </li>
-                    <li> Suitable_For : {Data.Suitable_For}</li>
-                    <li>
-                      Battery : {Data.Battery_Cell} {Data.Battery_Backup}
-                    </li>
-                    <li>
-                      Graphic : {Data.Dedicated_Graphic_Memory_Capacity}{" "}
-                      {Data.Dedicated_Graphic_Memory_Type}
-                    </li>
-                    <li> Operating System : {Data.Operating_System}</li>
-                    <li> Screen_Size : {Data.Screen_Size}</li>
-                  </ul>
+                <div className="card-body">
+                  <Link to={"/tablets/" + tablet.id}>{tablet.Brand}</Link>
+                  <p className="card-text">
+                    {tablet.Display_Size} {tablet.OS}
+                  </p>
                 </div>
               </div>
             </div>
-            <hr />
           </div>
         ))}
       </div>
@@ -117,5 +91,4 @@ export const LapDes = (props) => {
     </React.Fragment>
   );
 };
-
-export default LapDes;
+export default TabDes;

@@ -8,7 +8,7 @@ const fPrice = [
   { id: "5", pRange: "Above 80,000" },
 ];
 
-const FilterPrice = () => {
+const FilterPrice = ({ filterPrice, setFilterPrice }) => {
   return (
     <React.Fragment>
       <p>
@@ -17,6 +17,8 @@ const FilterPrice = () => {
       {fPrice.map((range) => (
         <div className="form-check" key={range.id}>
           <input
+            value={filterPrice}
+            onInput={(e) => setFilterPrice(e.target.value)}
             className="form-check-input"
             type="radio"
             name="flexRadioDefault"

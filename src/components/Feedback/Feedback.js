@@ -1,6 +1,6 @@
 import React from "react";
 import "./Feedback.css";
-export const Feedback = () => {
+const Feedback = () => {
   return (
     <>
       <div className="container mt-2 w-50">

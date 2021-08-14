@@ -1,34 +1,36 @@
-import React from "react";
+import React,{useState} from "react";
 import Filter from "../filter/mobileFilter/Filter";
-import './mobile.css'
+import SearchProduct from "../searchBar/SearchProduct";
+import MobDes from "./MobDes";
+import './mobile.css';
+import MobileData from './mobileData.json';
 
-const mobiles = [
-    {
-        id: "1",
-        imgUrl:
-          "https://source.unsplash.com/400x300/?Mobile",
-        name: "Xiaomi Redmi Note 10",
-        desc: "5G (6GB RAM +128GB)",
-    },
-    {
-        id: "2",
-        imgUrl:
-          "https://source.unsplash.com/400x300/?MObile",
-        name: "Xiaomi Redmi Note 10",
-        desc: "5G (6GB RAM +128GB)",
-    },
-    {
-        id: "3",
-        imgUrl:
-          "https://source.unsplash.com/400x300/?MOBile",
-        name: "Xiaomi Redmi Note 10",
-        desc: "5G (6GB RAM +128GB)",
-    },
-]
 const Mobiles = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filterPosts = (MobileData, query) => {
+    if (!query) {
+      return MobileData;
+    }
+
+    return MobileData.filter((Data) => {
+      const laptopHeading =
+        Data.Brand;
+
+      const laptopBrand = laptopHeading.toLowerCase();
+      return laptopBrand.includes(query);
+    });
+  };
+  const searchedData = filterPosts(MobileData, searchQuery);
   return (
     <React.Fragment>
       <div className="row mt-4 mx-1">
+      <div className="row">
+        <SearchProduct
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+        />
+      </div>
         <div className="col-3 pl-4">
           <div
             className="filter container"
@@ -52,30 +54,8 @@ const Mobiles = () => {
         </div>
         <div className="col-9">
           <div> Showing 1 – 20 of 2000 results for "Mobiles".</div>
-          <div className="my-2" style={{ gridRow: "1/2" }}>
-            {mobiles.map((mobile) => (
-              <div
-                className="card mb-3"
-                key={mobile.id}
-                style={{ maxWidth: "800px", border: "none" }}
-              >
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img
-                      src={mobile.imgUrl}
-                      className="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">{mobile.name} </h5>
-                      <p className="card-text">{mobile.desc} </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div>
+            <MobDes data={searchedData} />
           </div>
         </div>
       </div>

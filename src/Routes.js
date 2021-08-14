@@ -7,6 +7,7 @@ import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
 import LaptopDetail from "./components/pages/LaptopDetail";
+import MobileDetail from "./components/pages/MobileDetail";
 import TabletDetail from "./components/pages/TabletDetail";
 import Tablets from "./components/tablet/Tablets";
 import ApplyPagination from "./components/test/ApplyPagination";
@@ -18,7 +19,8 @@ const Routes = () => {
         <React.Fragment>
             <Switch>
             <Route path='/home' > <Home /> </Route>
-            <Route path='/mobiles' > <Mobiles /> </Route>
+            <Route path='/mobiles' exact> <Mobiles /> </Route>
+            <Route path='/mobiles/:mobileId' > <MobileDetail /> </Route>
             <Route path='/tablets' exact> <Tablets /> </Route>
             <Route path='/tablets/:tabletId' > <TabletDetail /> </Route>
             <Route path='/test' > <Test /> </Route>

@@ -45,19 +45,37 @@ const TabDes = (props) => {
             key={tablet.id}
             style={{ maxWidth: "800px", border: "none" }}
           >
-            <div className="row g-0">
-              <div className="col-md-4">
-                <img src="" className="img-fluid rounded-start" alt="..." />
+            <div className="row" style={{'marginLeft': 'auto'}}>
+              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center'}}>
+                <Link to={"/tablets/" + tablet.id}>
+                  <img src="https://source.unsplash.com/400x300/?tablet" 
+                  className="img-fluid" 
+                  alt="..." />
+                </Link>
               </div>
               <div className="col-md-8">
-                <div className="card-body">
-                  <Link to={"/tablets/" + tablet.id}>{tablet.Brand}</Link>
-                  <p className="card-text">
-                    {tablet.Display_Size} {tablet.OS}
+                <div className=" px-2">
+                  <p className="fs-5 card-title title">
+                    <Link to={"/tablets/" + tablet.id}>
+                      {tablet.Brand} {tablet.Model_Name} {tablet.Processor_Type} Processor 
+                      {" "}{tablet.OS} Operating System {tablet.Internal_Storage}
+                    </Link>
                   </p>
+                  <ul className="card-text fs-6">
+                    <li> Ram : {tablet.RAM} </li>
+                    <li>Operating System : {tablet.OS} {tablet.Operating_System_Version}</li>
+                    <li>Battery : {tablet.Battery_Capacity } </li>
+                    <li>
+                      Display Size  : {tablet.Display_Size}{" "}
+                    </li>
+                    <li> Voice Call : {tablet.Voice_Call}</li>
+                    <li> Camera :  {tablet.Primary_Camera} Primary; {tablet.Secondary_Camera} Secondary</li>
+                    
+                  </ul>
                 </div>
               </div>
             </div>
+            <hr />
           </div>
         ))}
       </div>

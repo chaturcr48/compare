@@ -4,7 +4,7 @@ import Filter from "../filter/laptopFilter/Filter";
 import "./Laptops.css";
 import LapDes from "./LapDes";
 import Data from "./finalData.json";
-import SearchLaptop from "../searchBar/SearchLaptop";
+import SearchProduct from "../searchBar/SearchProduct";
 
 const Laptops = () => {
   // const { search } = window.location;
@@ -38,7 +38,7 @@ const Laptops = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <SearchLaptop
+          <SearchProduct
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />

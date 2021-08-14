@@ -7,6 +7,7 @@ import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
 import LaptopDetail from "./components/pages/LaptopDetail";
+import TabletDetail from "./components/pages/TabletDetail";
 import Tablets from "./components/tablet/Tablets";
 import ApplyPagination from "./components/test/ApplyPagination";
 import Test from "./components/test/Test";
@@ -18,7 +19,8 @@ const Routes = () => {
             <Switch>
             <Route path='/home' > <Home /> </Route>
             <Route path='/mobiles' > <Mobiles /> </Route>
-            <Route path='/tablets' > <Tablets /> </Route>
+            <Route path='/tablets' exact> <Tablets /> </Route>
+            <Route path='/tablets/:tabletId' > <TabletDetail /> </Route>
             <Route path='/test' > <Test /> </Route>
             <Route path='/applyPagination' > <ApplyPagination /> </Route>
             <Route path='/users' > <Users /> </Route>

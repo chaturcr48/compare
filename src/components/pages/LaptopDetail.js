@@ -74,7 +74,7 @@ const LaptopDetail = () => {
                 <strong style={{ color: "green" }}>
                   INR&nbsp; {detail.Discounted_price}
                 </strong>
-                <span class="text-decoration-line-through ml-1">
+                <span className="text-decoration-line-through ml-1">
                   {" "}
                   {detail.MRP_Price}{" "}
                 </span>

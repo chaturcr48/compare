@@ -17,12 +17,12 @@ const Routes = () => {
         <React.Fragment>
             <Switch>
             <Route path='/home' > <Home /> </Route>
-            <Route path='/laptop' exact > <Laptops /> </Route>
             <Route path='/mobiles' > <Mobiles /> </Route>
             <Route path='/tablets' > <Tablets /> </Route>
             <Route path='/test' > <Test /> </Route>
             <Route path='/applyPagination' > <ApplyPagination /> </Route>
             <Route path='/users' > <Users /> </Route>
+            <Route path='/laptop' exact > <Laptops /> </Route>
             <Route path='/laptop/:laptopId' > <LaptopDetail /> </Route>
             <Route path='/footer-detail' > <FooterDetail /> </Route>
             <Route path='/footer-team'> <Team /> </Route>

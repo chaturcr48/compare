@@ -31,7 +31,7 @@ export const Team = () => {
                 </a>
               </li>
               <li className="nav-link  fs-3 px-5">
-                <Link className='nav-link' to={"/footer-"+feedbackUrl}>
+                <Link className='nav-link' href={url}>
                   About Us
                 </Link>
               </li>
@@ -41,9 +41,9 @@ export const Team = () => {
                 </a>
               </li>
               <li className="nav-link fs-3 px-5">
-                <a className="nav-link" href={url}>
+                <Link className="nav-link" to={"/footer-"+feedbackUrl}>
                   Feedback
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

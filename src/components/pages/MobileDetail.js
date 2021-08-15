@@ -157,10 +157,10 @@ const MobileDetail = () => {
             </div>
           </div>
         </div>
-        <div className="specification-heading">Specification</div>
+        <div className="fs-3">Specification</div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">General</div>
+            <div className="fs-4">General</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -205,7 +205,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">
+            <div className="fs-4">
               Processor And Memory Features
             </div>
             <table className="table">
@@ -252,7 +252,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">Additional Features</div>
+            <div className="fs-4">Additional Features</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -289,7 +289,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">Warranty</div>
+            <div className="fs-4">Warranty</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -318,7 +318,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">Connectivity Features</div>
+            <div className="fs-4">Connectivity Features</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -335,7 +335,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">Dimensions</div>
+            <div className="fs-4">Dimensions</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -352,7 +352,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">Operating System</div>
+            <div className="fs-4">Operating System</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -372,7 +372,7 @@ const MobileDetail = () => {
           </div>
         </div>
         <div className="row">
-          <div className="specification-heading">
+          <div className="fs-4">
             Display And Audio Features
           </div>
           <div className="col">
@@ -412,7 +412,7 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading">Port And Slot Features</div>
+            <div className="fs-4">Port And Slot Features</div>
             <table className="table">
               <tbody>
                 <tr>

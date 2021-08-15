@@ -54,7 +54,7 @@ const Mobiles = () => {
         </div>
         <div className="col-9">
           <div> Showing 1 – 20 of 2000 results for "Mobiles".</div>
-          <div>
+          <div className="mt-2">
             <MobDes data={searchedData} />
           </div>
         </div>

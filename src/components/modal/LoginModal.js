@@ -1,4 +1,38 @@
+import React, {useState} from "react";
+
 const LoginModal = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const emailHamdler = event => {
+    setEmail(event.target.value);
+  }
+  const passwordHandler = event => {
+    setPassword(event.target.value);
+  }
+
+  async function submitHandler(event) {
+    event.preventDefault();
+    const loginUser = {
+      email: email,
+      password: password,
+    };
+    const response = await fetch(
+      "https://synkrino-e13d6-default-rtdb.firebaseio.com/loginUser.json",
+      {
+        method: "POST",
+        body: JSON.stringify(loginUser),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    await response.json();
+    setEmail('');
+    setPassword('');
+  }
+
   return (
     <div
       className="modal fade"
@@ -21,7 +55,7 @@ const LoginModal = () => {
             ></button>
           </div>
           <div className="modal-body">
-            <form>
+            <form onSubmit={submitHandler}>
               <div className="mb-3">
                 <label htmlFor="exampleInputEmail1" className="form-label">
                   Email address
@@ -31,6 +65,8 @@ const LoginModal = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  value={email}
+                  onChange={emailHamdler}
                 />
                 <div id="emailHelp" className="form-text">
                   We'll never share your email with anyone else.
@@ -44,6 +80,8 @@ const LoginModal = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
+                  value={password}
+                  onChange={passwordHandler}
                 />
               </div>
               <div className="mb-3 form-check">
@@ -56,7 +94,7 @@ const LoginModal = () => {
                   Check me out
                 </label>
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary mr-2" data-bs-dismiss="modal">
                 Submit
               </button>
               <button

@@ -1,20 +1,32 @@
-import React, { useRef } from 'react';
+import React, { useState } from "react";
 
 const SignupModal = (props) => {
 
-
-  const usernameRef = useRef("");
-  const mobileNumberRef = useRef("");
-  const emailRef = useRef("");
-  const passwordRef = useRef("");
+  const [username, setUsername] = useState('');
+  const [mobileNumber, setMobileNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const usernameHandler = event => {
+    setUsername(event.target.value);
+  }
+  const mobileNumberHandler = event => {
+    setMobileNumber(event.target.value);
+  }
+  const emailHandler = event => {
+    setEmail(event.target.value);
+  }
+  const passwordHandler = event => {
+    setPassword(event.target.value);
+  }
 
   async function submitHandler(event) {
     event.preventDefault();
     const user = {
-      username: usernameRef.current.value,
-      mobileNumber: mobileNumberRef.current.value,
-      email: emailRef.current.value,
-      password: passwordRef.current.value
+      username: username,
+      mobileNumber: mobileNumber,
+      email: email,
+      password: password,
     };
     const response = await fetch(
       "https://synkrino-e13d6-default-rtdb.firebaseio.com/users.json",
@@ -27,6 +39,13 @@ const SignupModal = (props) => {
       }
     );
     await response.json();
+    setUsername('');
+    setMobileNumber('');
+    setEmail('');
+    setPassword('');
+  }
+  const submitButton = () => {
+    window.alert("SignUp successfully, Login to continue");
   }
 
   return (
@@ -60,7 +79,8 @@ const SignupModal = (props) => {
                   type="text"
                   className="form-control"
                   id="exampleInputUsername"
-                  ref={usernameRef}
+                  value={username}
+                  onChange={usernameHandler}
                 />
                 <label htmlFor="exampleInputPhoneNumber" className="form-label">
                   Mobile Number
@@ -69,7 +89,8 @@ const SignupModal = (props) => {
                   type="number"
                   className="form-control"
                   id="exampleInputPhoneNumber"
-                  ref={mobileNumberRef}
+                  value={mobileNumber}
+                  onChange={mobileNumberHandler}
                 />
                 <label htmlFor="exampleInputEmail2" className="form-label">
                   Email address
@@ -78,7 +99,8 @@ const SignupModal = (props) => {
                   type="email"
                   className="form-control"
                   id="exampleInputEmail2"
-                  ref={emailRef}
+                  value={email}
+                  onChange={emailHandler}
                 />
                 <label htmlFor="exampleInputPassword3" className="form-label">
                   Password
@@ -87,11 +109,12 @@ const SignupModal = (props) => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword3"
-                  ref={passwordRef}
+                  value={password}
+                  onChange={passwordHandler}
                 />
               </div>
               <div className="mb-3 form-check"></div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" data-bs-dismiss="modal" onClick={submitButton}>
                 Submit
               </button>
               <button

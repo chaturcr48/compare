@@ -70,9 +70,18 @@ const Navbar = (props) => {
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"
-                    to="users"
+                    to="/users"
                   >
                     Users
+                  </NavLink>
+                </li>
+                <li className="nav-item fs-5 ">
+                  <NavLink
+                    activeClassName={classes.active}
+                    className="nav-NavLink"
+                    to="/mobile-api-test"
+                  >
+                    MobileApiTest
                   </NavLink>
                 </li>
               </ul>

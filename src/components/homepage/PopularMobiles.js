@@ -49,9 +49,9 @@ const PopularMobiles = () => {
             <div className='col'>
               <div class="card">
                 <img src={item.imgUrl} class="card-img-top" alt="..."/>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below </p>
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">This card has supporting text below </p>
                   </div>
               </div>
               </div>

@@ -1,4 +1,5 @@
-import React from "react";
+// import React, {} from "react";
+import React, { useState } from "react";
 
 let url = "";
 
@@ -10,7 +11,13 @@ const fBrand = [
   { id: "5", brand: "MSI" },
   { id: "6", brand: "Accer" },
 ];
-const FilterBrand = ({filterBrand, setFilterBrand}) => {
+const FilterBrand = (props) => {
+  const [brand, setBrand] = useState("");
+  const brandHandler = (event) => {
+    setBrand(event.target.value);
+    console.log(event.target.value);
+    props.filterByBrand(brand);
+  };
   return (
     <React.Fragment>
       <br />
@@ -20,8 +27,8 @@ const FilterBrand = ({filterBrand, setFilterBrand}) => {
       {fBrand.map((brand) => (
         <div className="form-check" key={brand.id}>
           <input
-            // value={filterBrand}
-            // onInput={setFilterBrand(brand.brand)}
+            value={brand.brand}
+            onInput={brandHandler}
             className="form-check-input"
             type="checkbox"
             name="flexRadioDefault"
@@ -32,6 +39,7 @@ const FilterBrand = ({filterBrand, setFilterBrand}) => {
           </label>
         </div>
       ))}
+
       <a href={url}>See more</a> <br />
     </React.Fragment>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import Data from "../laptop/finalData.json";
 import "../../css/DetailPage.css";
 let url = "";

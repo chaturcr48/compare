@@ -9,13 +9,16 @@ import Stores from "./Stores";
 import Weight from "./Weight";
 import OperatingSystem from "./OperatingSystem";
 
-const Filter = () => {
+const Filter = (props) => {
+  const filterByBrandHandler = (value) => {
+    props.filterBrand(value);
+  }
   return (
     <React.Fragment>
       <div className='filter overflow-auto p-2'>
         <h4>Filters</h4>
         <FilterPrice />
-        <FilterBrand />
+        <FilterBrand filterByBrand={filterByBrandHandler} />
         <FilterRam />
         <StorageCapacity />
         <Stores />

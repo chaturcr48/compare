@@ -45,22 +45,37 @@ const MobDes = (props) => {
             key={mobile.id}
             style={{ maxWidth: "800px", border: "none" }}
           >
-            <div className="row g-0">
-              <div className="col-md-4">
-                  <Link to={"/mobiles/" + mobile.id}>
-                    <img src="" className="img-fluid rounded-start" alt="..." />
-                   </Link>
+            <div className="row" style={{'marginLeft': 'auto'}}>
+              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center'}}>
+                <Link to={"/mobiles/" + mobile.id}>
+                  <img src="https://source.unsplash.com/400x300/?mobile" 
+                  className="img-fluid" 
+                  alt="..." />
+                </Link>
               </div>
               <div className="col-md-8">
-                <div className="card-body">
-                  <Link to={"/mobiles/" + mobile.id}>{mobile.Brand}</Link>
-                  <p className="card-text">
-                    {mobile.Display_Size} {mobile.OS}
+                <div className=" px-2">
+                  <p className="fs-5 card-title title">
+                    <Link to={"/mobiles/" + mobile.id}>
+                      {mobile.Brand} {mobile.Model_Name} {mobile.Processor_Type} Processor 
+                      {" "}{mobile.OS} Operating System {mobile.Internal_Storage}
+                    </Link>
                   </p>
-                
-              </div>
+                  <ul className="card-text fs-6">
+                    <li> Ram : {mobile.RAM} </li>
+                    <li>Operating System : {mobile.Operating_System}</li>
+                    <li>Internal Storage : {mobile.Internal_Storage } Expandable upto {mobile.Expandable_Storage} </li>
+                    <li>
+                      Display Size  : {mobile.Display_Size}{" "}
+                    </li>
+                    <li> Processor : {mobile.Processor_Type} {mobile.Processor_Core}</li>
+                    <li> Camera :  {mobile.Primary_Camera} Primary; {mobile.Secondary_Camera} Secondary</li>
+                    
+                  </ul>
+                </div>
               </div>
             </div>
+            <hr />
           </div>
         ))}
       </div>

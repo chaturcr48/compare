@@ -45,19 +45,12 @@ const TabDes = (props) => {
             key={tablet.id}
             style={{ maxWidth: "800px", border: "none" }}
           >
-<<<<<<< HEAD
             <div className="row" style={{'marginLeft': 'auto'}}>
               <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center'}}>
                 <Link to={"/tablets/" + tablet.id}>
                   <img src="https://source.unsplash.com/400x300/?tablet" 
                   className="img-fluid" 
                   alt="..." />
-=======
-            <div className="row g-0">
-              <div className="col-md-4">
-                <Link to={"/tablets/" + tablet.id}>
-                <img src="" className="img-fluid rounded-start" alt="..." />
->>>>>>> fe1dea7d5fa4392a0780ae19b59075c9705b5858
                 </Link>
               </div>
               <div className="col-md-8">
@@ -68,7 +61,6 @@ const TabDes = (props) => {
                       {" "}{tablet.OS} Operating System {tablet.Internal_Storage}
                     </Link>
                   </p>
-<<<<<<< HEAD
                   <ul className="card-text fs-6">
                     <li> Ram : {tablet.RAM} </li>
                     <li>Operating System : {tablet.OS} {tablet.Operating_System_Version}</li>
@@ -81,10 +73,6 @@ const TabDes = (props) => {
                     
                   </ul>
                 </div>
-=======
-                
-              </div>
->>>>>>> fe1dea7d5fa4392a0780ae19b59075c9705b5858
               </div>
             </div>
             <hr />

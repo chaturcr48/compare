@@ -11,6 +11,7 @@ import MobileDetail from "./components/pages/MobileDetail";
 import TabletDetail from "./components/pages/TabletDetail";
 import Tablets from "./components/tablet/Tablets";
 import ApplyPagination from "./components/test/ApplyPagination";
+import MobileApiTest from "./components/test/MobileApiTest";
 import Test from "./components/test/Test";
 import Users from "./components/users/Users";
 
@@ -32,6 +33,7 @@ const Routes = () => {
             <Route path='/footer-detail' > <FooterDetail /> </Route>
             <Route path='/footer-team'> <Team /> </Route>
             <Route path='/footer-feedback' > <Feedback /> </Route>
+            <Route path='/mobile-api-test' > <MobileApiTest /> </Route>
             </Switch>
         </React.Fragment>
     )

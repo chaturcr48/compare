@@ -1,13 +1,13 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import MobileData from '../mobile/mobileData.json';
+import MobileData from "../mobile/mobileData.json";
 let url = "";
 
 const MobileDetail = () => {
-    const params = useParams();
+  const params = useParams();
   const detail = MobileData[params.mobileId];
-    return (
-        <React.Fragment>
+  return (
+    <React.Fragment>
       <div className="container mt-2">
         <div className="row">
           <div className="col">
@@ -441,6 +441,6 @@ const MobileDetail = () => {
         </div>
       </div>
     </React.Fragment>
-    )
-}
+  );
+};
 export default MobileDetail;

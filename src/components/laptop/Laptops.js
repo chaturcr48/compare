@@ -11,8 +11,19 @@ const Laptops = () => {
   // const query = new URLSearchParams(search).get("s");
   // const [searchQuery, setSearchQuery] = useState(query || "");
 
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [filterBrand, setFilterBrand] = useState('');
+  // const filterByBrand = (Data, query) => {
+  //   if(!query){
+  //     return Data;
+  //   }
+  //   return Data.filter(Data => {
+  //     const filterLaptopBrand = Data.Brand.toLowerCase();
+  //     return filterLaptopBrand.includes(query); 
+  //   })
+  // }
+  // const searchedData = filterByBrand(Data, filterBrand);
 
+  const [searchQuery, setSearchQuery] = useState("");
   const filterPosts = (Data, query) => {
     if (!query) {
       return Data;
@@ -45,7 +56,10 @@ const Laptops = () => {
         </div>
         <div className="row">
           <div className="filter-container">
-            <Filter />
+            <Filter
+              // filterBrand={filterBrand}
+              // setFilterBrand={setFilterBrand}
+               />
           </div>
           <div className="lapDes-container">
             <div> Showing 1 – 20 of 2000 results for "laptop".</div>

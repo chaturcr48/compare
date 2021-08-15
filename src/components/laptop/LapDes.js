@@ -47,29 +47,30 @@ export const LapDes = (props) => {
             key={Data.id}
             style={{ border: "none" }}
           >
-            <div className="row">
-              <div className="col-md-4 image">
+            <div className="row" style={{'marginLeft': 'auto'}}>
+              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center'}}>
                 <Link to={"/laptop/" + Data.id}>
-                  <img src={Data.imgUrl} className="img-fluid" alt="..." />
+                  <img src="https://source.unsplash.com/400x300/?laptop" 
+                  className="img-fluid" 
+                  alt="..." />
                 </Link>
               </div>
               <div className="col-md-8">
-                <div className="px-2">
-                  <h5 className="card-title title">
+                <div className=" px-2">
+                  <p className="fs-5 card-title title">
                     <Link to={"/laptop/" + Data.id}>
                       {Data.Brand} {Data.Series} {Data.Type}
                       {Data.OS_Architecture} {Data.Processor_Brand}
                       {Data.Processor_Name} {Data.Processor_Generation}
                     </Link>
-                  </h5>
-                  <ul className="card-text">
+                  </p>
+                  <ul className="card-text fs-6">
                     <li>
                       Storage : {Data.SSD_Capacity} SSD {Data.HDD_Capacity} HDD
                     </li>
                     <li>
                       Ram : {Data.RAM} {Data.RAM_Type}
                     </li>
-                    <li> Suitable_For : {Data.Suitable_For}</li>
                     <li>
                       Battery : {Data.Battery_Cell} {Data.Battery_Backup}
                     </li>

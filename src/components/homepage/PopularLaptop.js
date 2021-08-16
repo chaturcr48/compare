@@ -46,7 +46,7 @@ const PopulatLaptop = () => {
         <h3>Popular Laptops</h3>
         <div className="row row-cols-5 g-4">
           {items.map((item) => (
-            <div className='col'>
+            <div className='col' key={item.id}>
             <div className="card" key={item.id}>
               <img src={item.imgUrl} className="card-img-top" alt="..." />
               <div className="card-body">

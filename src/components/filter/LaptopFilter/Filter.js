@@ -11,6 +11,7 @@ import OperatingSystem from "./OperatingSystem";
 
 const Filter = (props) => {
   const filterByBrandHandler = (value) => {
+    console.log(value)
     props.filterBrand(value);
   }
   return (

@@ -49,12 +49,12 @@ const TabDes = (props) => {
   };
   return (
     <React.Fragment>
-      <div className="my-2" style={{ gridRow: "1/2" }}>
+      <div>
         {getPaginatedData().map((tablet) => (
           <div
-            className="card mb-3"
+            className="card full-card"
             key={tablet.id}
-            style={{ maxWidth: "800px", border: "none" }}
+            style={{border: "none" }}
           >
             <div className="row" style={{'marginLeft': 'auto'}}>
               <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center'}}>

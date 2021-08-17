@@ -1,12 +1,13 @@
 .image:hover{
-    border: 2px solid rgb(68,88,99);
+    border: 2px solid rgb(255, 255, 255);
 }
 .title a{
     text-decoration: none;
-    color: rgb(68,88,99);
+    color: rgb(17, 17, 17);
+    font-weight: 500;
 }
 .title a:hover{
-    color: rgba(68, 88, 99, 0.61);
+    color: rgb(0, 4, 224);
 }
 @media only screen and (max-width: 320px) {
     

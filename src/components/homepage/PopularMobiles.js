@@ -48,13 +48,13 @@ const PopularMobiles = () => {
           {items.map((item) => (
             <div className='col'>
               <div class="card">
-                <img src={item.imgUrl} class="card-img-top" alt="..."/>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below </p>
-                  </div>
+                <img src={item.imgUrl} class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This card has supporting text below </p>
+                </div>
               </div>
-              </div>
+            </div>
           ))}
           {/* <div className="">
             <a className="float-end" href={url}>

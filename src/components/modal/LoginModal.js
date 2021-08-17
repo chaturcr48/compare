@@ -95,7 +95,7 @@ const LoginModal = () => {
                 </label>
               </div>
               <button type="submit" className="btn btn-primary mr-2" data-bs-dismiss="modal">
-                Submit
+                Login
               </button>
               <button
                 type="button"

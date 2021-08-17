@@ -41,8 +41,8 @@ const PopulatTablets = () => {
         <h3>Popular Tablets</h3>
         <div className="row row-cols-5 g-4">
           {items.map((item) => (
-            <div className="col">
-              <div className="card" key={item.id}>
+            <div className="col" key={item.id}>
+              <div className="card">
                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">{item.name} </h5>

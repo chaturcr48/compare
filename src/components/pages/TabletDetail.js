@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import TabletData from "../tablet/TabletData.json";
 let url = "";
 
@@ -11,48 +11,45 @@ const TabletDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <div className="col">
+          <div className="col my-3">
             <div className="row">
-              <img src="" className="big-img" alt="..." />
+              <img src="https://source.unsplash.com/250x250/?Tablet" className="big-img" alt="..."  style={{'border': '1.5px solid black', 'padding': '10px'}} />
             </div>
-            <div className="row mt-1">
-              <div className="col-3">
+            <div className="row my-3">
+              <div className="col-2">
                 <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
+                  src="https://source.unsplash.com/50x50/?Tablet"
                   className="small-img"
                   alt="..."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
+                  src="https://source.unsplash.com/50x50/?Tablet"
                   className="small-img"
                   alt="..."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
+                  src="https://source.unsplash.com/50x50/?Tablet"
                   className="small-img"
                   alt="..."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
+                  src="https://source.unsplash.com/50x50/?Tablet"
                   className="small-img"
                   alt="..."
                 />
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col my-2 mx-3">
             <div className="row py-2">
               <div>
-                <h5>{detail.Brand}</h5>
-              </div>
-              <div>
-                <Link to="">Visit the HP store</Link>
+                <h3>{detail.Brand} {detail.Model_Name} </h3>
               </div>
               <div>
                 <span>
@@ -158,10 +155,10 @@ const TabletDetail = () => {
             </div>
           </div>
         </div>
-        <div className="specification-heading fs-3">Specification</div>
+        <div className="fs-3 my-2">Specification</div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">General</div>
+            <div className=" fs-4 mb-1">General</div>
             <table className="table"  style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -202,8 +199,8 @@ const TabletDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">
-              Processor And Memory Features
+            <div className="fs-4 my-1">
+              Product Details
             </div>
             <table className="table"  style={{'width': '75vw'}}>
               <tbody>
@@ -216,97 +213,65 @@ const TabletDetail = () => {
                   <td style={{'width': '25vw'}}>{detail.Sales_Package}</td>
                 </tr>
                 <tr>
-                  <td style={{'width': '25vw'}}>Processor Generation</td>
-                  <td style={{'width': '25vw'}}>{detail.Processor_Generation}</td>
+                  <td style={{'width': '25vw'}}>Display Resolution</td>
+                  <td style={{'width': '25vw'}}>{detail.Display_Resolution}</td>
                 </tr>
                 <tr>
-                  <td style={{'width': '25vw'}}>SSD</td>
-                  <td style={{'width': '25vw'}}>{detail.SSD} </td>
+                  <td style={{'width': '25vw'}}>Primary Camera</td>
+                  <td style={{'width': '25vw'}}>{detail.Primary_Camera} </td>
                 </tr>
                 <tr>
-                  <td style={{'width': '25vw'}}>SSD Capacity</td>
-                  <td style={{'width': '25vw'}}>{detail.SSD_Capacity} </td>
+                  <td style={{'width': '25vw'}}>Internal Storage</td>
+                  <td style={{'width': '25vw'}}>{detail.Internal_Storage} </td>
                 </tr>
                 <tr>
-                  <td style={{'width': '25vw'}}>RAM</td>
-                  <td style={{'width': '25vw'}}>{detail.RAM}</td>
+                  <td style={{'width': '25vw'}}>Processor Speed</td>
+                  <td style={{'width': '25vw'}}>{detail.Processor_Speed}</td>
+                </tr>
+                <tr>
+                  <td style={{'width': '25vw'}}>Sim Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Sim_Type} </td>
+                </tr>
+                <tr>
+                  <td style={{'width': '25vw'}}>Multi touch</td>
+                  <td style={{'width': '25vw'}}>{detail.MultiTouch} </td>
+                </tr>
+                <tr>
+                  <td style={{'width': '25vw'}}>Sim_Size</td>
+                  <td style={{'width': '25vw'}}>{detail.Sim_Size} </td>
+                </tr>
+                <tr>
+                  <td style={{'width': '25vw'}}>Sensors</td>
+                  <td style={{'width': '25vw'}}>{detail.Sensors} </td>
+                </tr>
+                <tr>
+                  <td style={{'width': '25vw'}}>ROM</td>
+                  <td style={{'width': '25vw'}}>{detail.ROM} </td>
                 </tr>
                 <tr>
                   <td style={{'width': '25vw'}}>RAM Type</td>
                   <td style={{'width': '25vw'}}>{detail.RAM_Type} </td>
                 </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>HDD Capacity</td>
-                  <td style={{'width': '25vw'}}>{detail.HDD_Capacity} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Processor Variant</td>
-                  <td style={{'width': '25vw'}}>{detail.Processor_Variant} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Clock Speed</td>
-                  <td style={{'width': '25vw'}}>{detail.Clock_Speed} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Expandable Memory</td>
-                  <td style={{'width': '25vw'}}>{detail.Expandable_Memory} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>RAM Frequency</td>
-                  <td style={{'width': '25vw'}}>{detail.RAM_Frequency} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Cache</td>
-                  <td style={{'width': '25vw'}}>{detail.Cache} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>RPM</td>
-                  <td style={{'width': '25vw'}}>{detail.RPM} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Graphic Processor</td>
-                  <td style={{'width': '25vw'}}>{detail.Graphic_Processor} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Number of Cores</td>
-                  <td style={{'width': '25vw'}}>{detail.Number_of_Cores} </td>
-                </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Additional Features</div>
+            <div className="fs-4 my-1">Battery Features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td style={{'width': '25vw'}}>Disk Drive</td>
-                  <td style={{'width': '25vw'}}>{detail.Disk_Drive}</td>
+                  <td style={{'width': '25vw'}}>Battery Capacity</td>
+                  <td style={{'width': '25vw'}}>{detail.Battery_Capacity}</td>
                 </tr>
                 <tr>
-                  <td style={{'width': '25vw'}}>Web Camera</td>
-                  <td style={{'width': '25vw'}}>{detail.Web_Camera}</td>
+                  <td style={{'width': '25vw'}}>Battery Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Battery_Type}</td>
                 </tr>
                 <tr>
-                  <td style={{'width': '25vw'}}>Keyboard</td>
-                  <td style={{'width': '25vw'}}>{detail.Keyboard}</td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Backlit Keyboard</td>
-                  <td style={{'width': '25vw'}}>{detail.Backlit_Keyboard} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Pointer Device</td>
-                  <td style={{'width': '25vw'}}>{detail.Pointer_Device} </td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Included Software</td>
-                  <td style={{'width': '25vw'}}>{detail.Included_Software}</td>
-                </tr>
-                <tr>
-                  <td style={{'width': '25vw'}}>Additional Features</td>
-                  <td style={{'width': '25vw'}}>{detail.Additional_Features} </td>
+                  <td style={{'width': '25vw'}}>Battery Features</td>
+                  <td style={{'width': '25vw'}}>{detail.Battery_Features}</td>
                 </tr>
               </tbody>
             </table>
@@ -314,7 +279,7 @@ const TabletDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Warranty</div>
+            <div className="fs-4 my-1">Warranty</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -343,16 +308,36 @@ const TabletDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Connectivity Features</div>
+            <div className="fs-4 my-1">Display Features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td style={{'width':'25vw'}}>Wireless LAN</td>
-                  <td style={{'width':'25vw'}}>{detail.Wireless_LAN}</td>
+                  <td style={{'width':'25vw'}}>Display_Size</td>
+                  <td style={{'width':'25vw'}}>{detail.Display_Size}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Bluetooth</td>
-                  <td style={{'width':'25vw'}}>{detail.Bluetooth}</td>
+                  <td style={{'width':'25vw'}}>Display_Resolution</td>
+                  <td style={{'width':'25vw'}}>{detail.Display_Resolution}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Display_Resolution_Type</td>
+                  <td style={{'width':'25vw'}}>{detail.Display_Resolution_Type}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Display_Supported_Network</td>
+                  <td style={{'width':'25vw'}}>{detail.Display_Supported_Network}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Other_Display_Features</td>
+                  <td style={{'width':'25vw'}}>{detail.Other_Display_Features}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Display_Type</td>
+                  <td style={{'width':'25vw'}}>{detail.Display_Type}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Display_PPI</td>
+                  <td style={{'width':'25vw'}}>{detail.Display_PPI}</td>
                 </tr>
               </tbody>
             </table>
@@ -360,16 +345,20 @@ const TabletDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Dimensions</div>
+            <div className="fs-4 my-1">Camera features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td style={{'width':'25vw'}}>Dimensions</td>
-                  <td style={{'width':'25vw'}}>{detail.Dimensions}</td>
+                  <td style={{'width':'25vw'}}>Primary Camera</td>
+                  <td style={{'width':'25vw'}}>{detail.Primary_Camera}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Weight</td>
-                  <td style={{'width':'25vw'}}>{detail.Weight}</td>
+                  <td style={{'width':'25vw'}}>Secondary Camera</td>
+                  <td style={{'width':'25vw'}}>{detail.Secondary_Camera}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Other Camera Features</td>
+                  <td style={{'width':'25vw'}}>{detail.Other_Camera_Features}</td>
                 </tr>
               </tbody>
             </table>
@@ -377,88 +366,55 @@ const TabletDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Operating System</div>
+            <div className="fs-4 my-1">Storag Features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td style={{'width':'25vw'}}>OS Architecture</td>
-                  <td style={{'width':'25vw'}}>{detail.OS_Architecture}</td>
+                  <td style={{'width':'25vw'}}>Internal Storage</td>
+                  <td style={{'width':'25vw'}}>{detail.Internal_Storage}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Operating System</td>
-                  <td style={{'width':'25vw'}}>{detail.Operating_System}</td>
+                  <td style={{'width':'25vw'}}>Expandable Storage Capacity</td>
+                  <td style={{'width':'25vw'}}>{detail.Expandable_Storage_Capacity}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>System Architecture</td>
-                  <td style={{'width':'25vw'}}>{detail.System_Architecture}</td>
+                  <td style={{'width':'25vw'}}>Memory Card Support</td>
+                  <td style={{'width':'25vw'}}>{detail.Memory_Card_Support}</td>
+                </tr>
+                <tr>
+                  <td style={{'width':'25vw'}}>Memory Card Slot Type</td>
+                  <td style={{'width':'25vw'}}>{detail.Memory_Card_Slot_Type}</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div className="row">
-          <div className="specification-heading fs-4">
-            Display And Audio Features
+          <div className="fs-4 my-1">
+            Connectivity Features
           </div>
           <div className="col">
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td style={{'width':'25vw'}}>Touch Screen</td>
-                  <td style={{'width':'25vw'}}>{detail.Touchscreen}</td>
+                  <td style={{'width':'25vw'}}>Bluetooth_Version</td>
+                  <td style={{'width':'25vw'}}>{detail.Bluetooth_Version}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Screen Size</td>
-                  <td style={{'width':'25vw'}}>{detail.Screen_Size}</td>
+                  <td style={{'width':'25vw'}}>USB</td>
+                  <td style={{'width':'25vw'}}>{detail.USB}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Screen Resolution</td>
-                  <td style={{'width':'25vw'}}>{detail.Screen_Resolution}</td>
+                  <td style={{'width':'25vw'}}>Headphone_Jack</td>
+                  <td style={{'width':'25vw'}}>{detail.Headphone_Jack}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Screen Type</td>
+                  <td style={{'width':'25vw'}}>Wi-fi_Version</td>
                   <td style={{'width':'25vw'}}>{detail.Screen_Type}</td>
                 </tr>
                 <tr>
-                  <td style={{'width':'25vw'}}>Speakers</td>
-                  <td style={{'width':'25vw'}}>{detail.Speakers}</td>
-                </tr>
-                <tr>
-                  <td style={{'width':'25vw'}}>Internal Mic</td>
-                  <td style={{'width':'25vw'}}>{detail.Internal_Mic}</td>
-                </tr>
-                <tr>
-                  <td style={{'width':'25vw'}}>Sound Properties</td>
-                  <td style={{'width':'25vw'}}>{detail.Sound_Properties}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="specification-heading fs-4">Port And Slot Features</div>
-            <table className="table" style={{'width': '75vw'}}>
-              <tbody>
-                <tr>
-                  <td style={{'width':'25vw'}}>Mic In</td>
-                  <td style={{'width':'25vw'}}>{detail.Mic_In}</td>
-                </tr>
-                <tr>
-                  <td style={{'width':'25vw'}}>USB Port</td>
-                  <td style={{'width':'25vw'}}>{detail.USB_Port}</td>
-                </tr>
-                <tr>
-                  <td style={{'width':'25vw'}}>HDMI Port</td>
-                  <td style={{'width':'25vw'}}>{detail.HDMI_Port}</td>
-                </tr>
-                <tr>
-                  <td style={{'width':'25vw'}}>Multi Card Slot</td>
-                  <td style={{'width':'25vw'}}>{detail.Multi_Card_Slot}</td>
-                </tr>
-                <tr>
-                  <td style={{'width':'25vw'}}>Hardware Interface</td>
-                  <td style={{'width':'25vw'}}>{detail.Hardware_Interface}</td>
+                  <td style={{'width':'25vw'}}>Other_Connectivity_Features</td>
+                  <td style={{'width':'25vw'}}>{detail.Other_Connectivity_Features}</td>
                 </tr>
               </tbody>
             </table>

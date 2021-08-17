@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import Data from "../laptop/finalData.json";
 import "../../css/DetailPage.css";
 let url = "";
@@ -11,33 +11,33 @@ const LaptopDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <div className="col">
+          <div className="col  my-3">
             <div className="row">
-              <img src="https://source.unsplash.com/250x250/?nature,water" className="big-img" alt="..." />
+              <img src="https://source.unsplash.com/250x250/?nature,water" className="big-img" alt="..." style={{'border': '1.5px solid black', 'padding': '10px'}} />
             </div>
-            <div className="row mt-1">
-              <div className="col-3">
+            <div className="row my-3">
+              <div className="col-2">
                 <img
                   src="https://source.unsplash.com/50x50/?nature,water"
                   className="small-img"
                   alt="..."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <img
                   src="https://source.unsplash.com/50x50/?nature,water"
                   className="small-img"
                   alt="..."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <img
                   src="https://source.unsplash.com/50x50/?nature,water"
                   className="small-img"
                   alt="..."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <img
                   src="https://source.unsplash.com/50x50/?nature,water"
                   className="small-img"
@@ -49,12 +49,9 @@ const LaptopDetail = () => {
           <div className="col">
             <div className="row py-2">
               <div>
-                <h5 className="">
-                  {detail.Brand}
-                  {detail.Series} {detail.Type} {detail.OS_Architecture}{" "}
-                  {detail.Processor_Brand} {detail.Processor_Name}{" "}
-                  {detail.Processor_Generation}
-                </h5>
+                <h3 className="">
+                  {detail.Brand} {detail.Series}
+                </h3>
               </div>
               <div>
               </div>
@@ -162,10 +159,10 @@ const LaptopDetail = () => {
             </div>
           </div>
         </div>
-        <div className="specification-heading fs-3">Specification</div>
+        <div className=" fs-3 my-2">Specification</div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">General</div>
+            <div className=" fs-4 mb-1">General</div>
             <table className="table"  style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -214,7 +211,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">
+            <div className=" fs-4 my-1">
               Processor And Memory Features
             </div>
             <table className="table"  style={{'width': '75vw'}}>
@@ -289,7 +286,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Additional Features</div>
+            <div className=" fs-4 my-1">Additional Features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -326,7 +323,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Warranty</div>
+            <div className=" fs-4 my-1">Warranty</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -355,7 +352,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Connectivity Features</div>
+            <div className=" fs-4 my-1">Connectivity Features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -372,7 +369,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Dimensions</div>
+            <div className=" fs-4 my-1">Dimensions</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -389,7 +386,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Operating System</div>
+            <div className=" fs-4 my-1">Operating System</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
@@ -409,7 +406,7 @@ const LaptopDetail = () => {
           </div>
         </div>
         <div className="row">
-          <div className="specification-heading fs-4">
+          <div className=" fs-4 my-1">
             Display And Audio Features
           </div>
           <div className="col">
@@ -449,7 +446,7 @@ const LaptopDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="specification-heading fs-4">Port And Slot Features</div>
+            <div className=" fs-4 my-1">Port And Slot Features</div>
             <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>

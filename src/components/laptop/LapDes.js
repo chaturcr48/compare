@@ -5,6 +5,18 @@ import "../../css/LapDes.css";
 const dataLimit = 20;
 const pageLimit = 5;
 
+
+let button_style= {
+  'width': '45px',
+  'height': '33px',
+  'lineHeight': '0px',
+  'paddingLeft': '7px',
+  'color': 'white',
+  'borderRadius': '7px',
+  'backgroundColor': 'rgb(77,88,99)'
+}
+
+
 export const LapDes = (props) => {
   const Data = props.data;
   const [pages] = useState(Math.round(Data.length / dataLimit));
@@ -90,14 +102,14 @@ export const LapDes = (props) => {
       </div>
 
       <div className="pagination mt-2">
-        <button
+        <button style={button_style}
           onClick={goToPreviousPage}
           className={`prev ${currentPage === 1 ? "disabled" : ""}`}
         >
           prev
         </button>
         {getPaginationGroup().map((item, index) => (
-          <button
+          <button style={{'width': '35px','height': '35px'}}
             key={index}
             onClick={changePage}
             className={`paginationItem ${
@@ -107,7 +119,7 @@ export const LapDes = (props) => {
             <span>{item}</span>
           </button>
         ))}
-        <button
+        <button style={button_style}
           onClick={goToNextPage}
           className={`next ${currentPage === pages ? "disabled" : ""}`}
         >

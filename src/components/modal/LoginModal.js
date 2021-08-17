@@ -1,37 +1,68 @@
-import React, {useState} from "react";
+import React, { useState, useRef, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import AuthContext from "../../store/auth-context";
 
 const LoginModal = () => {
+  const history = useHistory();
+  const emailInputRef = useRef();
+  const passwordInputRef = useRef();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const authCtx = useContext(AuthContext);
 
-  const emailHamdler = event => {
-    setEmail(event.target.value);
-  }
-  const passwordHandler = event => {
-    setPassword(event.target.value);
-  }
+  const [isLogin, setIsLogin] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  async function submitHandler(event) {
+  const switchAuthModeHandler = () => {
+    setIsLogin((prevState) => !prevState);
+  };
+
+  const submitHandler = (event) => {
     event.preventDefault();
-    const loginUser = {
-      email: email,
-      password: password,
-    };
-    const response = await fetch(
-      "https://synkrino-e13d6-default-rtdb.firebaseio.com/loginUser.json",
-      {
-        method: "POST",
-        body: JSON.stringify(loginUser),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    await response.json();
-    setEmail('');
-    setPassword('');
-  }
+
+    const enteredEmail = emailInputRef.current.value;
+    const enteredPassword = passwordInputRef.current.value;
+
+    // optional: Add validation
+    setIsLoading(true);
+    let url;
+    if (isLogin) {
+      url =
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCAhw0Le08RXSCbGBxhBrJdMMObjlFeRGg";
+    } else {
+      url =
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCAhw0Le08RXSCbGBxhBrJdMMObjlFeRGg";
+    }
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify({
+        email: enteredEmail,
+        password: enteredPassword,
+        returnSecureToken: true,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        setIsLoading(false);
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then((data) => {
+            let errorMessage =
+              "Authentication failed!";
+            throw new Error(errorMessage);
+          });
+        }
+      })
+      .then((data) => {
+        authCtx.login(data.idToken);
+        history.replace('/');
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
 
   return (
     <div
@@ -45,7 +76,7 @@ const LoginModal = () => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="loginModalLabel">
-              Sign-in
+              {isLogin ? "Login" : "Sign Up"}
             </h5>
             <button
               type="button"
@@ -65,12 +96,9 @@ const LoginModal = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  value={email}
-                  onChange={emailHamdler}
+                  required
+                  ref={emailInputRef}
                 />
-                <div id="emailHelp" className="form-text">
-                  We'll never share your email with anyone else.
-                </div>
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">
@@ -80,8 +108,8 @@ const LoginModal = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
-                  value={password}
-                  onChange={passwordHandler}
+                  required
+                  ref={passwordInputRef}
                 />
               </div>
               <div className="mb-3 form-check">
@@ -96,6 +124,20 @@ const LoginModal = () => {
               </div>
               <button type="submit" className="btn btn-primary mr-2" data-bs-dismiss="modal">
                 Login
+
+              {!isLoading && (
+                <button type="submit" className="btn btn-primary mr-2">
+                  {isLogin ? "Login" : "Create Account"}
+                </button>
+              )}
+              {isLoading && <p>Sending request...</p>}
+              <button
+                type="submit"
+                className="btn btn-primary mr-2"
+                onClick={switchAuthModeHandler}
+              >
+                {isLogin ? "Signup" : "Login with existing account"}
+
               </button>
               <button
                 type="button"

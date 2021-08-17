@@ -4,6 +4,18 @@ import { Link } from "react-router-dom";
 const dataLimit = 20;
 const pageLimit = 5;
 
+
+let button_style= {
+  'width': '45px',
+  'height': '33px',
+  'lineHeight': '0px',
+  'paddingLeft': '7px',
+  'color': 'white',
+  'borderRadius': '7px',
+  'backgroundColor': 'rgb(77,88,99)'
+}
+
+
 const MobDes = (props) => {
     const Data = props.data;
     const [pages] = useState(Math.round(Data.length / dataLimit));
@@ -38,12 +50,12 @@ const MobDes = (props) => {
     };
     return (
         <React.Fragment>
-      <div className="my-2" style={{ gridRow: "1/2" }}>
+      <div>
         {getPaginatedData().map((mobile) => (
           <div
-            className="card mb-3"
+            className="card full-card"
             key={mobile.id}
-            style={{ maxWidth: "800px", border: "none" }}
+            style={{border: "none" }}
           >
             <div className="row" style={{'marginLeft': 'auto'}}>
               <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center'}}>
@@ -81,14 +93,14 @@ const MobDes = (props) => {
       </div>
 
       <div className="pagination mt-2">
-        <button
+        <button style={button_style}
           onClick={goToPreviousPage}
           className={`prev ${currentPage === 1 ? "disabled" : ""}`}
         >
           prev
         </button>
         {getPaginationGroup().map((item, index) => (
-          <button
+          <button style={{'width': '35px','height': '35px'}}
             key={index}
             onClick={changePage}
             className={`paginationItem ${
@@ -98,7 +110,7 @@ const MobDes = (props) => {
             <span>{item}</span>
           </button>
         ))}
-        <button
+        <button style={button_style}
           onClick={goToNextPage}
           className={`next ${currentPage === pages ? "disabled" : ""}`}
         >

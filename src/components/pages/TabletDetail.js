@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { useParams } from "react-router-dom";
+=======
+import { useParams} from "react-router-dom";
+>>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
 import TabletData from "../tablet/TabletData.json";
 let url = "";
 

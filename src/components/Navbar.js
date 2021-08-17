@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import LoginModal from "./modal/LoginModal";
-import SignupModal from "./modal/SignupModal";
+// import SignupModal from "./modal/SignupModal";
 import { NavLink } from "react-router-dom";
 import classes from "../css/Navbar.module.css";
 import img from "../assets/synkrino.jpg";
+import AuthContext from "../store/auth-context";
 
 const Navbar = (props) => {
+  const authCtx = useContext(AuthContext);
+  const isLoggedIn = authCtx.isLoggedIn;
+  const logoutHandler = () => {
+    authCtx.logout();
+    // optional: redirect the user
+  };
   return (
     <React.Fragment>
       <header className={classes.header}>
@@ -85,34 +92,21 @@ const Navbar = (props) => {
                   </NavLink>
                 </li>
               </ul>
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button
-                  className="btn btn-outline-secondary "
-                  type="submit"
-                  style={{ coor: "white" }}
-                >
-                  Search
-                </button>
-              </form>
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                <li>
-                  <button
-                    className="btn btn-outline-secondary mr-2 login-button"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loginModal"
-                    style={{ color: "white" }}
-                  >
-                    Login
-                  </button>
-                </li>
-                <li className="nav-item fs-5">
+                {!isLoggedIn && (
+                  <li>
+                    <button
+                      className="btn btn-outline-secondary mr-2 login-button"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#loginModal"
+                      style={{ color: "white" }}
+                    >
+                      Login
+                    </button>
+                  </li>
+                )}
+                {/* <li className="nav-item fs-5">
                   <button
                     className="btn btn-outline-secondary signup-button"
                     type="button"
@@ -122,14 +116,30 @@ const Navbar = (props) => {
                   >
                     Signup
                   </button>
-                </li>
+                </li> */}
+                {isLoggedIn && (
+                  <li className="nav-item fs-5">
+                    <span style={{ color: "white", marginRight: "5px" }}>
+                      Welcome to{" "}
+                      <em style={{ fontWeight: "bold" }}>Synkrino</em>
+                    </span>
+                    <button
+                      className="btn btn-outline-secondary logout-button"
+                      type="button"
+                      style={{ color: "white" }}
+                      onClick={logoutHandler}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
         </nav>
       </header>
       <LoginModal />
-      <SignupModal />
+      {/* <SignupModal /> */}
     </React.Fragment>
   );
 };

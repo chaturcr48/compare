@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+// import React, { useState,useEffect } from "react";
 
 import Filter from "../filter/laptopFilter/Filter";
 import "./Laptops.css";
@@ -7,23 +8,19 @@ import Data from "./finalData.json";
 import SearchProduct from "../searchBar/SearchProduct";
 
 const Laptops = () => {
-  // const { search } = window.location;
-  // const query = new URLSearchParams(search).get("s");
-  // const [searchQuery, setSearchQuery] = useState(query || "");
-
-  // const [filterBrand, setFilterBrand] = useState('');
-  // const filterByBrand = (Data, query) => {
-  //   if(!query){
-  //     return Data;
-  //   }
-  //   return Data.filter(Data => {
-  //     const filterLaptopBrand = Data.Brand.toLowerCase();
-  //     return filterLaptopBrand.includes(query); 
-  //   })
-  // }
-  // const searchedData = filterByBrand(Data, filterBrand);
 
   const [searchQuery, setSearchQuery] = useState("");
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   };
+  // }, [input]);
+
+  const filterBrandHandler = (value) => {
+      setSearchQuery(value.toLowerCase());
+      console.log(value);
+  }
   const filterPosts = (Data, query) => {
     if (!query) {
       return Data;
@@ -54,6 +51,7 @@ const Laptops = () => {
             setSearchQuery={setSearchQuery}
           />
         </div>
+<<<<<<< HEAD
         <div className="row" style={{'justifyContent': 'center'}}>
           <div className='full-line'>
           <div className="filter-container mt-3" style={{'width': 'auto'}}>
@@ -61,6 +59,11 @@ const Laptops = () => {
               // filterBrand={filterBrand}
               // setFilterBrand={setFilterBrand}
                />
+=======
+        <div className="row">
+          <div className="filter-container">
+            <Filter filterBrand={filterBrandHandler} />
+>>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
           </div>
           </div>
           

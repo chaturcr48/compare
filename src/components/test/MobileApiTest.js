@@ -13,7 +13,7 @@ const MobileApiTest = () => {
       .then((data) => setMobileData(data))
       .catch((error) => setError(error.message));
   }, []);
-  console.log(typeof MobileData);
+  console.log(MobileData[0]);
   if (error) {
     return <h2>Error</h2>;
   } else {

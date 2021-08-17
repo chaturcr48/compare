@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 // import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import './laptopfilter.css'
+=======
+// import React, {} from "react";
+import React, { useState } from "react";
+>>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
 
 
 const fBrand = [
@@ -12,7 +17,17 @@ const fBrand = [
   { id: "5", brand: "MSI" },
   { id: "6", brand: "Accer" },
 ];
+<<<<<<< HEAD
 const FilterBrand = ({ filterBrand, setFilterBrand }) => {
+=======
+const FilterBrand = (props) => {
+  const [brand, setBrand] = useState("");
+  const brandHandler = (event) => {
+    setBrand(event.target.value);
+    console.log(event.target.value);
+    props.filterByBrand(brand);
+  };
+>>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
   return (
     <React.Fragment>
       <br />
@@ -22,8 +37,8 @@ const FilterBrand = ({ filterBrand, setFilterBrand }) => {
       {fBrand.map((brand) => (
         <div className="form-check" key={brand.id}>
           <input
-            // value={filterBrand}
-            // onInput={setFilterBrand(brand.brand)}
+            value={brand.brand}
+            onInput={brandHandler}
             className="form-check-input"
             type="checkbox"
             name="flexRadioDefault"
@@ -34,6 +49,7 @@ const FilterBrand = ({ filterBrand, setFilterBrand }) => {
           </label>
         </div>
       ))}
+<<<<<<< HEAD
       <div className="dropdown mt-2 fs-6">
         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           See More
@@ -45,6 +61,10 @@ const FilterBrand = ({ filterBrand, setFilterBrand }) => {
           <li><Link className="dropdown-item" href="#">Microsoft</Link></li>
         </ul>
       </div>
+=======
+
+      <a href={url}>See more</a> <br />
+>>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
     </React.Fragment>
   );
 };

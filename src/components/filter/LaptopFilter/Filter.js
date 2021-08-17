@@ -10,9 +10,14 @@ import Weight from "./Weight";
 import OperatingSystem from "./OperatingSystem";
 import '../../laptop/Laptops.css'
 
-const Filter = () => {
+const Filter = (props) => {
+  const filterByBrandHandler = (value) => {
+    console.log(value)
+    props.filterBrand(value);
+  }
   return (
     <React.Fragment>
+<<<<<<< HEAD
       <div className='filter py-2 pl-2 mr-3' style={{'backgrounColor': 'rgba(77, 88, 99, 0.088)'}}>
         <h5 className='mr-3' >Filters</h5>
         
@@ -35,6 +40,19 @@ const Filter = () => {
             </div>
           </nav>
         </div>
+=======
+      <div className='filter overflow-auto p-2'>
+        <h4>Filters</h4>
+        <FilterPrice />
+        <FilterBrand filterByBrand={filterByBrandHandler} />
+        <FilterRam />
+        <StorageCapacity />
+        <Stores />
+        <Weight />
+        <OperatingSystem />
+        <Stars />
+      </div>
+>>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
     </React.Fragment>
   );
 };

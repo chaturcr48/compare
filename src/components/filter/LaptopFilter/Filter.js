@@ -10,18 +10,13 @@ import Weight from "./Weight";
 import OperatingSystem from "./OperatingSystem";
 import '../../laptop/Laptops.css'
 
-const Filter = (props) => {
-  const filterByBrandHandler = (value) => {
-    console.log(value)
-    props.filterBrand(value);
-  }
+const Filter = () => {
   return (
     <React.Fragment>
-<<<<<<< HEAD
       <div className='filter py-2 pl-2 mr-3' style={{'backgrounColor': 'rgba(77, 88, 99, 0.088)'}}>
         <h5 className='mr-3' >Filters</h5>
         
-        <nav className="navbar navbar-expand-lg navbar-light ml-2" >
+        <nav className="navbar navbar-expand-lg navbar-light ml-2">
             <button className="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -40,19 +35,6 @@ const Filter = (props) => {
             </div>
           </nav>
         </div>
-=======
-      <div className='filter overflow-auto p-2'>
-        <h4>Filters</h4>
-        <FilterPrice />
-        <FilterBrand filterByBrand={filterByBrandHandler} />
-        <FilterRam />
-        <StorageCapacity />
-        <Stores />
-        <Weight />
-        <OperatingSystem />
-        <Stars />
-      </div>
->>>>>>> ad29baea555bc7ff7c9d81ca2ab9ff6aa1fd516b
     </React.Fragment>
   );
 };

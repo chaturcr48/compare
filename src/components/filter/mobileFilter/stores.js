@@ -1,13 +1,13 @@
 import React from "react";
 
-let url ='';
 
 const fstore = [
     {id: '1', store: 'Amazon'},
     {id: '2', store: 'Flipkart'},
     {id: '3', store: 'Tatacliq'},
     {id: '4', store: 'Shopclues'},
-    {id: '5', store: 'Reliance digital'}
+    {id: '5', store: 'Reliance digital'},
+    {id: '6', store: 'Snapdeal'}
 ]
 
 const Stores = () => {
@@ -22,7 +22,6 @@ const Stores = () => {
                         </label>
                         </div>
                     ))}
-                    <a href={url}>See more</a><br/>
         </React.Fragment>
     )
 }

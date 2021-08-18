@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-let url = "";
 
 const fBrand = [
     {id: '1', brand: 'Samsung'},
@@ -30,7 +30,17 @@ const FilterBrand = () => {
           </label>
         </div>
       ))}
-      <a href={url}>See more</a><br/>
+      <div className="dropdown mt-2 fs-6">
+        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          See More
+        </button>
+        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><Link
+           className="dropdown-item" href="#">ASUS</Link></li>
+          <li><Link className="dropdown-item" href="#">Apple</Link></li>
+          <li><Link className="dropdown-item" href="#">Microsoft</Link></li>
+        </ul>
+      </div>
     </React.Fragment>
   );
 };

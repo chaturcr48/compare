@@ -1,7 +1,9 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import MobileData from "../mobile/mobileData.json";
-let url = "";
+import Images from "./Images";
+
+let url={}
 
 const MobileDetail = () => {
   const params = useParams();
@@ -10,48 +12,11 @@ const MobileDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <div className="col">
-            <div className="row">
-              <img src="" className="big-img" alt="..." />
-            </div>
-            <div className="row mt-1">
-              <div className="col-3">
-                <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src="https://source.unsplash.com/50x50/?nature,water"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
+          <Images/>
           <div className="col">
             <div className="row py-2">
               <div>
-                <h5>{detail.Brand}</h5>
-              </div>
-              <div>
-                <Link to="">Visit the HP store</Link>
+                <h3>{detail.Brand} {detail.Model_Name}</h3>
               </div>
               <div>
                 <span>
@@ -76,7 +41,7 @@ const MobileDetail = () => {
               <div>
                 Capacity:&nbsp;{" "}
                 <strong>
-                  {detail.RAM} RAM | {detail.SSD_Capacity} SSD
+                  {detail.RAM} RAM | {detail.Internal_Storage} Storage
                 </strong>
               </div>
             </div>
@@ -157,47 +122,43 @@ const MobileDetail = () => {
             </div>
           </div>
         </div>
-        <div className="fs-3">Specification</div>
+        <div className="fs-3 mb-2">Specification</div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">General</div>
-            <table className="table">
+            <div className="fs-4 mb-1">General</div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td className="table-feature">Sales Package</td>
-                  <td>{detail.Sales_Package}</td>
+                  <td style={{'width': '25vw'}} >In The Box</td>
+                  <td style={{'width': '25vw'}}>{detail.In_The_Box}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Model Number</td>
-                  <td>{detail.Model_Number}</td>
+                  <td style={{'width': '25vw'}} >Model Number</td>
+                  <td style={{'width': '25vw'}}>{detail.Model_Number}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Part Number</td>
-                  <td>{detail.Part_Number}</td>
+                  <td style={{'width': '25vw'}} >Model Name</td>
+                  <td style={{'width': '25vw'}}>{detail.Model_Name}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Series</td>
-                  <td>{detail.Series} </td>
+                  <td style={{'width': '25vw'}} >Color</td>
+                  <td style={{'width': '25vw'}}>{detail.Color} </td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Color</td>
-                  <td>{detail.Color} </td>
+                  <td style={{'width': '25vw'}} >Browse Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Browse_Type} </td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Type</td>
-                  <td>{detail.Type}</td>
+                  <td style={{'width': '25vw'}} >SIM Type</td>
+                  <td style={{'width': '25vw'}}>{detail.SIM_Type}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Suitable For</td>
-                  <td>{detail.Suitable_For} </td>
+                  <td style={{'width': '25vw'}} >Hybrid Sim Slot</td>
+                  <td style={{'width': '25vw'}}>{detail.Hybrid_Sim_Slot} </td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Battery Cell</td>
-                  <td>{detail.Battery_Cell} </td>
-                </tr>
-                <tr>
-                  <td className="table-feature">MS Office Provided</td>
-                  <td>{detail.MS_Office_Provided} </td>
+                  <td style={{'width': '25vw'}} >OTG Compatible</td>
+                  <td style={{'width': '25vw'}}>{detail.OTG_Compatible} </td>
                 </tr>
               </tbody>
             </table>
@@ -205,46 +166,26 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">
-              Processor And Memory Features
+            <div className="fs-4 mb-1">
+              Display Features
             </div>
-            <table className="table">
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td className="table-feature">Processor Brand</td>
-                  <td>{detail.Processor_Brand}</td>
+                  <td style={{'width': '25vw'}} >Display Size</td>
+                  <td style={{'width': '25vw'}}>{detail.Display_Size}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Processor Name</td>
-                  <td>{detail.Processor_Name}</td>
+                  <td style={{'width': '25vw'}} >Resolution</td>
+                  <td style={{'width': '25vw'}}>{detail.Resolution}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">Processor Generation</td>
-                  <td>{detail.Processor_Generation}</td>
+                  <td style={{'width': '25vw'}} >Resolution Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Resolution_Type}</td>
                 </tr>
                 <tr>
-                  <td className="table-feature">SSD</td>
-                  <td>{detail.SSD} </td>
-                </tr>
-                <tr>
-                  <td className="table-feature">SSD Capacity</td>
-                  <td>{detail.SSD_Capacity} </td>
-                </tr>
-                <tr>
-                  <td className="table-feature">RAM</td>
-                  <td>{detail.RAM}</td>
-                </tr>
-                <tr>
-                  <td className="table-feature">RAM Type</td>
-                  <td>{detail.RAM_Type} </td>
-                </tr>
-                <tr>
-                  <td className="table-feature">Processor Variant</td>
-                  <td>{detail.Processor_Variant} </td>
-                </tr>
-                <tr>
-                  <td className="table-feature">Clock Speed</td>
-                  <td>{detail.Clock_Speed} </td>
+                  <td style={{'width': '25vw'}} >Display Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Display_Type} </td>
                 </tr>
               </tbody>
             </table>
@@ -252,36 +193,28 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">Additional Features</div>
-            <table className="table">
+            <div className="fs-4 mb-1">Memory and Storage Features</div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>Disk Drive</td>
-                  <td>{detail.Disk_Drive}</td>
+                  <td style={{'width': '25vw'}}>Internal Storage</td>
+                  <td style={{'width': '25vw'}}>{detail.Internal_Storage}</td>
                 </tr>
                 <tr>
-                  <td>Web Camera</td>
-                  <td>{detail.Web_Camera}</td>
+                  <td style={{'width': '25vw'}}>RAM</td>
+                  <td style={{'width': '25vw'}}>{detail.RAM}</td>
                 </tr>
                 <tr>
-                  <td>Keyboard</td>
-                  <td>{detail.Keyboard}</td>
+                  <td style={{'width': '25vw'}}>Expandable Storage</td>
+                  <td style={{'width': '25vw'}}>{detail.Expandable_Storage}</td>
                 </tr>
                 <tr>
-                  <td>Backlit Keyboard</td>
-                  <td>{detail.Backlit_Keyboard} </td>
+                  <td style={{'width': '25vw'}}>Supported Memory Card Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Supported_Memory_Card_Type} </td>
                 </tr>
                 <tr>
-                  <td>Pointer Device</td>
-                  <td>{detail.Pointer_Device} </td>
-                </tr>
-                <tr>
-                  <td>Included Software</td>
-                  <td>{detail.Included_Software}</td>
-                </tr>
-                <tr>
-                  <td>Additional Features</td>
-                  <td>{detail.Additional_Features} </td>
+                  <td style={{'width': '25vw'}}>Memory Card Slot Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Memory_Card_Slot_Type} </td>
                 </tr>
               </tbody>
             </table>
@@ -289,28 +222,24 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">Warranty</div>
-            <table className="table">
+            <div className="fs-4 mb-1">Os and Processor Features </div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>Warranty Summary</td>
-                  <td>{detail.Warranty_Summary}</td>
+                  <td style={{'width': '25vw'}}>Operating System</td>
+                  <td style={{'width': '25vw'}}>{detail.Operating_System}</td>
                 </tr>
                 <tr>
-                  <td>Warranty Service Type</td>
-                  <td>{detail.Warranty_Service_Type}</td>
+                  <td style={{'width': '25vw'}}>Processor Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Processor_Type}</td>
                 </tr>
                 <tr>
-                  <td>Covered In Warranty</td>
-                  <td>{detail.Covered_in_Warranty}</td>
+                  <td style={{'width': '25vw'}}>Processor Core</td>
+                  <td style={{'width': '25vw'}}>{detail.Processor_Core}</td>
                 </tr>
                 <tr>
-                  <td>Not Covered in Warrenty</td>
-                  <td>{detail.Not_Covered_in_Warranty} </td>
-                </tr>
-                <tr>
-                  <td>Domestic Warranty</td>
-                  <td>{detail.Domestic_Warranty} </td>
+                  <td style={{'width': '25vw'}}> Primary Clock Speed</td>
+                  <td style={{'width': '25vw'}}>{detail.Primary_Clock_Speed} </td>
                 </tr>
               </tbody>
             </table>
@@ -318,16 +247,16 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">Connectivity Features</div>
-            <table className="table">
+            <div className="fs-4 mb-1">Connectivity Features</div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>Wireless LAN</td>
-                  <td>{detail.Wireless_LAN}</td>
+                  <td style={{'width': '25vw'}}>Wireless LAN</td>
+                  <td style={{'width': '25vw'}}>{detail.Wireless_LAN}</td>
                 </tr>
                 <tr>
-                  <td>Bluetooth</td>
-                  <td>{detail.Bluetooth}</td>
+                  <td style={{'width': '25vw'}}>Bluetooth</td>
+                  <td style={{'width': '25vw'}}>{detail.Bluetooth}</td>
                 </tr>
               </tbody>
             </table>
@@ -335,16 +264,16 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">Dimensions</div>
-            <table className="table">
+            <div className="fs-4 mb-1">Dimensions</div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>Dimensions</td>
-                  <td>{detail.Dimensions}</td>
+                  <td style={{'width': '25vw'}}>Dimensions</td>
+                  <td style={{'width': '25vw'}}>{detail.Dimensions}</td>
                 </tr>
                 <tr>
-                  <td>Weight</td>
-                  <td>{detail.Weight}</td>
+                  <td style={{'width': '25vw'}}>Weight</td>
+                  <td style={{'width': '25vw'}}>{detail.Weight}</td>
                 </tr>
               </tbody>
             </table>
@@ -352,59 +281,59 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">Operating System</div>
-            <table className="table">
+            <div className="fs-4 mb-1">Operating System</div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>OS Architecture</td>
-                  <td>{detail.OS_Architecture}</td>
+                  <td style={{'width': '25vw'}}>OS Architecture</td>
+                  <td style={{'width': '25vw'}}>{detail.OS_Architecture}</td>
                 </tr>
                 <tr>
-                  <td>Operating System</td>
-                  <td>{detail.Operating_System}</td>
+                  <td style={{'width': '25vw'}}>Operating System</td>
+                  <td style={{'width': '25vw'}}>{detail.Operating_System}</td>
                 </tr>
                 <tr>
-                  <td>System Architecture</td>
-                  <td>{detail.System_Architecture}</td>
+                  <td style={{'width': '25vw'}}>System Architecture</td>
+                  <td style={{'width': '25vw'}}>{detail.System_Architecture}</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div className="row">
-          <div className="fs-4">
+          <div className="fs-4 mb-1">
             Display And Audio Features
           </div>
           <div className="col">
-            <table className="table">
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>Touch Screen</td>
-                  <td>{detail.Touchscreen}</td>
+                  <td style={{'width': '25vw'}}>Touch Screen</td>
+                  <td style={{'width': '25vw'}}>{detail.Touchscreen}</td>
                 </tr>
                 <tr>
-                  <td>Screen Size</td>
-                  <td>{detail.Screen_Size}</td>
+                  <td style={{'width': '25vw'}}>Screen Size</td>
+                  <td style={{'width': '25vw'}}>{detail.Screen_Size}</td>
                 </tr>
                 <tr>
-                  <td>Screen Resolution</td>
-                  <td>{detail.Screen_Resolution}</td>
+                  <td style={{'width': '25vw'}}>Screen Resolution</td>
+                  <td style={{'width': '25vw'}}>{detail.Screen_Resolution}</td>
                 </tr>
                 <tr>
-                  <td>Screen Type</td>
-                  <td>{detail.Screen_Type}</td>
+                  <td style={{'width': '25vw'}}>Screen Type</td>
+                  <td style={{'width': '25vw'}}>{detail.Screen_Type}</td>
                 </tr>
                 <tr>
-                  <td>Speakers</td>
-                  <td>{detail.Speakers}</td>
+                  <td style={{'width': '25vw'}}>Speakers</td>
+                  <td style={{'width': '25vw'}}>{detail.Speakers}</td>
                 </tr>
                 <tr>
-                  <td>Internal Mic</td>
-                  <td>{detail.Internal_Mic}</td>
+                  <td style={{'width': '25vw'}}>Internal Mic</td>
+                  <td style={{'width': '25vw'}}>{detail.Internal_Mic}</td>
                 </tr>
                 <tr>
-                  <td>Sound Properties</td>
-                  <td>{detail.Sound_Properties}</td>
+                  <td style={{'width': '25vw'}}>Sound Properties</td>
+                  <td style={{'width': '25vw'}}>{detail.Sound_Properties}</td>
                 </tr>
               </tbody>
             </table>
@@ -412,28 +341,28 @@ const MobileDetail = () => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="fs-4">Port And Slot Features</div>
-            <table className="table">
+            <div className="fs-4 mb-1">Port And Slot Features</div>
+            <table className="table" style={{'width': '75vw'}}>
               <tbody>
                 <tr>
-                  <td>Mic In</td>
-                  <td>{detail.Mic_In}</td>
+                  <td style={{'width': '25vw'}}>Mic In</td>
+                  <td style={{'width': '25vw'}}>{detail.Mic_In}</td>
                 </tr>
                 <tr>
-                  <td>USB Port</td>
-                  <td>{detail.USB_Port}</td>
+                  <td style={{'width': '25vw'}}>USB Port</td>
+                  <td style={{'width': '25vw'}}>{detail.USB_Port}</td>
                 </tr>
                 <tr>
-                  <td>HDMI Port</td>
-                  <td>{detail.HDMI_Port}</td>
+                  <td style={{'width': '25vw'}}>HDMI Port</td>
+                  <td style={{'width': '25vw'}}>{detail.HDMI_Port}</td>
                 </tr>
                 <tr>
-                  <td>Multi Card Slot</td>
-                  <td>{detail.Multi_Card_Slot}</td>
+                  <td style={{'width': '25vw'}}>Multi Card Slot</td>
+                  <td style={{'width': '25vw'}}>{detail.Multi_Card_Slot}</td>
                 </tr>
                 <tr>
-                  <td>Hardware Interface</td>
-                  <td>{detail.Hardware_Interface}</td>
+                  <td style={{'width': '25vw'}}>Hardware Interface</td>
+                  <td style={{'width': '25vw'}}>{detail.Hardware_Interface}</td>
                 </tr>
               </tbody>
             </table>

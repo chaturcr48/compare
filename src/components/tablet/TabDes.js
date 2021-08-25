@@ -59,10 +59,11 @@ const TabDes = (props) => {
           >
             <div className="row" style={{'marginLeft': '3px'}}>
               <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'31%'}}>
-                <Link to={"/tablets/" + tablet.id}>
-                  <img src="https://source.unsplash.com/400x300/?tablet" 
+                <Link to={"/tablets/" + tablet.id} style={{'margin': 'auto'}}>
+                  <img src= {tablet.Img_url[0]}
                   className="img-fluid" 
-                  alt="..." />
+                  alt="..." 
+                  style={{'height':'21vh'}}/>
                 </Link>
               </div>
               <div className="col-md-8" style={{'width':'63%'}}>

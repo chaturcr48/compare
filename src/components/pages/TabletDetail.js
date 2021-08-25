@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import TabletData from "../tablet/TabletData.json";
+import TabletData from "../tablet/tabletData.json";
 import Images from './Images'
 let url = "";
 
@@ -12,7 +12,7 @@ const TabletDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <Images/>
+          <Images data={detail.Img_url}/>
           <div className="col my-2 mx-3">
             <div className="row py-2">
               <div>

@@ -62,16 +62,16 @@ const MobDes = (props) => {
             style={{border: "none" }}
           >
             <div className="row" style={{'marginLeft': '3px'}}>
-              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'24%'}}>
+              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'22%'}}>
                 <Link to={"/mobiles/" + mobile.id} style={{'margin': 'auto'}}>
                   <img src={mobile.Img_url[0]}
                   className="img-fluid" 
                   alt="..." 
-                  style={{'height':'27vh'}}/>
+                  style={{'height':'21vh'}}/>
                 </Link>
               </div>
               
-              <div className="col-md-8" style={{'width':'70%'}}>
+              <div className="col-md-8" style={{'width':'72%'}}>
                   <p className="heading card-title title">
                     <Link to={"/mobiles/" + mobile.id}>
                     {mobile.Brand} {mobile.Model_Name} {mobile.Processor_Type} Processor 

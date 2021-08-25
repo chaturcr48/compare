@@ -43,12 +43,12 @@ const PopularMobiles = () => {
   return (
     <React.Fragment>
       <div className="container mt-2">
-        <h3>Popular Mobiles</h3>
+        <h4>Popular Mobiles</h4>
         <div className="row row-cols-5 g-4">
           {items.map((item) => (
             <div className='col' key={item.id}>
               <div className="card">
-                <img src={item.imgUrl} className="card-img-top" alt="..."/>
+                  <img src={item.imgUrl} className="card-img-top" alt="..."/>
                   <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">This card has supporting text below </p>

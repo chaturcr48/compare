@@ -52,6 +52,7 @@ export const LapDes = (props) => {
   };
 
   return (
+
     <React.Fragment>
       <div style={{'width':'auto'}}>
         {getPaginatedData().map((Data) => (
@@ -63,17 +64,18 @@ export const LapDes = (props) => {
             <div className="row" style={{'marginLeft': '3px'}}>
               <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'31%'}}>
                 <Link to={"/laptop/" + Data.id}>
-                  <img src="https://source.unsplash.com/400x300/?laptop" 
+                  <img src={Data.Img_url[0]}
                   className="img-fluid" 
                   alt="..." />
                 </Link>
+                
               </div>
               <div className="col-md-8" style={{'width':'63%'}}>
                   <p className="heading card-title title">
                     <Link to={"/laptop/" + Data.id}>
                       {Data.Brand} {Data.Series} {Data.Type} {" "}
                       {Data.OS_Architecture} {Data.Processor_Brand} {" "}
-                      {Data.Processor_Name} {Data.Processor_Generation}
+                      {Data.Processor_Name} {Data.Processor_Generation} 
                     </Link>
                   </p>
                   <ul className="card-text des" style={{'paddingLeft': 'inherit'}}>

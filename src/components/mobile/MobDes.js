@@ -50,26 +50,31 @@ const MobDes = (props) => {
       return new Array(pageLimit).fill().map((_, idx) => start + idx + 1);
     };
     return (
+        
         <React.Fragment>
       <div style={{'width':'auto'}}>
         {getPaginatedData().map((mobile) => (
+          // console.log(mobile.Img_url)
+          
           <div
             className="card full-card"
             key={mobile.id}
             style={{border: "none" }}
           >
             <div className="row" style={{'marginLeft': '3px'}}>
-              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'31%'}}>
-                <Link to={"/mobiles/" + mobile.id}>
-                  <img src="https://source.unsplash.com/400x300/?mobile" 
+              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'24%'}}>
+                <Link to={"/mobiles/" + mobile.id} style={{'margin': 'auto'}}>
+                  <img src={mobile.Img_url[0]}
                   className="img-fluid" 
-                  alt="..." />
+                  alt="..." 
+                  style={{'height':'27vh'}}/>
                 </Link>
               </div>
-              <div className="col-md-8" style={{'width':'63%'}}>
+              
+              <div className="col-md-8" style={{'width':'70%'}}>
                   <p className="heading card-title title">
                     <Link to={"/mobiles/" + mobile.id}>
-                      {mobile.Brand} {mobile.Model_Name} {mobile.Processor_Type} Processor 
+                    {mobile.Brand} {mobile.Model_Name} {mobile.Processor_Type} Processor 
                       {" "}{mobile.OS} Operating System {mobile.Internal_Storage}
                     </Link>
                   </p>

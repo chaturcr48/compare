@@ -8,6 +8,7 @@ import Stars from "./Stars";
 import Stores from "./Stores";
 import Weight from "./Weight";
 import OperatingSystem from "./OperatingSystem";
+import '../../laptop/Laptops.css'
 
 const Filter = (props) => {
   const filterByBrandHandler = (value) => {

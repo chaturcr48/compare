@@ -1,7 +1,6 @@
 // import React, {} from "react";
 import React, { useState } from "react";
-
-let url = "";
+let url={}
 
 const fBrand = [
   { id: "1", brand: "HP" },

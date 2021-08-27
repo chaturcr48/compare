@@ -1,6 +1,6 @@
 import React from "react";
 
-let url = "";
+// let url = "";
 const items = [
   {
     id: "1",

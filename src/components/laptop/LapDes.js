@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../css/LapDes.css";
-import './Laptops.css'
+import './Laptops.css';
 
 const dataLimit = 20;
 const pageLimit = 5;

@@ -12,7 +12,7 @@
 .lapDes-container{
     width:75%;
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 991px){
     .lapDes-container{
         display: contents;
     }
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
 }
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 992px){
     .full-line{
         display: inline-block;
     width: 22%;
@@ -39,7 +39,7 @@
 @media only screen and (max-width: 1000px){
     .filter-container{
         font-size: 15px;
-        width: 22%;
+        /* width: 21%; */
     }
     .heading{
         font-size: 18px;
@@ -48,7 +48,7 @@
         font-size: 15px;
     }
     .lapDes-container{
-        width: 90%;
+        /* width: 90%; */
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 768px){
@@ -180,4 +180,14 @@
 }
 .col-md-4{
     padding: 0 8px;
+}
+.image:hover{
+    border: 2px solid rgb(68,88,99);
+}
+.title a{
+    text-decoration: none;
+    color: rgb(68,88,99);
+}
+.title a:hover{
+    color: rgba(68, 88, 99, 0.61);
 }

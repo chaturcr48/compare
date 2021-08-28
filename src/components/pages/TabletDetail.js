@@ -1,6 +1,7 @@
 import React from "react";
-import { useParams} from "react-router-dom";
-import TabletData from "../tablet/TabletData.json";
+import { useParams } from "react-router-dom";
+import TabletData from "../tablet/tabletData.json";
+import Images from './Images'
 let url = "";
 
 const TabletDetail = () => {
@@ -11,41 +12,7 @@ const TabletDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <div className="col my-3">
-            <div className="row">
-              <img src="https://source.unsplash.com/250x250/?Tablet" className="big-img" alt="..."  style={{'border': '1.5px solid black', 'padding': '10px'}} />
-            </div>
-            <div className="row my-3">
-              <div className="col-2">
-                <img
-                  src="https://source.unsplash.com/50x50/?Tablet"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-              <div className="col-2">
-                <img
-                  src="https://source.unsplash.com/50x50/?Tablet"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-              <div className="col-2">
-                <img
-                  src="https://source.unsplash.com/50x50/?Tablet"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-              <div className="col-2">
-                <img
-                  src="https://source.unsplash.com/50x50/?Tablet"
-                  className="small-img"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
+          <Images data={detail.Img_url}/>
           <div className="col my-2 mx-3">
             <div className="row py-2">
               <div>

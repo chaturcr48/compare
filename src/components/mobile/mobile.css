@@ -1,1 +1,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+.filter-container{
+    padding: 0px 0px 0px 12px;
+    width: 24%;
+    height: fit-content;
+    background-color: rgba(77, 88, 99, 0.088);
+    font-family: Quicksand;
+    border: 2px solid black;
+    border-radius: 1vw;
+}
+.lapDes-container{
+    width:75%;
+}
+@media only screen and (max-width: 991px){
+    .lapDes-container{
+        display: contents;
+    }
+    .filter-container{
+        width:45%;
+    }
+}
+.heading{
+    font-size: 20px;
+}
+.lapDes-container{
+    width: 75%;
+}
+.full-line{
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (min-width: 992px){
+    .full-line{
+        display: inline-block;
+    width: 22%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .filter-container{
+        font-size: 15px;
+        /* width: 21%; */
+    }
+    .heading{
+        font-size: 18px;
+    }
+    .des{
+        font-size: 15px;
+    }
+    .lapDes-container{
+        /* width: 90%; */
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    .filter-container{
+        /* width: 25%; */
+        font-size: 14px;
+    }
+    .lapDes-container{
+        /* width: 66.66%; */
+    }
+    .heading{
+        font-size: 17px;
+    }
+    .des{
+        font-size: 15px;
+    }
+    /* .imcss{
+        width: 63%;
+        margin: 2vh auto;
+    } */
+}
+@media only screen and (min-width: 560px) and (max-width: 600px){
+    .filter-container{
+        /* width: 27%; */
+        font-size: 14px;
+    }
+    .lapDes-container{
+        /* width: 67%; */
+    }
+    .heading{
+        font-size: 17px;
+    }
+    .des{
+        font-size: 14px;
+    }
+    .imcss{
+        width: 68%;
+        margin: 2vh auto;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 560px){
+    .filter-container{
+        /* width: 30%; */
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    .lapDes-container{
+        /* width: 66%; */
+        font-size: 14px;
+    }
+    .imcss{
+        width: 70%;
+        margin: 2vh auto;
+    }
+}
+@media only screen and (min-width: 415px) and (max-width: 500px){
+    .lapDes-container{
+        /* width: 63%; */
+        font-size: 14px;
+    }
+    .filter-container{
+        /* width: 33%; */
+        font-size: 13px;
+        padding-left: 8px;
+        margin-right: 8px;
+    }
+
+}
+@media only screen and (min-width: 330px) and (max-width: 415px){
+    .filter-container{
+        /* width: 33%; */
+        font-size: 13px;
+        padding-left: 7px;
+        margin-right: 8px;
+    }
+    .lapDes-container{
+        /* width: 63%; */
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 290px) and (max-width: 330px) {
+    .filter-container{
+        /* width: 35%; */
+        font-size: 13px;
+        padding-left: 5px;
+        margin-right: 8px;
+    }
+    .lapDes-container{
+        /* width: 62%; */
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 290) {
+    .filter-container{
+        /* width: 35%; */
+        font-size: 13px;
+        padding-left: 5px;
+        margin-right: 8px;
+    }
+    .lapDes-container{
+        /* width: 60%; */
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .heading{
+        font-size: 15px;
+    }
+    .des{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 500px) {
+.imcss{
+    width: 73%;
+    margin: 2vh auto;
+}
+}
+@media only screen and (max-width: 500px){
+    .col-md-4{
+        padding: 0 8px;
+    }
+    .col-md-8{
+        padding: 0 8px;
+    }
+    .filter-container{
+        width: 60%;
+    }
+}
+.col-md-4{
+    padding: 0 8px;
+}
+.image:hover{
+    border: 2px solid rgb(68,88,99);
+}
+.title a{
+    text-decoration: none;
+    color: rgb(68,88,99);
+}
+.title a:hover{
+    color: rgba(68, 88, 99, 0.61);
+}

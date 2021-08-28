@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import React, { useState,useEffect } from "react";
 
 import Filter from "../filter/laptopFilter/Filter";
 import "./Laptops.css";
@@ -8,19 +7,23 @@ import Data from "./finalData.json";
 import SearchProduct from "../searchBar/SearchProduct";
 
 const Laptops = () => {
+  // const { search } = window.location;
+  // const query = new URLSearchParams(search).get("s");
+  // const [searchQuery, setSearchQuery] = useState(query || "");
+
+  // const [filterBrand, setFilterBrand] = useState('');
+  // const filterByBrand = (Data, query) => {
+  //   if(!query){
+  //     return Data;
+  //   }
+  //   return Data.filter(Data => {
+  //     const filterLaptopBrand = Data.Brand.toLowerCase();
+  //     return filterLaptopBrand.includes(query); 
+  //   })
+  // }
+  // const searchedData = filterByBrand(Data, filterBrand);
 
   const [searchQuery, setSearchQuery] = useState("");
-  // useEffect(() => {
-  //   effect
-  //   return () => {
-  //     cleanup
-  //   };
-  // }, [input]);
-
-  const filterBrandHandler = (value) => {
-    setSearchQuery(value.toLowerCase());
-    console.log(value);
-  }
   const filterPosts = (Data, query) => {
     if (!query) {
       return Data;
@@ -28,12 +31,12 @@ const Laptops = () => {
 
     return Data.filter((Data) => {
       const laptopHeading =
-        Data.Brand + " " +
-        Data.Series + " " +
-        Data.Type + " " +
-        Data.OS_Architecture + " " +
-        Data.Processor_Brand + " " +
-        Data.Processor_Name + " " +
+        Data.Brand + " "+
+        Data.Series + " "+
+        Data.Type + " "+
+        Data.OS_Architecture + " "+
+        Data.Processor_Brand + " "+
+        Data.Processor_Name + " "+
         Data.Processor_Generation + " ";
       // const laptopBrand = Data.Brand.toLowerCase();
       const laptopBrand = laptopHeading.toLowerCase();
@@ -44,28 +47,32 @@ const Laptops = () => {
 
   return (
     <React.Fragment>
-      <div className="container-fluid mt-2 mx-4 px-2" style={{ 'width': 'auto' }}>
+      <div className="container-fluid mt-2 mx-4 px-2" style={{'width':'auto'}}>
         <div className="row">
           <SearchProduct
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
         </div>
-        <div className="row">
-          <div className="filter-container">
-            <Filter filterBrand={filterBrandHandler} />
+        <div className="row" style={{'justifyContent': 'center'}}>
+          <div className='full-line'>
+          <div className="filter-container mt-3" style={{'width': 'auto'}}>
+            <Filter
+              // filterBrand={filterBrand}
+              // setFilterBrand={setFilterBrand}
+               />
           </div>
-        </div>
-
-        <div className="lapDes-container">
-          <div> Showing 1 – 20 of 2000 results for "laptop".</div>
-          <div className="mt-2">
-            <LapDes data={searchedData} />
+          </div>
+          
+          <div className="lapDes-container">
+            <div> Showing 1 – 20 of 2000 results for "laptop".</div>
+            <div className="mt-2">
+              <LapDes data={searchedData} />
+            </div>
           </div>
         </div>
       </div>
-    
-    </React.Fragment >
+    </React.Fragment>
   );
 };
 export default Laptops;

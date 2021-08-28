@@ -14,20 +14,34 @@ const Filter = (props) => {
   const [brand, setBrand] = useState([]);
   const [ram, setRam] = useState([]);
   const [price, setPrice] = useState([]);
+  const [ssd, setSSD] = useState([]);
+  const [weight, setWeight] = useState([]);
+  const [os, setOS] = useState([]);
 
   const sendBrand = (brand) => {
     setBrand(brand);
-    props.applyFilter(brand, ram, price);
+    props.applyFilter(brand, ram, price, ssd, weight, os);
   };
   const sendRam = (ram) => {
     setRam(ram);
-    props.applyFilter(brand, ram, price);
+    props.applyFilter(brand, ram, price, ssd, weight, os);
   };
   const sendPrice = (price) => {
     setPrice(price);
-    props.applyFilter(brand, ram, price);
+    props.applyFilter(brand, ram, price, ssd, weight, os);
   };
-  console.log(price);
+  const sendSSD = (ssd) => {
+    setSSD(ssd);
+    props.applyFilter(brand, ram, price, ssd, weight, os);
+  };
+  const sendWeight = (weight) => {
+    setWeight(weight);
+    props.applyFilter(brand, ram, price, ssd, weight, os);
+  };
+  const sendOS = (os) => {
+    setOS(os);
+    props.applyFilter(brand, ram, price, ssd, weight, os);
+  };
 
   // const applyAllFilter = () => {
   //   props.applyFilter(brand, ram);
@@ -122,7 +136,7 @@ const Filter = (props) => {
                 aria-expanded="false"
                 aria-controls="collapseFour"
               >
-                Storage Capacity
+                Storage (SSD)
               </button>
             </h2>
             <div
@@ -132,7 +146,7 @@ const Filter = (props) => {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                <StorageCapacity />
+                <StorageCapacity filterBySSD={sendSSD} />
               </div>
             </div>
           </div>
@@ -156,7 +170,31 @@ const Filter = (props) => {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                <Weight />
+                <Weight filterByWeight={sendWeight} />
+              </div>
+            </div>
+          </div>
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingSeven">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven"
+                aria-expanded="false"
+                aria-controls="collapseSeven"
+              >
+                Operating System
+              </button>
+            </h2>
+            <div
+              id="collapseSeven"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingSeven"
+              data-bs-parent="#accordionExample"
+            >
+              <div className="accordion-body">
+                <OperatingSystem filterByOS={sendOS} />
               </div>
             </div>
           </div>
@@ -181,30 +219,6 @@ const Filter = (props) => {
             >
               <div className="accordion-body">
                 <Stores />
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingSeven">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSeven"
-                aria-expanded="false"
-                aria-controls="collapseSeven"
-              >
-                Operating System
-              </button>
-            </h2>
-            <div
-              id="collapseSeven"
-              className="accordion-collapse collapse"
-              aria-labelledby="headingSeven"
-              data-bs-parent="#accordionExample"
-            >
-              <div className="accordion-body">
-                <OperatingSystem />
               </div>
             </div>
           </div>

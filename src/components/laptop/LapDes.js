@@ -12,9 +12,7 @@ let button_style= {
   'height': '33px',
   'lineHeight': '0px',
   'paddingLeft': '7px',
-  'color': 'white',
-  'borderRadius': '7px',
-  'backgroundColor': 'rgb(77,88,99)'
+  'borderRadius': '7px'
 }
 
 
@@ -89,8 +87,10 @@ export const LapDes = (props) => {
                       Battery : {Data.Battery_Cell} {Data.Battery_Backup}
                     </li>
                     <li>
-                      Graphic : {Data.Dedicated_Graphic_Memory_Capacity}{" "}
-                      {Data.Dedicated_Graphic_Memory_Type}
+                      Graphic : {Data.Graphic_Processor}
+                    </li>
+                    <li>
+                      Weight : {Data.Weight}
                     </li>
                     <li> Operating System : {Data.Operating_System}</li>
                     <li> Screen_Size : {Data.Screen_Size}</li>

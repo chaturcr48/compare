@@ -50,7 +50,11 @@ const Laptops = () => {
   const filterByPrice = (Data, price) => {
     return Data.filter((Data) => {
       const laptopPrice = Data.Discounted_price;
-      return laptopPrice.includes(price);
+      if(price==='30000'){return laptopPrice<30000}
+      else if(price==='50000'){return laptopPrice>=30000 && laptopPrice<50000}
+      else if(price==='70000'){return laptopPrice>=50000 && laptopPrice<70000}
+      else if(price==='90000'){return laptopPrice>=70000 && laptopPrice<90000}
+      else {return laptopPrice>=90000}
     })
   }
   const filterBySSD = (Data, ssd) => {

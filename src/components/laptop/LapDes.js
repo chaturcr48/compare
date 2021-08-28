@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../css/LapDes.css";
-import './Laptops.css'
+import "./Laptops.css";
 
 const dataLimit = 20;
 const pageLimit = 5;
 
-
-let button_style= {
-  'width': '45px',
-  'height': '33px',
-  'lineHeight': '0px',
-  'paddingLeft': '7px',
-  'color': 'white',
-  'borderRadius': '7px',
-  'backgroundColor': 'rgb(77,88,99)'
-}
-
+let button_style = {
+  width: "45px",
+  height: "33px",
+  lineHeight: "0px",
+  paddingLeft: "7px",
+  borderRadius: "7px",
+};
 
 export const LapDes = (props) => {
   const Data = props.data;
@@ -52,49 +48,69 @@ export const LapDes = (props) => {
   };
 
   return (
-
     <React.Fragment>
-      <div style={{'width':'auto'}}>
+      <div style={{ width: "auto" }}>
         {getPaginatedData().map((Data) => (
           <div
             className="card full-card"
             key={Data.id}
             style={{ border: "none" }}
           >
-            <div className="row" style={{'marginLeft': '3px'}}>
-              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'31%'}}>
+            <div className="row" style={{ marginLeft: "3px" }}>
+              <div
+                className="col-md-4 image"
+                style={{ display: "flex", alignItems: "center", width: "31%" }}
+              >
                 <Link to={"/laptop/" + Data.id}>
-                  <img src={Data.Img_url[0]}
-                  className="img-fluid" 
-                  alt="..." />
+                  <img src={Data.Img_url[0]} className="img-fluid" alt="..." />
                 </Link>
-                
               </div>
-              <div className="col-md-8" style={{'width':'63%'}}>
-                  <p className="heading card-title title">
-                    <Link to={"/laptop/" + Data.id}>
-                      {Data.Brand} {Data.Series} {Data.Type} {" "}
-                      {Data.OS_Architecture} {Data.Processor_Brand} {" "}
-                      {Data.Processor_Name} {Data.Processor_Generation} 
+              <div className="col-md-8" style={{ width: "63%" }}>
+                <p className="heading card-title title">
+                  <Link to={"/laptop/" + Data.id}>
+                    {Data.Brand} {Data.Series} {Data.Type}{" "}
+                    {Data.OS_Architecture} {Data.Processor_Brand}{" "}
+                    {Data.Processor_Name} {Data.Processor_Generation}
+                  </Link>
+                </p>
+                <ul className="card-text" style={{ paddingLeft: "inherit" }}>
+                  <li>
+                    Price : {Data.Discounted_price}
+                    <Link className="ml-2 p-1 goto-flipkart" to="">
+                      Flipkart
+                      <img
+                        src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
+                        alt=""
+                        style={{ width: "18px" }}
+                      />
                     </Link>
-                  </p>
-                  <ul className="card-text des" style={{'paddingLeft': 'inherit'}}>
-                    <li>
-                      Storage : {Data.SSD_Capacity} SSD {Data.HDD_Capacity} HDD
-                    </li>
-                    <li>
-                      Ram : {Data.RAM} {Data.RAM_Type}
-                    </li>
-                    <li>
-                      Battery : {Data.Battery_Cell} {Data.Battery_Backup}
-                    </li>
-                    <li>
-                      Graphic : {Data.Dedicated_Graphic_Memory_Capacity}{" "}
-                      {Data.Dedicated_Graphic_Memory_Type}
-                    </li>
-                    <li> Operating System : {Data.Operating_System}</li>
-                    <li> Screen_Size : {Data.Screen_Size}</li>
-                  </ul>
+                    <Link className="ml-2 p-1 goto-amazon" to="">
+                      Amazon
+                      <img
+                        src="https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg"
+                        alt=""
+                        
+                        style={{ width: "15px" }}
+                      />
+                    </Link>
+                    <Link className="px-2 goto-reliance-trend" to="">
+                      Reliance Trend
+                    </Link>
+                  </li>
+                  <li>
+                    Storage : {Data.SSD_Capacity} SSD {Data.HDD_Capacity} HDD
+                  </li>
+                  <li>
+                    Ram : {Data.RAM} {Data.RAM_Type}
+                  </li>
+                  <li>
+                    Battery : {Data.Battery_Cell} {Data.Battery_Backup}
+                  </li>
+                  <li>Graphic : {Data.Graphic_Processor}</li>
+                  <li>Weight : {Data.Weight}</li>
+                  <li> Operating System : {Data.Operating_System}</li>
+                  <li> Screen_Size : {Data.Screen_Size}</li>
+                </ul>
               </div>
             </div>
             <hr className="my-2" />
@@ -103,14 +119,16 @@ export const LapDes = (props) => {
       </div>
 
       <div className="pagination mt-2">
-        <button style={button_style}
+        <button
+          style={button_style}
           onClick={goToPreviousPage}
           className={`prev ${currentPage === 1 ? "disabled" : ""}`}
         >
           prev
         </button>
         {getPaginationGroup().map((item, index) => (
-          <button style={{'width': '35px','height': '35px'}}
+          <button
+            style={{ width: "35px", height: "35px" }}
             key={index}
             onClick={changePage}
             className={`paginationItem ${
@@ -120,7 +138,8 @@ export const LapDes = (props) => {
             <span>{item}</span>
           </button>
         ))}
-        <button style={button_style}
+        <button
+          style={button_style}
           onClick={goToNextPage}
           className={`next ${currentPage === pages ? "disabled" : ""}`}
         >

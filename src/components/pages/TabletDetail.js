@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import TabletData from "../tablet/tabletData.json";
+import TabletData from "../tablet/TabletData.json";
 import Images from './Images'
 let url = "";
 

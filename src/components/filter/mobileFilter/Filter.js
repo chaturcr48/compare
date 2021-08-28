@@ -4,11 +4,11 @@ import FilterPrice from "./FilterPrice";
 import FilterRam from "./FilterRam";
 import BroadbandGeneration from "./BroadbandGeneration";
 import StorageCapacity from "./StorageCapacity";
-import Stars from "./Stars";
-import Stores from "./Stores";
+import Stars from "./Stars.js";
+import Stores from "./stores.js";
 import RearCamera from "./RearCamera";
 import FrontCamera from "./FrontCamera";
-import '../../mobile/mobile.css'
+import '../../mobile/mobile.css';
 
 const Filter = () => {
     return (

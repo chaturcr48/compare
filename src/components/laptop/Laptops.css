@@ -8,6 +8,11 @@
     color: black;
     background-color: rgba(109, 152, 172, 0.596);
 }
+.goto-reliance-trend{
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgba(255, 0, 0, 0.726);
+}
 .filter-container{
     padding: 0px 0px 0px 12px;
     width: 24%;

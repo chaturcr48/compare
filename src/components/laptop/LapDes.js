@@ -89,12 +89,16 @@ export const LapDes = (props) => {
                       <img
                         src="https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg"
                         alt=""
-                        
                         style={{ width: "15px" }}
                       />
                     </Link>
-                    <Link className="px-2 goto-reliance-trend" to="">
-                      Reliance Trend
+                    <Link className="ml-2 p-1 goto-reliance-trend" to="">
+                      Reliance Digital
+                      <img
+                        src="https://seeklogo.com/images/R/reliance-logo-6CB9A8B72D-seeklogo.com.png"
+                        alt=""
+                        style={{ width: "20px" }}
+                      />
                     </Link>
                   </li>
                   <li>

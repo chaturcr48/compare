@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import './tablet.css'
+import './tablet.css';
 
 const dataLimit = 20;
 const pageLimit = 5;
@@ -11,8 +11,8 @@ let button_style= {
   'lineHeight': '0px',
   'paddingLeft': '7px',
   'color': 'white',
-  'border-radius': '7px',
-  'background-color': 'rgb(77,88,99)'
+  'borderRadius': '7px',
+  'backgroundColor': 'rgb(77,88,99)'
 }
 
 

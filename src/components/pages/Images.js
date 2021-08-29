@@ -14,7 +14,7 @@ function Images(url) {
         <div className="containerr my-3 mr-4">
             <div className="content-tabs" style={{'border': '1.5px solid black'}}>
                 <div className={toggleState === 1 ? "content  active-content" : "content"}>
-                    <img src={url.data[0]} className="big-img within" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
+                    <img src={url.data[0]} className="big-img within img-fluid" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
                 </div>
                 <div className={toggleState === 2 ? "content  active-content" : "content"}>
                     <img src={url.data[1]} className="big-img within" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />

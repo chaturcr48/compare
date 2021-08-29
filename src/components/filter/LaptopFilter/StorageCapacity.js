@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const fSC = [
   { id: "1", ssd: "256 GB" },
@@ -7,18 +7,18 @@ const fSC = [
 ];
 
 const StorageCapacity = (props) => {
-    const [ssd, setSSD] = useState({
-      "256 GB": false,
-      "512 GB": false,
-      "1 TB": false,
-    });
-    const checkClick = (event) => {
-      let { value, checked } = event.target;
-      setSSD({ ...ssd, [value]: checked });
-    };
-    const applyFilter = () => {
-      props.filterBySSD(ssd);
-    };
+  const [ssd, setSSD] = useState({
+    "256 GB": false,
+    "512 GB": false,
+    "1 TB": false,
+  });
+  const checkClick = (event) => {
+    let { value, checked } = event.target;
+    setSSD({ ...ssd, [value]: checked });
+  };
+  const applyFilter = () => {
+    props.filterBySSD(ssd);
+  };
   return (
     <React.Fragment>
       {fSC.map((item) => (

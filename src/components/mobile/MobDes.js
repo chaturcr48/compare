@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import './mobile.css'
+import './mobile.css';
 
 const dataLimit = 20;
 const pageLimit = 5;
@@ -80,6 +80,7 @@ const MobDes = (props) => {
                   </p>
                   <ul className="card-text des" style={{'paddingLeft': 'inherit'}}>
                     <li> Ram : {mobile.RAM} </li>
+                    <li> Price : {mobile.Discounted_price} </li>
                     <li>Operating System : {mobile.Operating_System}</li>
                     <li>Internal Storage : {mobile.Internal_Storage } Expandable upto {mobile.Expandable_Storage} </li>
                     <li>

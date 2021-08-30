@@ -1,16 +1,13 @@
 import React from "react";
 
 const fcalling = [
-    {id: '1', calling: 'Yes'},
-    {id: '2', calling: 'No'},
-]
+  { id: "1", calling: "Yes" },
+  { id: "2", calling: "No" },
+];
 
 const Calling = () => {
   return (
     <React.Fragment>
-      <p>
-        <b>Voice Calling Facility</b>
-      </p>
       {fcalling.map((range) => (
         <div className="form-check" key={range.id}>
           <input
@@ -24,6 +21,14 @@ const Calling = () => {
           </label>
         </div>
       ))}
+      <button
+        className="btn btn-secondary mt-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseNine"
+        aria-controls="collapseNine"
+      >
+        Apply Calling
+      </button>
     </React.Fragment>
   );
 };

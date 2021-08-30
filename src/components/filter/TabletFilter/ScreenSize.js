@@ -10,10 +10,6 @@ const fBrand = [
 const ScreenSize = () => {
   return (
     <React.Fragment>
-      <br />
-      <p>
-        <b>Screen Size</b>
-      </p>
       {fBrand.map((brand) => (
         <div className="form-check" key={brand.id}>
           <input
@@ -27,6 +23,14 @@ const ScreenSize = () => {
           </label>
         </div>
       ))}
+      <button
+        className="btn btn-secondary mt-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseEleven"
+        aria-controls="collapseEleven"
+      >
+        Apply Size
+      </button>
     </React.Fragment>
   );
 };

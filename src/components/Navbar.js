@@ -73,7 +73,7 @@ const Navbar = (props) => {
                     Tablets
                   </NavLink>
                 </li>
-                <li className="nav-item fs-5 ">
+                {/* <li className="nav-item fs-5 ">
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"
@@ -81,8 +81,8 @@ const Navbar = (props) => {
                   >
                     Users
                   </NavLink>
-                </li>
-                <li className="nav-item fs-5 ">
+                </li> */}
+                {/* <li className="nav-item fs-5 ">
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"
@@ -90,22 +90,7 @@ const Navbar = (props) => {
                   >
                     MobileApiTest
                   </NavLink>
-                </li>
-              </ul>
-              <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                {!isLoggedIn && (
-                  <li>
-                    <button
-                      className="btn btn-outline-secondary mr-2 login-button"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#loginModal"
-                      style={{ color: "white" }}
-                    >
-                      Login
-                    </button>
-                  </li>
-                )}
+                </li> */}
                 {/* <li className="nav-item fs-5">
                   <button
                     className="btn btn-outline-secondary signup-button"
@@ -117,8 +102,29 @@ const Navbar = (props) => {
                     Signup
                   </button>
                 </li> */}
+              </ul>
+              <form className="d-flex">
+                <input
+                  className="form-control me-2"
+                  // type="search"
+                  type="text"
+                  placeholder="Search"
+                  aria-label="input"
+                  style={{ width: "400px" }}
+                />
+                {!isLoggedIn && (
+                  <button
+                    className="btn btn-outline-secondary mr-2 login-button"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    style={{ color: "white" }}
+                  >
+                    Login
+                  </button>
+                )}
                 {isLoggedIn && (
-                  <li className="nav-item fs-5">
+                  <div>
                     <span style={{ color: "white", marginRight: "5px" }}>
                       Welcome to{" "}
                       <em style={{ fontWeight: "bold" }}>Synkrino</em>
@@ -131,9 +137,9 @@ const Navbar = (props) => {
                     >
                       Logout
                     </button>
-                  </li>
+                  </div>
                 )}
-              </ul>
+              </form>
             </div>
           </div>
         </nav>

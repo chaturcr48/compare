@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import './tablet.css';
+import "./tablet.css";
 
 const dataLimit = 20;
 const pageLimit = 5;
 
-let button_style= {
-  'width': '45px',
-  'height': '33px',
-  'lineHeight': '0px',
-  'paddingLeft': '7px',
-  'color': 'white',
-  'borderRadius': '7px',
-  'backgroundColor': 'rgb(77,88,99)'
-}
-
+let button_style = {
+  width: "45px",
+  height: "33px",
+  lineHeight: "0px",
+  paddingLeft: "7px",
+  color: "white",
+};
 
 const TabDes = (props) => {
   const Data = props.data;
@@ -50,54 +47,98 @@ const TabDes = (props) => {
   };
   return (
     <React.Fragment>
-      <div style={{'width':'auto'}}>
+      <div style={{ width: "auto" }}>
         {getPaginatedData().map((tablet) => (
           <div
             className="card full-card"
             key={tablet.id}
-            style={{border: "none" }}
+            style={{ border: "none" }}
           >
-            <div className="row" style={{'marginLeft': '3px'}}>
-              <div className="col-md-4 image" style={{'display': 'flex', 'alignItems': 'center', 'width':'31%'}}>
-                <Link to={"/tablets/" + tablet.id} style={{'margin': 'auto'}}>
-                  <img src= {tablet.Img_url[0]}
-                  className="img-fluid" 
-                  alt="..." 
-                  style={{'height':'21vh'}}/>
+            <div className="row" style={{ marginLeft: "3px" }}>
+              <div
+                className="col-md-4 image"
+                style={{ display: "flex", alignItems: "center", width: "31%" }}
+              >
+                <Link to={"/tablets/" + tablet.id} style={{ margin: "auto" }}>
+                  <img
+                    src={tablet.Img_url[0]}
+                    className="img-fluid"
+                    alt="..."
+                    style={{ height: "21vh" }}
+                  />
                 </Link>
               </div>
-              <div className="col-md-8" style={{'width':'63%'}}>
-                  <p className="heading card-title title">
-                    <Link to={"/tablets/" + tablet.id}>
-                      {tablet.Brand} {tablet.Model_Name} {tablet.Processor_Type} 
-                      {" "} {tablet.Internal_Storage}
+              <div className="col-md-8" style={{ width: "63%" }}>
+                <p className="heading card-title title">
+                  <Link to={"/tablets/" + tablet.id}>
+                    {tablet.Brand} {tablet.Model_Name} {tablet.Processor_Type}{" "}
+                    {tablet.Internal_Storage}
+                  </Link>
+                </p>
+                <ul
+                  className="card-text des"
+                  style={{ paddingLeft: "inherit" }}
+                >
+                  <li>
+                    {" "}
+                    Price : {tablet.Discounted_price}
+                    <Link className="ml-2 p-1 goto-flipkart" to="">
+                      Flipkart
+                      <img
+                        src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
+                        alt=""
+                        style={{ width: "18px" }}
+                      />
                     </Link>
-                  </p>
-                  <ul className="card-text des" style={{'paddingLeft': 'inherit'}}>
-                    <li> Ram : {tablet.RAM} </li>
-                    <li>Operating System : {tablet.OS} {tablet.Operating_System_Version}</li>
-                    <li>Battery : {tablet.Battery_Capacity } </li>
-                    <li>Display Size  : {tablet.Display_Size}{" "}</li>
-                    <li> Voice Call : {tablet.Voice_Call}</li>
-                    <li> Camera :  {tablet.Primary_Camera} Primary; {tablet.Secondary_Camera} Secondary</li>
-                    
-                  </ul>
+                    <Link className="ml-2 p-1 goto-amazon" to="">
+                      Amazon
+                      <img
+                        src="https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg"
+                        alt=""
+                        style={{ width: "15px" }}
+                      />
+                    </Link>
+                    <Link className="ml-2 p-1 goto-reliance-trend" to="">
+                      Reliance Digital
+                      <img
+                        src="https://seeklogo.com/images/R/reliance-logo-6CB9A8B72D-seeklogo.com.png"
+                        alt=""
+                        style={{ width: "20px" }}
+                      />
+                    </Link>
+                  </li>
+                  <li> Ram : {tablet.RAM} </li>
+                  <li>
+                    Operating System : {tablet.OS}{" "}
+                    {tablet.Operating_System_Version}
+                  </li>
+                  <li>Battery : {tablet.Battery_Capacity} </li>
+                  <li>Display Size : {tablet.Display_Size} </li>
+                  <li> Voice Call : {tablet.Voice_Call}</li>
+                  <li>
+                    {" "}
+                    Camera : {tablet.Primary_Camera} Primary;{" "}
+                    {tablet.Secondary_Camera} Secondary
+                  </li>
+                </ul>
               </div>
             </div>
-            <hr  className="my-2" />
+            <hr className="my-2" />
           </div>
         ))}
       </div>
 
       <div className="pagination mt-2">
-        <button style={button_style}
+        <button
+          style={button_style}
           onClick={goToPreviousPage}
           className={`prev ${currentPage === 1 ? "disabled" : ""}`}
         >
           prev
         </button>
         {getPaginationGroup().map((item, index) => (
-          <button style={{'width': '35px','height': '35px'}}
+          <button
+            style={{ width: "35px", height: "35px" }}
             key={index}
             onClick={changePage}
             className={`paginationItem ${
@@ -107,7 +148,8 @@ const TabDes = (props) => {
             <span>{item}</span>
           </button>
         ))}
-        <button style={button_style}
+        <button
+          style={button_style}
           onClick={goToNextPage}
           className={`next ${currentPage === pages ? "disabled" : ""}`}
         >

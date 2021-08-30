@@ -1,5 +1,5 @@
 import React from "react";
-import '../../css/PopularMobiles.css';
+import "../../css/PopularMobiles.css";
 
 const items = [
   {
@@ -51,15 +51,17 @@ const PopularMobiles = () => {
     <React.Fragment>
       <div className="container mt-2">
         <h4>Popular Mobiles</h4>
-        <div className="row columns">
+        <div className="row">
           {items.map((item) => (
-            <div className='col p-1' key={item.id}>
+            <div className="col p-1" key={item.id}>
               <div className="card">
-                  <img src={item.imgUrl} className="card-img-top" alt="..."/>
-                    <h5 className="card-title">Card Title</h5>
-                    <p className="card-text">This card has supporting us</p>
+                <img src={item.imgUrl} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Card Title</h5>
+                  <p className="card-text">This card has supporting us</p>
+                </div>
               </div>
-              </div>
+            </div>
           ))}
         </div>
       </div>

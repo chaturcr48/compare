@@ -12,7 +12,7 @@ const MobileDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <Images data={detail.Img_url}/>
+          <Images data={detail.Img_url} />
           <div className="col">
             <div className="row py-2">
               <div>

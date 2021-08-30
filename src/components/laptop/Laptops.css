@@ -8,6 +8,7 @@
     color: black;
     background-color: rgba(109, 152, 172, 0.596);
 }
+
 .goto-reliance-trend{
     text-decoration: none;
     color: whitesmoke;
@@ -197,10 +198,11 @@
 .image:hover{
     border: 2px solid rgb(68,88,99);
 }
-.title a{
+.title{
     text-decoration: none;
-    color: rgb(68,88,99);
+    color: rgb(0, 0, 0);
 }
-.title a:hover{
-    color: rgba(68, 88, 99, 0.61);
+
+.title:hover{
+    color: rgba(22, 21, 21, 0.863);
 }

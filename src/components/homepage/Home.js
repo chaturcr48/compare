@@ -15,6 +15,7 @@ const Home = () => {
             <PopulatLaptop />
             {/* <PopularTelevision /> */}
             <PopulatTablets />
+            
         </React.Fragment>
     )
 }

@@ -186,8 +186,8 @@
 }
 .title a{
     text-decoration: none;
-    color: rgb(68,88,99);
+    color: rgb(24, 89, 211);
 }
 .title a:hover{
-    color: rgba(68, 88, 99, 0.61);
+    color: rgb(0, 0, 0);
 }

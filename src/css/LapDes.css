@@ -3,9 +3,11 @@
 }
 .title a{
     text-decoration: none;
-    color: rgb(17, 17, 17);
-    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 .title a:hover{
-    color: rgb(0, 0, 0);
+
+    color:green;
 }
+

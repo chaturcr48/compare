@@ -17,15 +17,15 @@ function Images(url) {
                     <img src={url.data[0]} className="big-img within img-fluid" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
                 </div>
                 <div className={toggleState === 2 ? "content  active-content" : "content"}>
-                    <img src={url.data[1]} className="big-img within" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
+                    <img src={url.data[1]} className="big-img within img-fluid" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
                 </div>
 
                 <div className={toggleState === 3 ? "content  active-content" : "content"}>
-                    <img src={url.data[2]} className="big-img within" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
+                    <img src={url.data[2]} className="big-img within img-fluid" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
                 </div>
 
                 <div className={toggleState === 4 ? "content  active-content" : "content"}>
-                    <img src={url.data[3]} className="big-img within" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
+                    <img src={url.data[3]} className="big-img within img-fluid" alt="..." style={{'padding': '10px', 'width': 'inherit' }} />
                 </div>
             </div>
             <div className="bloc-tabs">

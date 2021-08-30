@@ -190,14 +190,14 @@ const Laptops = () => {
             </div>
           </div>
 
-          <div className="col-9">
+          {/* <div className="col-9"> */}
             <div className="lapDes-container">
               <div> Showing 1 – 20 of 2000 results for "laptop".</div>
               <div className="mt-2">
                 <LapDes data={feedableData} />
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </React.Fragment>

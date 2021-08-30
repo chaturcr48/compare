@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
           <div className="row">
             <div className="pb-2">
-              <Link style={{ color: "white" }} to="" className="float-end">
+              <Link style={{ color: "white" }} to="#" className="float-end">
                 Back to top <i className="fa fa-angle-double-up"></i>
               </Link>
             </div>

@@ -39,9 +39,9 @@ const PopulatTablets = () => {
     <React.Fragment>
       <div className="container mt-2">
         <h3>Popular Tablets</h3>
-        <div className="row row-cols-5 g-4">
+        <div className="row">
           {items.map((item) => (
-            <div className="col" key={item.id}>
+            <div className="col p-1" key={item.id}>
               <div className="card">
               <img src={item.imgUrl} className="card-img-top" alt="..."/>
                   <div className="card-body">

@@ -1,0 +1,41 @@
+.corousalImage{
+    height: 380px;
+}
+@media only screen and (max-width: 320px) {
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 360px){
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 361px) and (max-width: 375px){
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 412px) and (max-width: 414px){
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 415px) and (max-width: 425px){
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    .corousalImage{
+        height: auto;
+    }
+}
+@media only screen and (min-width: 769px){
+    
+}

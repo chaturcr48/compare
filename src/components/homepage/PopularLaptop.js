@@ -44,7 +44,7 @@ const PopulatLaptop = () => {
     <React.Fragment>
       <div className="container mt-2">
         <h3>Popular Laptops</h3>
-        <div className="row row-cols-5 g-4">
+        <div className="row">
           {items.map((item) => (
             <div className='col' key={item.id}>
             <div className="card">

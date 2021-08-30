@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 const fBrand = [
   { id: "1", brand: "Samsung" },
@@ -28,7 +28,6 @@ const FilterBrand = (props) => {
   const applyFilter = () => {
     props.filterByBrand(brand);
   };
-
   return (
     <React.Fragment>
       {fBrand.map((brand) => (

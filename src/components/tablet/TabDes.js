@@ -11,8 +11,6 @@ let button_style= {
   'lineHeight': '0px',
   'paddingLeft': '7px',
   'color': 'white',
-  'borderRadius': '7px',
-  'backgroundColor': 'rgb(77,88,99)'
 }
 
 

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const fqal = [
     {id: '1', qal: 'Full HD'},
     {id: '2', qal: 'HD'},
@@ -10,9 +9,6 @@ const fqal = [
 const Display = () => {
   return (
     <React.Fragment>
-      <p>
-        <b>Display Size</b>
-      </p>
       {fqal.map((brand) => (
         <div className="form-check" key={brand.id}>
           <input
@@ -26,6 +22,14 @@ const Display = () => {
           </label>
         </div>
       ))}
+      <button
+        className="btn btn-secondary mt-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTen"
+        aria-controls="collapseTen"
+      >
+        Apply Display
+      </button>
     </React.Fragment>
   );
 };

@@ -112,25 +112,40 @@ const LoginModal = () => {
                   ref={passwordInputRef}
                 />
               </div>
-              {!isLoading && (
-                <button type="submit" className="btn btn-primary mr-2">
-                  {isLogin ? "Login" : "Create Account"}
+              <div className="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label className="form-check-label" htmlFor="exampleCheck1">
+                  Check me out
+                </label>
+              </div>
+              <button type="submit" className="btn btn-primary mr-2" data-bs-dismiss="modal">
+                Login
+
+                {!isLoading && (
+                  <button type="submit" className="btn btn-primary mr-2">
+                    {isLogin ? "Login" : "Create Account"}
+                  </button>
+                )}
+                {isLoading && <p>Sending request...</p>}
+                <button
+                  type="submit"
+                  className="btn btn-primary mr-2"
+                  onClick={switchAuthModeHandler}
+                >
+                  {isLogin ? "Signup" : "Login with existing account"}
+
                 </button>
-              )}
-              {isLoading && <p>Sending request...</p>}
-              <button
-                type="submit"
-                className="btn btn-primary mr-2"
-                onClick={switchAuthModeHandler}
-              >
-                {isLogin ? "Signup" : "Login with existing account"}
-              </button>
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
               </button>
             </form>
           </div>

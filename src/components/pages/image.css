@@ -1,4 +1,4 @@
-
+ 
   .containerr {
     display: flex;
     flex-direction: column;
@@ -36,7 +36,16 @@
     height: 5px;
   }
   
-  
+  @media only screen and (max-width:770px){
+    .containerr{
+      width:100%;
+    }
+
+    .bloc-tabs{
+      width:100%;
+    }
+    
+  }
   
   button {
     border: none;

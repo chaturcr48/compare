@@ -5,7 +5,7 @@ import FilterRam from "./FilterRam";
 import BroadbandGeneration from "./BroadbandGeneration";
 import StorageCapacity from "./StorageCapacity";
 import Stars from "./Stars.js";
-import Stores from "./stores.js";
+import Stores from "./Stores.js";
 import RearCamera from "./RearCamera";
 import FrontCamera from "./FrontCamera";
 import "../../mobile/mobile.css";

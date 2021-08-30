@@ -1,10 +1,13 @@
 .image:hover{
-    border: 2px solid rgb(68,88,99);
+    border: 2px solid rgb(255, 255, 255);
 }
 .title a{
     text-decoration: none;
-    color: rgb(68,88,99);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 .title a:hover{
-    color: rgba(68, 88, 99, 0.61);
+
+    color:green;
 }
+

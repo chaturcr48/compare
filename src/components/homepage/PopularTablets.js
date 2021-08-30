@@ -44,10 +44,10 @@ const PopulatTablets = () => {
             <div className="col p-1" key={item.id}>
               <div className="card">
               <img src={item.imgUrl} className="card-img-top" alt="..."/>
-                  <div className="card-body">
+                  
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">This card has supporting text below </p>
-                  </div>
+                
               </div>
             </div>
           ))}

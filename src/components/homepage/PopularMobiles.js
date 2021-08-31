@@ -48,11 +48,13 @@ const PopularMobiles = () => {
           {items.map((item) => (
             <div className='col' key={item.id}>
               <div className="card">
-                  <img src={item.imgUrl} className="card-img-top" alt="..."/>
-                    <h5 className="card-title">Card Title</h5>
-                    <p className="card-text">This card has supporting us</p>
+                <img src={item.imgUrl} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Card Title</h5>
+                  <p className="card-text">This card has supporting us</p>
+                </div>
               </div>
-              </div>
+            </div>
           ))}
           {/* <div className="">
             <a className="float-end" href={url}>

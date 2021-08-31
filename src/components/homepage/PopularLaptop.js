@@ -44,13 +44,13 @@ const items = [
 const PopulatLaptop = () => {
   return (
     <React.Fragment>
-      <div className="container mt-2">
+      <div className="container mt-2" style={{display:"block"}}>
         <h3>Popular Laptops</h3>
         <div className="row row-cols-5 g-4">
           {items.map((item) => (
             <div className='col' key={item.id}>
               <div className="card">
-                <img src={item.imgUrl} className="card-img-top" alt="..."  />
+                <img src={item.imgUrl} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">This card has supporting text below </p>

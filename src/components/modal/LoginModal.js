@@ -49,15 +49,14 @@ const LoginModal = () => {
           return res.json();
         } else {
           return res.json().then((data) => {
-            let errorMessage =
-              "Authentication failed!";
+            let errorMessage = "Authentication failed!";
             throw new Error(errorMessage);
           });
         }
       })
       .then((data) => {
         authCtx.login(data.idToken);
-        history.replace('/');
+        history.replace("/");
       })
       .catch((err) => {
         alert(err.message);
@@ -122,28 +121,25 @@ const LoginModal = () => {
                   Check me out
                 </label>
               </div>
-              <button type="submit" className="btn mr-2">
-                {!isLoading && (
-                  <button type="submit" className="btn btn-primary mr-2">
-                    {isLogin ? "Login" : "Create Account"}
-                  </button>
-                )}
-                {isLoading && <p>Sending request...</p>}
-                <button
-                  type="submit"
-                  className="btn btn-primary mr-2"
-                  onClick={switchAuthModeHandler}
-                >
-                  {isLogin ? "Signup" : "Login"}
-
+              {!isLoading && (
+                <button type="submit" className="btn btn-primary mr-2">
+                  {isLogin ? "Login" : "Create Account"}
                 </button>
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
+              )}
+              {isLoading && <p>Sending request...</p>}
+              <button
+                type="submit"
+                className="btn btn-primary mr-2"
+                onClick={switchAuthModeHandler}
+              >
+                {isLogin ? "Signup" : "Login"}
+              </button>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
               </button>
             </form>
           </div>

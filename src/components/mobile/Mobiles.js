@@ -104,8 +104,8 @@ const Mobiles = () => {
 
   return (
     <React.Fragment>
-      <div className="container-fluid mt-2 mx-4 px-2" style={{ width: "auto" }}>
-        <div className="row" style={{ justifyContent: "center" }}>
+      <div className="container-fluid">
+        <div className="row">
           <div className="full-line">
             <div className="">
               <Filter applyFilter={applyAllFilter} />

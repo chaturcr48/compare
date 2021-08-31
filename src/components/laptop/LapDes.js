@@ -57,15 +57,12 @@ export const LapDes = (props) => {
             style={{ border: "none" }}
           >
             <div className="row" style={{ marginLeft: "3px" }}>
-              <div
-                className="col-md-4 image"
-                style={{ display: "flex", alignItems: "center", width: "31%" }}
-              >
+              <div className="col-md-4">
                 <Link to={"/laptop/" + Data.id}>
                   <img src={Data.Img_url[0]} className="img-fluid" alt="..." />
                 </Link>
               </div>
-              <div className="col-md-8" style={{ width: "63%" }}>
+              <div className="col-md-8">
                 <p className="heading card-title title">
                   <Link to={"/laptop/" + Data.id}>
                     {Data.Brand} {Data.Series} {Data.Type}{" "}
@@ -73,9 +70,8 @@ export const LapDes = (props) => {
                     {Data.Processor_Name} {Data.Processor_Generation}
                   </Link>
                 </p>
-                <ul className="card-text" style={{ paddingLeft: "inherit" }}>
-                  <li>
-                    Price : {Data.Discounted_price}
+                <ul className="card-text">
+                  <li className='my-1' style={{listStyle: 'none'}}>
                     <Link className="ml-2 p-1 goto-flipkart" to="">
                       Flipkart
                       <img

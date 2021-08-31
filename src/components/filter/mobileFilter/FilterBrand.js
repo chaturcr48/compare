@@ -1,25 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
+import React, { useState } from "react";
 
 const fBrand = [
-    {id: '1', brand: 'Samsung'},
-    {id: '2', brand: 'Xiaomi'},
-    {id: '3', brand: 'Vivo'},
-    {id: '4', brand: 'Apple'},
-    {id: '5', brand: 'Oppo'},
-    {id: '6', brand: 'Nokia'},
-]
-const FilterBrand = () => {
+  { id: "1", brand: "Samsung" },
+  { id: "2", brand: "Xiaomi" },
+  { id: "3", brand: "Vivo" },
+  { id: "4", brand: "Apple" },
+  { id: "5", brand: "Oppo" },
+  { id: "6", brand: "Nokia" },
+  { id: "7", brand: "Redmi" },
+  { id: "8", brand: "Asus" },
+];
+const FilterBrand = (props) => {
+  const [brand, setBrand] = useState({
+    Samsung: false,
+    Xiaomi: false,
+    Vivo: false,
+    Apple: false,
+    Oppo: false,
+    Nokia: false,
+    Redmi: false,
+    Asus: false,
+  });
+  const checkClick = (event) => {
+    let { value, checked } = event.target;
+    setBrand({ ...brand, [value]: checked });
+  };
+  const applyFilter = () => {
+    props.filterByBrand(brand);
+  };
   return (
     <React.Fragment>
-      <br />
-      <p>
-        <b>Brand</b>
-      </p>
       {fBrand.map((brand) => (
         <div className="form-check" key={brand.id}>
           <input
+            value={brand.brand}
+            onInput={checkClick}
             className="form-check-input"
             type="checkbox"
             name="flexRadioDefault"
@@ -30,17 +45,15 @@ const FilterBrand = () => {
           </label>
         </div>
       ))}
-      <div className="dropdown mt-2 fs-6">
-        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          See More
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><Link
-           className="dropdown-item" href="#">ASUS</Link></li>
-          <li><Link className="dropdown-item" href="#">Apple</Link></li>
-          <li><Link className="dropdown-item" href="#">Microsoft</Link></li>
-        </ul>
-      </div>
+      <button
+        className="btn btn-secondary mt-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-controls="collapseOne"
+        onClick={applyFilter}
+      >
+        Apply Brand
+      </button>
     </React.Fragment>
   );
 };

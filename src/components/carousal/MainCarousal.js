@@ -37,8 +37,7 @@ const mainCarousalImgLink = [
 const MainCarousal = () => {
   return (
     <React.Fragment>
-
-      <div className="container">
+      <div className="">
         <div
           id="carouselExampleCaptions"
           className="carousel slide "
@@ -64,12 +63,12 @@ const MainCarousal = () => {
             ))}
           </div>
           <div className="carousel-inner">
-            <div className="carousel-item active">
+            <div className="carousel-item active corousalImage">
               <img
                 src="https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg"
                 className="d-block w-100"
                 alt="..."
-                style={{height: '350px'}}
+                // style={{height: '350px'}}
               />
               <div className="carousel-caption d-none d-md-block">
                 <h3>Compare products specifications</h3>
@@ -80,12 +79,12 @@ const MainCarousal = () => {
             </div>
 
             {mainCarousalImgLink.map((item) => (
-              <div className="carousel-item" key={item.id}>
+              <div className="carousel-item corousalImage" key={item.id}>
                 <img
                   src={item.imgUrl}
                   className="d-block w-100"
                   alt="imageNotFound..."
-                  style={{height: '350px'}}
+                  // style={{height: '350px'}}
                 />
                 <div className="carousel-caption d-none d-md-block">
                   <h3>Compare product price.</h3>

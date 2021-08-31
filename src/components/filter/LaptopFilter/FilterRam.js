@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 const fRam = [
-  { id: "1", ram: "Upto 4 Gb " },
-  { id: "2", ram: "6 Gb" },
-  { id: "3", ram: "8 Gb" },
-  { id: "4", ram: "12 GB" },
-  { id: "5", ram: "16 GB and Above" },
+  { id: "1", ram: "4 GB" },
+  { id: "2", ram: "8 GB" },
+  { id: "3", ram: "16 GB" },
 ];
 
-const FilterRam = () => {
+const FilterRam = (props) => {
+  const [ram, setRam] = useState({
+    "4 GB": false,
+    "8 GB": false,
+    "16 GB": false,
+  });
+  const checkClick = (event) => {
+    let { value, checked } = event.target;
+    setRam({ ...ram, [value]: checked });
+  };
+  const applyFilter = () => {
+    props.filterByRam(ram);
+  };
   return (
     <React.Fragment>
-      <br />
-      <p>
-        <b>Ram</b>
-      </p>
       {fRam.map((ram) => (
         <div className="form-check" key={ram.id}>
           <input
+            value={ram.ram}
+            onInput={checkClick}
             className="form-check-input"
             type="checkbox"
             name="flexRadioDefault"
@@ -28,6 +36,15 @@ const FilterRam = () => {
           </label>
         </div>
       ))}
+      <button
+        className="btn btn-secondary mt-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-controls="collapseTwo"
+        onClick={applyFilter}
+      >
+        Apply Ram
+      </button>
     </React.Fragment>
   );
 };

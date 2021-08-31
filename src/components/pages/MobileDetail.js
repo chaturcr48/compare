@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import MobileData from "../mobile/mobileData.json";
 import Images from "./Images";
@@ -6,13 +6,16 @@ import Images from "./Images";
 let url={}
 
 const MobileDetail = () => {
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: "0px" });
+  }, []);
   const params = useParams();
   const detail = MobileData[params.mobileId];
   return (
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <Images data={detail.Img_url}/>
+          <Images data={detail.Img_url} />
           <div className="col">
             <div className="row py-2">
               <div>

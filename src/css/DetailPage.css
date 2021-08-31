@@ -1,9 +1,10 @@
 .specification-heading{
     font-weight: bolder;
     font-size: 20px;
+    padding-top: 20px;
 }
 .table-feature{
-    font-weight: 650;
+    font-weight: 600;
 }
 @media only screen and (max-width: 320px) {
     .stores{

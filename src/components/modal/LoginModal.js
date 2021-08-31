@@ -49,15 +49,14 @@ const LoginModal = () => {
           return res.json();
         } else {
           return res.json().then((data) => {
-            let errorMessage =
-              "Authentication failed!";
+            let errorMessage = "Authentication failed!";
             throw new Error(errorMessage);
           });
         }
       })
       .then((data) => {
         authCtx.login(data.idToken);
-        history.replace('/');
+        history.replace("/");
       })
       .catch((err) => {
         alert(err.message);
@@ -112,6 +111,16 @@ const LoginModal = () => {
                   ref={passwordInputRef}
                 />
               </div>
+              <div className="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label className="form-check-label" htmlFor="exampleCheck1">
+                  Check me out
+                </label>
+              </div>
               {!isLoading && (
                 <button type="submit" className="btn btn-primary mr-2">
                   {isLogin ? "Login" : "Create Account"}
@@ -123,7 +132,7 @@ const LoginModal = () => {
                 className="btn btn-primary mr-2"
                 onClick={switchAuthModeHandler}
               >
-                {isLogin ? "Signup" : "Login with existing account"}
+                {isLogin ? "Signup" : "Login"}
               </button>
               <button
                 type="button"

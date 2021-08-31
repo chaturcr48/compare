@@ -1,4 +1,4 @@
-
+ 
   .containerr {
     display: flex;
     flex-direction: column;
@@ -36,7 +36,16 @@
     height: 5px;
   }
   
-  
+  @media only screen and (max-width:770px){
+    .containerr{
+      width:100%;
+    }
+
+    .bloc-tabs{
+      width:100%;
+    }
+    
+  }
   
   button {
     border: none;
@@ -68,7 +77,12 @@
     display: block;
   }
   .within{
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
+    width: 400px;
+    height:400px;
+    
+  }
+  .small-img{
+    padding-left: 40px;
+    height: 100%;
+    width:150%;
   }

@@ -1,13 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams} from "react-router-dom";
-import Data from "../laptop/finalData.json";
+import Data from "../laptop/laptopData.json";
 import "../../css/DetailPage.css";
 import Images from './Images'
 let url = "";
 
 const LaptopDetail = () => {
+
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: "0px" });
+  }, []);
+
   const params = useParams();
   const detail = Data[params.laptopId];
+  
   return (
     <React.Fragment>
       <div className="container mt-2">

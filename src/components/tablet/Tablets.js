@@ -3,7 +3,7 @@ import Filter from "../filter/TabletFilter/Filter";
 import SearchProduct from "../searchBar/SearchProduct";
 import TabDes from "./TabDes";
 import "./tablet.css";
-import TabletData from "./TabletData.json";
+import TabletData from "./tabletData.json";
 
 const Tablet = () => {
 

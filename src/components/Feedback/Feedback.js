@@ -3,8 +3,8 @@ import "./Feedback.css";
 const Feedback = () => {
   return (
     <>
-      <div className="container mt-2 w-50">
         <div className="center">
+      <div className="container mt-2 w-75n/ ">
           <h3>
             <i className='bi bi-chat-right'></i>
             &nbsp;we'd love your feedback

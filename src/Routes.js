@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Feedback from "./components/Feedback/Feedback";
-import FooterDetail from "./components/footer/FooterDetail";
-import Team from "./components/footer/Team";
+import FooterFeatures from "./components/footer/FooterFeatures";
 import Home from "./components/homepage/Home";
 import Laptops from "./components/laptop/Laptops";
 import Mobiles from "./components/mobile/Mobiles";
@@ -30,9 +28,7 @@ const Routes = () => {
             {/* <Route path='/users' > <Users /> </Route> */}
             <Route path='/laptop' exact > <Laptops /> </Route>
             <Route path='/laptop/:laptopId' > <LaptopDetail /> </Route>
-            <Route path='/footer-detail' > <FooterDetail /> </Route>
-            <Route path='/footer-team'> <Team /> </Route>
-            <Route path='/footer-feedback' > <Feedback /> </Route>
+            <Route path='/footer-features' > <FooterFeatures /> </Route>
             {/* <Route path='/mobile-api-test' > <MobileApiTest /> </Route> */}
             </Switch>
         </React.Fragment>

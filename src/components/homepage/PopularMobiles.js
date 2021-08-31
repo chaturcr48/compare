@@ -1,6 +1,6 @@
 import React from "react";
+import "../../css/PopularMobiles.css";
 
-//let url = "";
 const items = [
   {
     id: "1",
@@ -36,7 +36,14 @@ const items = [
       "https://www.godigit.com/content/dam/godigit/directportal/en/website-images/mobile-phone.jpg",
     name: "Xiaomi Redmi Note 100",
     desc: "5G (6GB RAM + 128GB)",
-  }
+  },
+  {
+    id: "6",
+    imgUrl:
+      "https://www.godigit.com/content/dam/godigit/directportal/en/website-images/mobile-phone.jpg",
+    name: "Xiaomi Redmi Note 100",
+    desc: "5G (6GB RAM + 128GB)",
+  },
 ];
 
 const PopularMobiles = () => {
@@ -44,9 +51,9 @@ const PopularMobiles = () => {
     <React.Fragment>
       <div className="container mt-2">
         <h4>Popular Mobiles</h4>
-        <div className="row row-cols-5 g-4">
+        <div className="row">
           {items.map((item) => (
-            <div className='col' key={item.id}>
+            <div className="col p-1" key={item.id}>
               <div className="card">
                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -56,11 +63,6 @@ const PopularMobiles = () => {
               </div>
             </div>
           ))}
-          {/* <div className="">
-            <a className="float-end" href={url}>
-              Show more
-            </a>
-          </div> */}
         </div>
       </div>
     </React.Fragment>

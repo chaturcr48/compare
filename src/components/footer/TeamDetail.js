@@ -1,55 +1,11 @@
-import React from "react";
-import { Link } from 'react-router-dom';
-let url = "";
-let feedbackUrl='feedback';
+import React, {useEffect} from "react";
 
-export const Team = () => {
+const TeamDetail = () => {
+    useEffect(() => {
+        window.scrollTo({ behavior: "smooth", top: "0px" });
+      }, []);
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container-fluid ">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse "
-            id="navbarSupportedContent"
-            style={{ paddingLeft: "12vw" }}
-          >
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-link  fs-3 px-5">
-                <a className="nav-link active" aria-current="page" href={url}>
-                  <u>Team</u>{" "}
-                </a>
-              </li>
-              <li className="nav-link  fs-3 px-5">
-                <Link className='nav-link' href={url}>
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-link fs-3 px-5">
-                <a className="nav-link" href={url}>
-                  Contact Us
-                </a>
-              </li>
-              <li className="nav-link fs-3 px-5">
-                <Link className="nav-link" to={"/footer-"+feedbackUrl}>
-                  Feedback
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
       <div className="container">
         <div className="row featurette d-flex justify-content-center align-items-center">
           <div className="col-md-3 order-md-1">
@@ -124,4 +80,4 @@ export const Team = () => {
     </React.Fragment>
   );
 };
-export default Team;
+export default TeamDetail;

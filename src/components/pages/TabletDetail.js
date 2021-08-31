@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import TabletData from "../tablet/TabletData.json";
 import Images from './Images'
@@ -7,7 +7,9 @@ let url = "";
 const TabletDetail = () => {
   const params = useParams();
   const detail = TabletData[params.tabletId];
-
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: "0px" });
+  }, []);
   return (
     <React.Fragment>
       <div className="container mt-2">

@@ -122,9 +122,7 @@ const LoginModal = () => {
                   Check me out
                 </label>
               </div>
-              <button type="submit" className="btn btn-primary mr-2" data-bs-dismiss="modal">
-                Login
-
+              <button type="submit" className="btn mr-2">
                 {!isLoading && (
                   <button type="submit" className="btn btn-primary mr-2">
                     {isLogin ? "Login" : "Create Account"}
@@ -136,7 +134,7 @@ const LoginModal = () => {
                   className="btn btn-primary mr-2"
                   onClick={switchAuthModeHandler}
                 >
-                  {isLogin ? "Signup" : "Login with existing account"}
+                  {isLogin ? "Signup" : "Login"}
 
                 </button>
                 <button

@@ -6,7 +6,9 @@
     margin-top: -300px;
     width: 50%;
 } */
-
+.container{
+    width:100%;
+}
 .intcolor1{
     color: green;
 }

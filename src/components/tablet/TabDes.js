@@ -56,7 +56,7 @@ const TabDes = (props) => {
           >
             <div className="row" style={{ marginLeft: "3px" }}>
               <div
-                className="col-md-4 image"
+                className="col-md-4"
                 style={{ display: "flex", alignItems: "center", width: "31%" }}
               >
                 <Link to={"/tablets/" + tablet.id} style={{ margin: "auto" }}>
@@ -75,14 +75,9 @@ const TabDes = (props) => {
                     {tablet.Internal_Storage}
                   </Link>
                 </p>
-                <ul
-                  className="card-text des"
-                  style={{ paddingLeft: "inherit" }}
-                >
-                  <li>
-                    {" "}
-                    Price : {tablet.Discounted_price}
-                    <Link className="ml-2 p-1 goto-flipkart" to="">
+                <ul className="card-text">
+                  <li className="my-1" style={{ listStyle: "none" }}>
+                    <Link className=" p-1 goto-flipkart" to="">
                       Flipkart
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"

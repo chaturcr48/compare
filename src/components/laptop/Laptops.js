@@ -7,8 +7,7 @@ import Data from "./laptopData.json";
 // import SearchProduct from "../searchBar/SearchProduct";
 
 const Laptops = () => {
-
-  let ud=[];
+  let ud = [];
 
   // const [searchQuery, setSearchQuery] = useState("");
   // const filterPosts = (Data, query) => {
@@ -39,41 +38,54 @@ const Laptops = () => {
       const laptopBrand = Data.Brand.toLowerCase();
       const query = brand.toLowerCase();
       return laptopBrand.includes(query);
-    })
-  }
+    });
+  };
   const filterByRam = (Data, ram) => {
     return Data.filter((Data) => {
       const laptopRam = Data.RAM;
       return laptopRam.includes(ram);
-    })
-  }
+    });
+  };
   const filterByPrice = (Data, price) => {
     return Data.filter((Data) => {
       const laptopPrice = Data.Discounted_price;
-      if(price==='30000'){return laptopPrice<30000}
-      else if(price==='50000'){return laptopPrice>=30000 && laptopPrice<50000}
-      else if(price==='70000'){return laptopPrice>=50000 && laptopPrice<70000}
-      else if(price==='90000'){return laptopPrice>=70000 && laptopPrice<90000}
-      else {return laptopPrice>=90000}
-    })
-  }
+      if (price === "30000") {
+        return laptopPrice < 30000;
+      } else if (price === "50000") {
+        return laptopPrice >= 30000 && laptopPrice < 50000;
+      } else if (price === "70000") {
+        return laptopPrice >= 50000 && laptopPrice < 70000;
+      } else if (price === "90000") {
+        return laptopPrice >= 70000 && laptopPrice < 90000;
+      } else {
+        return laptopPrice >= 90000;
+      }
+    });
+  };
   const filterBySSD = (Data, ssd) => {
     return Data.filter((Data) => {
       const laptopSSD = Data.SSD_Capacity;
       return laptopSSD.includes(ssd);
-    })
-  }
+    });
+  };
   const filterByWeight = (Data, weight) => {
     return Data.filter((Data) => {
       const laptopWeight = Data.Weight;
-      if(weight==='1.25 kg'){return laptopWeight<='1.25 kg';}
-      else if(weight==='1.251 kg'){return  laptopWeight>'1.25 kg' && laptopWeight<='1.5 kg';}
-      else if(weight==='1.51 kg'){return laptopWeight>'1.5 kg' && laptopWeight<='1.75 kg';}
-      else if(weight==='1.751 kg'){return laptopWeight>'1.75 kg' && laptopWeight<='2.0 kg';}
-      else if(weight==='2.1 kg'){return laptopWeight>'2.0 kg' && laptopWeight<='2.25 kg';}
-      else {return laptopWeight>'2.25 kg';}
+      if (weight === "1.25 kg") {
+        return laptopWeight <= "1.25 kg";
+      } else if (weight === "1.251 kg") {
+        return laptopWeight > "1.25 kg" && laptopWeight <= "1.5 kg";
+      } else if (weight === "1.51 kg") {
+        return laptopWeight > "1.5 kg" && laptopWeight <= "1.75 kg";
+      } else if (weight === "1.751 kg") {
+        return laptopWeight > "1.75 kg" && laptopWeight <= "2.0 kg";
+      } else if (weight === "2.1 kg") {
+        return laptopWeight > "2.0 kg" && laptopWeight <= "2.25 kg";
+      } else {
+        return laptopWeight > "2.25 kg";
+      }
     });
-  }
+  };
 
   const brandHandler = (brand, Data) => {
     let brandData = [];
@@ -91,7 +103,7 @@ const Laptops = () => {
     } else {
       return brandData;
     }
-  }
+  };
   const ramHandler = (ram, ud) => {
     let ramData = [];
     let key = Object.keys(ram);
@@ -109,7 +121,7 @@ const Laptops = () => {
     } else {
       return ramData;
     }
-  }
+  };
   const priceHandler = (price, ud) => {
     let priceData = [];
     let key = Object.keys(price);
@@ -127,7 +139,7 @@ const Laptops = () => {
     } else {
       return priceData;
     }
-  }
+  };
   const ssdHandler = (ssd, ud) => {
     let ssdData = [];
     let key = Object.keys(ssd);
@@ -145,7 +157,7 @@ const Laptops = () => {
     } else {
       return ssdData;
     }
-  }
+  };
   const weightHandler = (weight, ud) => {
     let weightData = [];
     let key = Object.keys(weight);
@@ -163,7 +175,7 @@ const Laptops = () => {
     } else {
       return weightData;
     }
-  }
+  };
 
   const applyAllFilter = (brand, ram, price, ssd, weight) => {
     ud = brandHandler(brand, Data);
@@ -172,31 +184,31 @@ const Laptops = () => {
     ud = ssdHandler(ssd, ud);
     ud = weightHandler(weight, ud);
     setFeedableData(ud);
-  }
-  
+  };
+
   return (
     <React.Fragment>
-      <div className="container-fluid mt-2 mx-4 px-2" style={{ 'width': 'auto' }}>
+      <div className="container-fluid mt-2 mx-4 px-2" style={{ width: "auto" }}>
         {/* <div className="row">
           <SearchProduct
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
         </div> */}
-        <div className="row" style={{ 'justifyContent': 'center' }}>
-          <div className='full-line'>
+        <div className="row" style={{ justifyContent: "center" }}>
+          <div className="full-line">
             <div className="">
               <Filter applyFilter={applyAllFilter} />
             </div>
           </div>
 
           {/* <div className="col-9"> */}
-            <div className="lapDes-container">
-              <div> Showing 1 – 20 of 2000 results for "laptop".</div>
-              <div className="mt-2">
-                <LapDes data={feedableData} />
-              </div>
+          <div className="lapDes-container">
+            <div> Showing 1 – 20 of 2000 results for "laptop".</div>
+            <div className="mt-2">
+              <LapDes data={feedableData} />
             </div>
+          </div>
           {/* </div> */}
         </div>
       </div>

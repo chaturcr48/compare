@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import "../../css/Footer.css";
 
 const features = [
-  { id: "1", fUrl: "team", name: "Team" },
-  { id: "2", fUrl: "", name: "About Us" },
-  { id: "3", fUrl: "", name: "Contact Us" },
-  { id: "4", fUrl: "feedback", name: "Feedback" },
+  { id: "1", fUrl: "features", name: "Team" },
+  { id: "2", fUrl: "features", name: "About Us" },
+  { id: "3", fUrl: "features", name: "Contact Us" },
+  { id: "4", fUrl: "features", name: "Feedback" },
 ];
 const resources = [
   { id: "1", rUrl: "https://www.amazon.com/", name: "Amazon" },
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <div className="row pt-2">
             <div className="col">
-              <h4>Features</h4>
+              <h4><Link style={{textDecoration: 'none', color: 'white'}} to={"/footer-features"}>Features</Link></h4>
               <ul className="list-unstyled text-small">
                 {features.map((item) => (
                   <li key={item.id}>

@@ -83,6 +83,7 @@
   }
   .small-img{
     padding-left: 40px;
-    height: 100%;
-    width:150%;
+    height: auto;
+    width:160%;
   }
+  

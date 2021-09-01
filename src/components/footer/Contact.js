@@ -2,63 +2,76 @@ import React from "react";
 const Contact = () => {
     return (
         <>
-            <div className="container my-3" >
-                <div >
-                    <div className="card m-3">
-                        <div className="card-body">
-                            <i className="bi bi-geo-alt"></i>
-                            <h3 className="card-title">Address</h3>
-                            <p className="card-text">Burdwan,Kolkata<br /> near Axis Bank,PIN-713104</p>
+            <div className="row gy-4">
+
+                <div className="col-lg-6">
+
+                    <div className="row gy-4">
+                        <div className="col-md-6">
+                            <div className="info-box text-center" style={{backgroundColor: "rgb(225, 239, 240)"}}>
+                                <i className="bi bi-geo-alt" style={{color:"blue"}}></i>
+                                <h3 style={{color: "#012970"}}>Address</h3>
+                                <p>Burdwan<br />West Bengal,713104<br/>India</p>
+                            </div>
+                        </div>
+                        <div className="col-md-6 ">
+                            <div className="info-box text-center" style={{backgroundColor: "rgb(225, 239, 240)"}}>
+                                <i className="bi bi-telephone" style={{color:"blue"}}></i>
+                                <h3 style={{color: "#012970"}}>Call Us</h3>
+                                <p>+91 9110065062<br />+91 9801178859<br />+91 9801178859</p>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="info-box text-center" style={{backgroundColor: "rgb(225, 239, 240)"}}>
+                                <i className="bi bi-envelope" style={{color:"blue"}}></i>
+                                <h3 style={{color: "#012970"}}>Email Us</h3>
+                                <p>kumarhimanshu0620@gmail.com<br />afhamfardeen98@gmail.com<br />chaturcr94@gmail.com</p>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="info-box text-center" style={{backgroundColor: "rgb(225, 239, 240)"}}>
+                                <i className="bi bi-clock" style={{color:"blue"}}></i>
+                                <h3 style={{color: "#012970"}}>Open Hours</h3>
+                                <p>Monday - Friday<br />9:00AM - 05:00PM<br/><br/></p>
+                            </div>
                         </div>
                     </div>
 
-
-                    <div className="card m-3">
-                        <div className="card-body">
-                            <i className="bi bi-telephone"></i>
-                            <h3 className="card-title">Call Us</h3>
-                            <p className="card-text">+91 7004901819<br /> +91 9801178859</p>
-                        </div>
-                    </div>
                 </div>
 
-                <div>
-                    <div className="card m-3">
-                        <div className="card-body">
-                            <i className="bi bi-envelope"></i>
-                            <h3 className="card-title">Email Us</h3>
-                            <p className="card-text">afhamfardeen98@gmail.com<br /> chaturcr94@gmail.com</p>
-                        </div>
-                    </div>
+                <div className="col-lg-6" style={{backgroundColor: "rgb(225, 239, 240)"}}><br/>
+                    <form>
+                        <div className="row gy-4">
 
-                    <div className="card m-3">
-                        <div className="card-body">
-                            <i className="bi bi-clock"></i>
-                            <h3 className="card-title">Open Hours</h3>
-                            <p className="card-text">Monday - Friday<br /> 9:00AM - 05:00PM</p>
-                        </div>
-                    </div>
+                            <div className="col-md-6">
+                                <input type="text" name="name" className="form-control" placeholder="Your Name" required="" />
+                            </div>
+
+                            <div className="col-md-6 ">
+                                <input type="email" className="form-control" name="email" placeholder="Your Email" required="" />
+                            </div>
+
+                            <div className="col-md-12">
+                                <input type="text" className="form-control" name="subject" placeholder="Subject" required="" />
+                            </div>
+
+                            <div className="col-md-12">
+                                <textarea className="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div className="text-center">
+                                <button type="submit" className="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+
+
+
+
+                        </div><br />
+
+                    </form>
+
                 </div>
-            </div>
 
-
-            <div className="container my-2" >
-                <form className="p-4" >
-                    <div className="mb-3" >
-                        <input type="email" className="form-control" placeholder="Your Name" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" />
-                    </div>
-                    <div className="mb-3" >
-                        <input type="password" className="form-control" placeholder="Your Email" id="exampleInputPassword1" />
-                    </div>
-                    <div className="mb-3">
-                        <input type="password" className="form-control" placeholder="Subject" id="exampleInputPassword1" />
-                    </div>
-                    <div className="mb-3">
-                        <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </>
     )

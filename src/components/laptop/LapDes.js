@@ -72,7 +72,7 @@ export const LapDes = (props) => {
                 </p>
                 <ul className="card-text">
                   <li className='my-1' style={{listStyle: 'none'}}>
-                    <Link className="ml-2 p-1 goto-flipkart" to="">
+                    <Link className="ml-2 px-1 goto-flipkart" to={Data.Item_url}>
                       Flipkart
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
@@ -80,7 +80,7 @@ export const LapDes = (props) => {
                         style={{ width: "18px" }}
                       />
                     </Link>
-                    <Link className="ml-2 p-1 goto-amazon" to="">
+                    <Link className="ml-2 px-1 goto-amazon" to="">
                       Amazon
                       <img
                         src="https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg"
@@ -88,7 +88,7 @@ export const LapDes = (props) => {
                         style={{ width: "15px" }}
                       />
                     </Link>
-                    <Link className="ml-2 p-1 goto-reliance-trend" to="">
+                    <Link className="ml-2 px-1 goto-reliance-trend" to="">
                       Reliance Digital
                       <img
                         src="https://seeklogo.com/images/R/reliance-logo-6CB9A8B72D-seeklogo.com.png"

@@ -1,44 +1,31 @@
-/* .center{
+.icon-size{
+    font-size: 30px;
+}
+@media only screen and (max-width: 320px) {
+    .icon-size{
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 360px){
+    .icon-size{
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 361px) and (max-width: 375px){
+    
+}
+@media only screen and (min-width: 376px) and (max-width: 411px) {
 
-    position: fixed;
-    top: 50%;
-    left: 30%;
-    margin-top: -300px;
-    width: 50%;
-} */
-.container{
-    width:100%;
 }
-.intcolor1{
-    color: green;
+@media only screen and (min-width: 412px) and (max-width: 414px){
+
 }
-.intcolor2{
-    color: rgb(38, 180, 216);
+@media only screen and (min-width: 415px) and (max-width: 425px){
+
 }
-.intcolor3{
-    color: rgb(173, 35, 162);
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
 }
-.intcolor4{
-    color: rgb(214, 211, 48);
+@media only screen and (min-width: 769px){
+    
 }
-.intcolor5{
-    color: rgba(248, 24, 24, 0.836);
-}
-.intcolor1:hover{
-    color: green;
-}
-.intcolor2:hover{
-    color: rgb(38, 180, 216);
-}
-.intcolor3:hover{
-    color: rgb(173, 35, 162);
-}
-.intcolor4:hover{
-    color: rgb(214, 211, 48);
-}
-.intcolor5:hover{
-    color: rgba(248, 24, 24, 0.836);
-}
-/* .float{
-    float: right;
-} */

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./image.css";
+import "./MobileImages.css";
 
-function Images(url) {
+function MobileImages(url) {
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
@@ -16,19 +16,14 @@ function Images(url) {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <img
-            src={url.data[0]}
-            // className="big-img within img-fluid"
-            alt="..."
-            style={{ padding: "10px", width: "inherit" }}
-          />
+          <img src={url.data[0]} className="mobile-image" alt="..." />
         </div>
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <img
             src={url.data[1]}
-            // className="big-img within img-fluid"
+            className=""
             alt="..."
             style={{ padding: "10px", width: "inherit" }}
           />
@@ -37,23 +32,13 @@ function Images(url) {
         <div
           className={toggleState === 3 ? "content  active-content" : "content"}
         >
-          <img
-            src={url.data[2]}
-            // className="big-img within img-fluid"
-            alt="..."
-            style={{ padding: "10px", width: "inherit" }}
-          />
+          <img src={url.data[2]} className="mobile-image" alt="..." />
         </div>
 
         <div
           className={toggleState === 4 ? "content  active-content" : "content"}
         >
-          <img
-            src={url.data[3]}
-            // className="big-img within img-fluid"
-            alt="..."
-            style={{ padding: "10px", width: "inherit" }}
-          />
+          <img src={url.data[3]} className="mobile-image" alt="..." />
         </div>
       </div>
       <div className="bloc-tabs">
@@ -96,4 +81,4 @@ function Images(url) {
   );
 }
 
-export default Images;
+export default MobileImages;

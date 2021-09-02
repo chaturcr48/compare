@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import MobileData from "../mobile/mobileData.json";
-import Images from "./Images";
+import MobileImages from "./MobileImages.js";
 
 let url={}
 
@@ -15,7 +15,7 @@ const MobileDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <Images data={detail.Img_url} />
+          <MobileImages data={detail.Img_url} />
           <div className="col">
             <div className="row py-2">
               <div>

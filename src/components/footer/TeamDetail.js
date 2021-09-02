@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import img from "../../assets/Afham.jpg";
 import img1 from "../../assets/himanshu.jpg";
 import chaturImg from "../../assets/chatur-square-img.jpg";
+import '../../css/TeamDetail.css';
 
 const TeamDetail = () => {
   useEffect(() => {
@@ -12,8 +13,8 @@ const TeamDetail = () => {
       <div className="row">
         <div className="col-lg-6">
           <div
-            className="member d-flex align-items-start pt-2 pb-2"
-            style={{ backgroundColor: "#ECFADF" }}
+            className="member d-flex align-items-start p-4"
+            style={{ backgroundColor: "rgba(77,88,99,0.088)" }}
           >
             <div className="pic ml-2">
               <img
@@ -35,7 +36,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-twitter icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -43,7 +44,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-facebook icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -51,7 +52,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-instagram icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -59,7 +60,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-linkedin"></i>
+                  <i class="bi bi-linkedin icon-color"></i>
                 </a>
               </div>
             </div>
@@ -68,8 +69,8 @@ const TeamDetail = () => {
 
         <div className="col-lg-6 mt-4 mt-lg-0">
           <div
-            className="member d-flex align-items-start pt-2 pb-2"
-            style={{ backgroundColor: "#ECFADF" }}
+            className="member d-flex align-items-start p-4"
+            style={{ backgroundColor: "rgba(77,88,99,0.088)" }}
           >
             <div className="pic ml-2">
               <img
@@ -91,7 +92,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-twitter icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -99,7 +100,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-facebook icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -107,7 +108,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-instagram icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -115,7 +116,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-linkedin"></i>
+                  <i class="bi bi-linkedin icon-color"></i>
                 </a>
               </div>
             </div>
@@ -124,8 +125,8 @@ const TeamDetail = () => {
 
         <div className="col-lg-6 mt-4">
           <div
-            className="member d-flex align-items-start pt-2 pb-2"
-            style={{ backgroundColor: "#ECFADF" }}
+            className="member d-flex align-items-start p-4"
+            style={{ backgroundColor: "rgba(77,88,99,0.088)" }}
           >
             <div className="pic ml-2">
               <img
@@ -147,7 +148,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-twitter icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -155,7 +156,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-facebook icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -163,7 +164,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-instagram icon-color"></i>
                 </a>
                 &nbsp;&nbsp;
                 <a
@@ -171,7 +172,7 @@ const TeamDetail = () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <i class="bi bi-linkedin"></i>
+                  <i class="bi bi-linkedin icon-color"></i>
                 </a>
               </div>
             </div>

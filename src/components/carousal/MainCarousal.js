@@ -27,7 +27,7 @@ const mainCarousalImgLink = [
 const MainCarousal = () => {
   return (
     <React.Fragment>
-      <div className="mb-5">
+      <div className="mb-4">
         <div
           id="carouselExampleCaptions"
           className="carousel slide mb-2"

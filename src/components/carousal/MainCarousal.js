@@ -27,10 +27,10 @@ const mainCarousalImgLink = [
 const MainCarousal = () => {
   return (
     <React.Fragment>
-      <div className="">
+      <div className="mb-4">
         <div
           id="carouselExampleCaptions"
-          className="carousel slide "
+          className="carousel slide mb-2"
           data-bs-ride="carousel"
         >
           {/* <div className="carousel-indicators">
@@ -58,10 +58,9 @@ const MainCarousal = () => {
                 src = {img4}
                 className="d-block w-100"
                 alt="..."
-                style={{height: '300px'}}
               />
               <div className="carousel-caption d-none d-md-block " style={{"color":'black'}}>
-                <h4>ellComp - Compare electronic product features and price</h4>
+                {/* <h4 style={{"color"}}>ellComp - Compare electronic products features and price</h4> */}
                 {/* <p>
                   Compare laptops laptops, phone and tablets price and features.
                 </p> */}
@@ -74,7 +73,6 @@ const MainCarousal = () => {
                   src={item.imgUrl}
                   className="d-block w-100"
                   alt="imageNotFound..."
-                  style={{height: '300px'}}
                 />
                 {/* <div className="carousel-caption d-none d-md-block" style={{"color":'black'}}>
                   <h3>Compare product price.</h3>

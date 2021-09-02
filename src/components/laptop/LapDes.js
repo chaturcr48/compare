@@ -71,15 +71,20 @@ export const LapDes = (props) => {
                   </Link>
                 </p>
                 <ul className="card-text">
-                  <li className='my-1' style={{listStyle: 'none'}}>
-                    <Link className="ml-2 px-1 goto-flipkart" to={Data.Item_url}>
+                  <li className="my-1" style={{ listStyle: "none" }}>
+                    <a
+                      className="px-1 goto-flipkart"
+                      href={Data.Item_url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
                       Flipkart
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
                         alt=""
                         style={{ width: "18px" }}
                       />
-                    </Link>
+                    </a>
                     <Link className="ml-2 px-1 goto-amazon" to="">
                       Amazon
                       <img

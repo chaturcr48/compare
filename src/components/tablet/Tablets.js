@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Filter from "../filter/TabletFilter/Filter";
 import TabDes from "./TabDes";
 import "./tablet.css";
-import TabletData from "./tabletData.json";
+import TabletData from "./TabletData.json";
 
 const Tablet = () => {
   let ud =[];

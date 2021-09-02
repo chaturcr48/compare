@@ -57,7 +57,7 @@ const Footer = () => {
               <h4>Resources</h4>
               <ul className="list-unstyled text-small">
                 {resources.map((item) => (
-                  <li key={item.id}>
+                  <li key={item.id} className=''>
                     <a
                       style={footerstyle}
                       className="nav-link no-decor px-0"

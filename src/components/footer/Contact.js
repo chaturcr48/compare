@@ -6,7 +6,7 @@ const Contact = () => {
 
                 <div className="col-lg-6">
 
-                    <div className="row gy-4">
+                    <div className="row gy-3">
                         <div className="col-md-6">
                             <div className="info-box text-center" style={{backgroundColor: "rgb(225, 239, 240)"}}>
                                 <i className="bi bi-geo-alt" style={{color:"blue",fontSize:"25px"}}></i>
@@ -39,9 +39,9 @@ const Contact = () => {
 
                 </div>
 
-                <div className="col-lg-6" style={{backgroundColor: "rgb(225, 239, 240)",height:"342px"}}>
+                <div className="col-lg-6" style={{backgroundColor: "rgb(225, 239, 240)",height:"333px"}}>
                     <form>
-                        <div className="row gy-4 pt-1">
+                        <div className="row gy-3 pt-1">
 
                             <div className="col-md-6">
                                 <input type="text" name="name" className="form-control" placeholder="Your Name" required="" />

@@ -9,19 +9,19 @@ let imgUrl_amazon =
 const PopulatLaptop = () => {
   return (
     <React.Fragment>
-      <div className="container mt-2" style={{ display: "block" }}>
+      <div className="container mt-2">
         <h3>Popular Laptops</h3>
-        <div className="row">
+        <div className="row row-cols-1 row-cols-md-5 g-1">
           {popularLaptop.map((item) => (
-            <div className="col p-1" key={item.id}>
-              <div className="card">
+            <div className="col" key={item.id}>
+              <div className="card h-100">
                 <img
                   src={item.Img_url[0]}
-                  className="card-img-top"
+                  className="card-img-top img-fluid"
                   alt="..."
                   style={{
-                    width: "200px",
-                    height: "170px",
+                    // width: "200px",
+                    // height: "170px",
                     margin: "auto",
                     padding: "3px",
                   }}
@@ -33,11 +33,11 @@ const PopulatLaptop = () => {
                     {item.Graphic_Processor} {item.Screen_Size}{" "}
                   </p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">
                     <a
                       href={imgUrl_flipkart}
-                      class="card-link"
+                      className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -49,7 +49,7 @@ const PopulatLaptop = () => {
                     </a>
                     <a
                       href={imgUrl_amazon}
-                      class="card-link"
+                      className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -61,7 +61,7 @@ const PopulatLaptop = () => {
                     </a>
                     <a
                       href={imgUrl_amazon}
-                      class="card-link"
+                      className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >

@@ -11,10 +11,10 @@ const PopulatTablets = () => {
     <React.Fragment>
       <div className="container mt-2">
         <h3>Popular Tablets</h3>
-        <div className="row">
+        <div className="row row-cols-1 row-cols-md-4 g-1">
           {popularTablet.map((item) => (
-            <div className="col p-1" key={item.id}>
-              <div className="card">
+            <div className="col" key={item.id}>
+              <div className="card h-100">
                 <img
                   src={item.Img_url[0]}
                   className="card-img-top"
@@ -33,11 +33,11 @@ const PopulatTablets = () => {
                     {item.Internal_Storage}
                   </p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">
                     <a
                       href={imgUrl_flipkart}
-                      class="card-link"
+                      className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -49,7 +49,7 @@ const PopulatTablets = () => {
                     </a>
                     <a
                       href={imgUrl_amazon}
-                      class="card-link"
+                      className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -61,7 +61,7 @@ const PopulatTablets = () => {
                     </a>
                     <a
                       href={imgUrl_amazon}
-                      class="card-link"
+                      className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >

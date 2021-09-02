@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
+import img from "../../assets/Afham.jpg";
+import img1 from "../../assets/himanshu.jpg";
 import chaturImg from "../../assets/chatur-square-img.jpg";
+
 const TeamDetail = () => {
   useEffect(() => {
     window.scrollTo({ behavior: "smooth", top: "0px" });
@@ -14,14 +17,14 @@ const TeamDetail = () => {
           >
             <div className="pic ml-2">
               <img
-                src={chaturImg}
+                src={img}
                 className="img-fluid"
                 alt=""
-                style={{ borderRadius: "50%", width: "200px" }}
+                style={{ borderRadius: "50%", width: "200px"  }}
               />
             </div>
             <div className="member-info ml-3">
-              <h4>Kumar Chatur Ranjan</h4>
+              <h4>Afham Fardeen</h4>
               <span>
                 <strong>Engineer</strong>
               </span>
@@ -126,14 +129,14 @@ const TeamDetail = () => {
           >
             <div className="pic ml-2">
               <img
-                src={chaturImg}
+                src={img1}
                 className="img-fluid"
                 alt=""
-                style={{ borderRadius: "50%", width: "200px" }}
+                style={{ borderRadius: "50%", width: "200px"  }}
               />
             </div>
             <div className="member-info ml-3">
-              <h4>Kumar Chatur Ranjan</h4>
+              <h4>Himanshu Kumar</h4>
               <span>
                 <strong>Engineer</strong>
               </span>

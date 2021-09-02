@@ -1,82 +1,67 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 const TeamDetail = () => {
-    useEffect(() => {
-        window.scrollTo({ behavior: "smooth", top: "0px" });
-      }, []);
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: "0px" });
+  }, []);
   return (
     <React.Fragment>
-      <div className="container">
-        <div className="row featurette d-flex justify-content-center align-items-center">
-          <div className="col-md-3 order-md-1">
-            <img
-              className="img-fluid"
-              src="https://source.unsplash.com/200x200/?laptop"
-              alt="..."
-              style={{ borderRadius: "50%" }}
-            />
-          </div>
-          <div className="col-md-8 order-md-2 my-3">
-            <h3 className="featurette-heading">Afham Fardeen</h3>
-            <span className="fs-6" style={{ color: "rgb(255,135,16)" }}>
-              HR
-            </span>
-            <p className="fs-6">
-              Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.Some great placeholder content
-              for the first featurette here. Imagine some exciting prose
-              here.Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.
-            </p>
+      <div className="row">
+
+        <div className="col-lg-6">
+          <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
+            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
+            <div className="member-info ml-3">
+              <h4>Afham Fardeen</h4>
+              <span><strong>Developer</strong></span>
+              <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+              <div className="social">
+                <a href=""><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="my-5 py-3 row featurette d-flex justify-content-center align-items-center">
-        <div className="col-md-3 order-md-2">
-            <img
-              className="img-fluid"
-              src="https://source.unsplash.com/200x200/?laptop"
-              alt="..."
-              style={{ borderRadius: "50%" }}
-            />
-          </div>
-          <div className="col-md-8 my-3" >
-            <h3 className="featurette-heading">Kumar Chatur Ranjan</h3>
-            <span className="fs-6" style={{ color: "rgb(255,135,16)" }}>
-              Engineer
-            </span>
-            <p className="fs-6">
-              Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.Some great placeholder content
-              for the first featurette here. Imagine some exciting prose
-              here.Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.
-            </p>
-          </div>
-          
-        </div>
-        <div className="mt-5 pt-3 row featurette d-flex justify-content-center align-items-center">
-          <div className="col-md-3 order-md-1">
-            <img
-              className="img-fluid"
-              src="https://source.unsplash.com/200x200/?laptop"
-              alt="..."
-              style={{ borderRadius: "50%" }}
-            />
-          </div>
-          <div className="col-md-8 order-md-2 my-3">
-            <h3 className="featurette-heading">Himanshu Kumar</h3>
-            <span className="fs-6" style={{ color: "rgb(255,135,16)" }}>
-              HR
-            </span>
-            <p className="fs-6">
-              Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.Some great placeholder content
-              for the first featurette here. Imagine some exciting prose
-              here.Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.
-            </p>
+
+        <div className="col-lg-6 mt-4 mt-lg-0" >
+          <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
+            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
+            <div className="member-info ml-3">
+              <h4>K C Ranjan</h4>
+              <span><strong>Engineer</strong></span>
+              <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+              <div className="social">
+                <a href=""><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className="col-lg-6 mt-4" >
+          <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
+            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
+            <div className="member-info ml-3">
+              <h4>Himanshu Kumar</h4>
+              <span><strong>Designer</strong></span>
+              <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+              <div className="social">
+                <a href=""><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
       </div>
     </React.Fragment>
   );

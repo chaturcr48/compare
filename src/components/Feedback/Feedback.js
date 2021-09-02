@@ -17,7 +17,7 @@ const Feedback = () => {
           </p>
           <h4>What's your opinion of this webpage?</h4>
 
-          <div style={{width:"120%"}}>
+          <div style={{width:"115%"}}>
             <button type="button" className="btn btn-light intcolor1">
               <i
                 className="bi bi-emoji-heart-eyes"

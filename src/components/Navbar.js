@@ -17,7 +17,7 @@ const Navbar = (props) => {
     <React.Fragment>
       <header className={classes.header}>
         <nav
-          className="navbar navbar-expand-lg navbar-dark"
+          className="navbar navbar-expand-lg navbar-dark py-1"
           style={{ backgroundColor: "rgb(77,88,99)" }}
         >
           <div className="container-fluid">
@@ -37,7 +37,7 @@ const Navbar = (props) => {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav me-auto mb-2">
-                <li className="nav-item fs-5">
+                <li className="nav-item fs-5 mx-4">
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"
@@ -46,7 +46,7 @@ const Navbar = (props) => {
                     Home
                   </NavLink>
                 </li>
-                <li className="nav-item fs-5 ">
+                <li className="nav-item fs-5 mx-4">
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"
@@ -55,7 +55,7 @@ const Navbar = (props) => {
                     Laptops
                   </NavLink>
                 </li>
-                <li className="nav-item fs-5 ">
+                <li className="nav-item fs-5 mx-4">
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"
@@ -64,7 +64,7 @@ const Navbar = (props) => {
                     Mobiles
                   </NavLink>
                 </li>
-                <li className="nav-item fs-5 ">
+                <li className="nav-item fs-5 mx-4">
                   <NavLink
                     activeClassName={classes.active}
                     className="nav-NavLink"

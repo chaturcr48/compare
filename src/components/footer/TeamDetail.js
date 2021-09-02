@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import img from "../../assets/Afham.jpg"
+import img1 from "../../assets/himanshu.jpg"
 
 const TeamDetail = () => {
   useEffect(() => {
@@ -10,7 +12,7 @@ const TeamDetail = () => {
 
         <div className="col-lg-6">
           <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
-            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
+            <div className="pic ml-2"><img src={img} className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
             <div className="member-info ml-3">
               <h4>Afham Fardeen</h4>
               <span><strong>Developer</strong></span>
@@ -44,7 +46,7 @@ const TeamDetail = () => {
 
         <div className="col-lg-6 mt-4" >
           <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
-            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
+            <div className="pic ml-2"><img src={img1} className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
             <div className="member-info ml-3">
               <h4>Himanshu Kumar</h4>
               <span><strong>Designer</strong></span>

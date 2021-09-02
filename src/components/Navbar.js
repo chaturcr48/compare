@@ -99,7 +99,7 @@ const Navbar = (props) => {
                     data-bs-target="#signupModal"
                     style={{ color: "white" }}
                   >
-                    Signup
+                    Search
                   </button>
                 </li> */}
               </ul>
@@ -112,6 +112,15 @@ const Navbar = (props) => {
                   aria-label="input"
                   style={{ width: "400px" }}
                 />
+                <button
+                    className="btn btn-outline-secondary signup-button mr-2"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signupModal"
+                    style={{ color: "white" }}
+                  >
+                    Search
+                  </button>
                 {!isLoggedIn && (
                   <button
                     className="btn btn-outline-secondary mr-2 login-button"

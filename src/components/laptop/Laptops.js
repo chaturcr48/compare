@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Filter from "../filter/laptopFilter/Filter";
+import Filter from "../filter/LaptopFilter/Filter";
 import "./Laptops.css";
 import LapDes from "./LapDes";
 import Data from "./laptopData.json";

@@ -3,7 +3,7 @@ import LoginModal from "./modal/LoginModal";
 // import SignupModal from "./modal/SignupModal";
 import { NavLink } from "react-router-dom";
 import classes from "../css/Navbar.module.css";
-import img from "../assets/synkrino.jpg";
+import img from "../assets/synkrino.png";
 import AuthContext from "../store/auth-context";
 
 const Navbar = (props) => {
@@ -22,7 +22,7 @@ const Navbar = (props) => {
         >
           <div className="container-fluid">
             <NavLink className="navbar-brand fs-4" to="/">
-              <img src={img} alt="" style={{ width: "30px" }} />
+              <img src={img} alt="" style={{ width: "35px" }} />
             </NavLink>
             <button
               className="navbar-toggler"

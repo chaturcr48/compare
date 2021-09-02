@@ -82,7 +82,7 @@ const LaptopDetail = () => {
                       <td>{detail.Discount}</td>
                       <td>{detail.Discounted_price}</td>
                       <td>
-                        <Link className="px-1 goto-flipkart" to={detail.Item_url}>
+                        <Link className="px-1 goto-flipkart" to={detail.Item_url} target="_blank">
                           Flipkart
                           <img
                             src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"

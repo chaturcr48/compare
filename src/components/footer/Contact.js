@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/ContactPage.css";
+
 const Contact = () => {
   return (
     <section className="contact">
@@ -7,15 +8,9 @@ const Contact = () => {
         <div className="col-lg-6">
           <div className="row gy-4">
             <div className="col-md-6">
-              <div
-                className="info-box"
-                style={{ backgroundColor: "rgb(225, 239, 240)" }}
-              >
-                <i
-                  className="bi bi-geo-alt"
-                  style={{ color: "rgb(77,88,99)" }}
-                ></i>
-                <h3 style={{ color: "rgb(77,88,99)" }}>Address</h3>
+              <div className="info-box">
+                <i className="bi bi-geo-alt"></i>
+                <h3>Address</h3>
                 <p>
                   Burdwan
                   <br />
@@ -28,13 +23,11 @@ const Contact = () => {
             <div className="col-md-6">
               <div
                 className="info-box"
-                style={{ backgroundColor: "rgb(225, 239, 240)" }}
               >
                 <i
                   className="bi bi-telephone"
-                  style={{ color: "rgb(77,88,99)" }}
                 ></i>
-                <h3 style={{ color: "rgb(77,88,99)" }}>Call Us</h3>
+                <h3>Call Us</h3>
                 <p>
                   +91 9110065062
                   <br />
@@ -47,13 +40,11 @@ const Contact = () => {
             <div className="col-md-6">
               <div
                 className="info-box"
-                style={{ backgroundColor: "rgb(225, 239, 240)" }}
               >
                 <i
                   className="bi bi-envelope"
-                  style={{ color: "rgb(77,88,99)"}}
                 ></i>
-                <h3 style={{ color: "rgb(77,88,99)" }}>Email Us</h3>
+                <h3>Email Us</h3>
                 <p>
                   kumarhimanshu0620@gmail.com
                   <br />
@@ -66,13 +57,11 @@ const Contact = () => {
             <div className="col-md-6">
               <div
                 className="info-box"
-                style={{ backgroundColor: "rgb(225, 239, 240)" }}
               >
                 <i
                   className="bi bi-clock"
-                  style={{ color: "rgb(77,88,99)"}}
                 ></i>
-                <h3 style={{ color: "rgb(77,88,99)" }}>Open Hours</h3>
+                <h3>Open Hours</h3>
                 <p>
                   Monday - Friday
                   <br />
@@ -85,10 +74,10 @@ const Contact = () => {
           </div>
         </div>
 
-        <div
-          className="col-lg-6"
-        >
-          <form className='php-email-form' style={{ backgroundColor: "rgb(225, 239, 240)" }}>
+        <div className="col-lg-6">
+          <form
+            className="php-email-form"
+          >
             <div className="row gy-4">
               <div className="col-md-6">
                 <input
@@ -130,9 +119,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="text-center">
-                <button type="submit">
-                  Send Message
-                </button>
+                <button type="submit">Send Message</button>
               </div>
             </div>
           </form>

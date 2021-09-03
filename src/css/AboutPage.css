@@ -2,48 +2,45 @@
 # Counts
 --------------------------------------------------------------*/
 .counts {
-    padding-bottom: 30px;
-  }
-  
-  .counts .count-box {
-    box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 100%;
-  }
-  
-  .counts .count-box i {
-    display: block;
-    font-size: 30px;
-    color: #3fbbc0;
-    float: left;
-  }
-  
-  .counts .count-box span {
-    font-size: 42px;
-    line-height: 24px;
-    display: block;
-    font-weight: 700;
-    color: #555555;
-    margin-left: 50px;
-  }
-  
-  .counts .count-box p {
-    padding: 30px 0 0 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-  }
-  
-  .counts .count-box a {
-    font-weight: 600;
-    display: block;
-    margin-top: 20px;
-    color: #7b7b7b;
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
-    transition: ease-in-out 0.3s;
-  }
-  
-  .counts .count-box a:hover {
-    color: #3fbbc0;
-  }
+  padding: 70px 0 60px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: rgba(77,88,99,0.088);
+}
+
+.counts .count-box i {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: rgb(77,88,99);
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  line-height: 0;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: rgb(77,88,99);
+}
+
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}

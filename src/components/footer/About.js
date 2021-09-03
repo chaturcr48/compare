@@ -49,45 +49,36 @@ const About = () => {
 
       <section id="counts" class="counts">
         <div class="container" data-aos="fade-up">
-          <div class="row no-gutters">
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
               <div class="count-box">
-                <i class="ri-group-line"></i>
-                <span class="purecounter">85</span>
-                <p>
-                  <strong>Members</strong> assosiated with ellcomp
-                </p>
-                <a href="www.google.com">Find out more &raquo;</a>
+                <i class="bi bi-emoji-smile"></i>
+                <span class="purecounter">232</span>
+                <p>Happy Clients</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
               <div class="count-box">
-                <i class="ri-group-line"></i>
-                <span class="purecounter">85</span>
-                <p>
-                  <strong>Members</strong> assosiated with ellcomp
-                </p>
-                <a href="www.google.com">Find out more &raquo;</a>
+                <i class="bi bi-journal-richtext"></i>
+                <span class="purecounter">13</span>
+                <p>Projects</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
               <div class="count-box">
-                <i class="ri-group-line"></i>
-                <span class="purecounter">85</span>
-                <p>
-                  <strong>Members</strong> assosiated with ellcomp
-                </p>
-                <a href="www.google.com">Find out more &raquo;</a>
+                <i class="bi bi-headset"></i>
+                <span class="purecounter">1632</span>
+                <p>Hours Of Support</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
               <div class="count-box">
-                <i class="ri-group-line"></i>
-                <span class="purecounter">85</span>
-                <p>
-                  <strong>Members</strong> assosiated with ellcomp
-                </p>
-                <a href="www.google.com">Find out more &raquo;</a>
+                <i class="bi bi-people"></i>
+                <span class="purecounter">3</span>
+                <p>Hard Workers</p>
               </div>
             </div>
           </div>

@@ -46,7 +46,7 @@ const TeamDetail = () => {
                 </div>
                 <div className="member-info">
                   <h4>Afham Fardeen</h4>
-                  <span>Co-Founder</span>
+                  <span>Founder</span>
                 </div>
               </div>
             </div>

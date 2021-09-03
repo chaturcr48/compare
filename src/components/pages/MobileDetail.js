@@ -63,7 +63,7 @@ const MobileDetail = () => {
                         <b>Details</b>
                       </td>
                       <td>
-                        <b>Item Price</b>
+                        <b>Discount</b>
                       </td>
                       <td>
                         <b>Total Price</b>
@@ -77,10 +77,22 @@ const MobileDetail = () => {
                     <tr className="">
                       <td>Flipkart</td>
                       <td>Free Delivery</td>
-                      <td>Thornton</td>
-                      <td>Thornton</td>
+                      <td>{detail.Discount}</td>
+                      <td>{detail.Discounted_price}</td>
                       <td>
-                        <a href={url}>Visit</a>
+                      <a
+                          className="px-1 goto-flipkart"
+                          href={detail.Item_url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          Flipkart
+                          <img
+                            src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
+                            alt=""
+                            style={{ width: "18px" }}
+                          />
+                        </a>
                       </td>
                     </tr>
                     <tr className="">

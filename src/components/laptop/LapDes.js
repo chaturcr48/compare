@@ -73,7 +73,7 @@ export const LapDes = (props) => {
                 <ul className="card-text">
                   <li className="my-1" style={{ listStyle: "none" }}>
                     <a
-                      className="px-1 goto-flipkart"
+                      className="p-1 goto-flipkart"
                       href={Data.Item_url}
                       target="_blank"
                       rel="noreferrer noopener"

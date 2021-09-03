@@ -113,41 +113,42 @@ const Navbar = (props) => {
                   style={{ width: "400px" }}
                 />
                 <button
-                  className="btn btn-outline-secondary signup-button mr-2"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#signupModal"
-                  style={{ color: "white" }}
-                >
-                  Search
-                </button>
-              </form>
-              {!isLoggedIn && (
-                <button
-                  className="btn btn-outline-secondary mr-2 login-button"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#loginModal"
-                  style={{ color: "white" }}
-                >
-                  Login
-                </button>
-              )}
-              {isLoggedIn && (
-                <div>
-                  <span style={{ color: "white", marginRight: "5px" }}>
-                    Welcome to <em style={{ fontWeight: "bold" }}>Synkrino</em>
-                  </span>
-                  <button
-                    className="btn btn-outline-secondary logout-button"
+                    className="btn btn-outline-secondary signup-button mr-2"
                     type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signupModal"
                     style={{ color: "white" }}
-                    onClick={logoutHandler}
                   >
-                    Logout
+                    Search
                   </button>
-                </div>
-              )}
+                {!isLoggedIn && (
+                  <button
+                    className="btn btn-outline-secondary mr-2 login-button"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    style={{ color: "white" }}
+                  >
+                    Login
+                  </button>
+                )}
+                {isLoggedIn && (
+                  <div>
+                    <span style={{ color: "white", marginRight: "5px" }}>
+                      Welcome to{" "}
+                      <em style={{ fontWeight: "bold" }}>ellComp.com</em>
+                    </span>
+                    <button
+                      className="btn btn-outline-secondary logout-button"
+                      type="button"
+                      style={{ color: "white" }}
+                      onClick={logoutHandler}
+                    >
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </nav>

@@ -12,9 +12,9 @@ const Contact = () => {
                 <i className="bi bi-geo-alt"></i>
                 <h3>Address</h3>
                 <p>
-                  Burdwan
+                  Mango, Jamshedpur.
                   <br />
-                  West Bengal, 713104
+                  Jharkhand, 832110
                   <br />
                   India
                 </p>
@@ -29,11 +29,11 @@ const Contact = () => {
                 ></i>
                 <h3>Call Us</h3>
                 <p>
+                  +91 7004901819
+                  <br />
+                  +91 9801178859
+                  <br />
                   +91 9110065062
-                  <br />
-                  +91 9801178859
-                  <br />
-                  +91 9801178859
                 </p>
               </div>
             </div>

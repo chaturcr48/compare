@@ -17,8 +17,6 @@ const TeamDetail = () => {
               Our Hardworking <span>Team</span>
             </h3>
             <p>
-              Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-              adipisci expedita at voluptas atque vitae autem.
             </p>
           </div>
 
@@ -48,11 +46,10 @@ const TeamDetail = () => {
                 </div>
                 <div className="member-info">
                   <h4>Afham Fardeen</h4>
-                  <span>Designer</span>
+                  <span>Co-Founder</span>
                 </div>
               </div>
             </div>
-
             <div
               className="col-lg-3 col-md-6 d-flex align-items-stretch"
               data-aos="fade-up"

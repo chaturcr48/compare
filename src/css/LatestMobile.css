@@ -1,0 +1,158 @@
+.animation-container {
+  background-color: rgba(77, 88, 99, 0.466);
+  padding: 3px;
+}
+.animation-text {
+  color: yellow;
+  background-color: rgb(77, 88, 99);
+  padding: 5px;
+  margin: 5px;
+}
+.new-mobile-animation {
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  animation-name: chatur-css;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes chatur-css {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 1130px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .animation-container {
+    padding: 1px;
+  }
+  .new-mobile-animation {
+    animation-duration: 5s;
+  }
+  @keyframes chatur-css {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      top: 0px;
+      left: 130px;
+    }
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+  .animation-container {
+    padding: 1px;
+  }
+  .new-mobile-animation {
+    animation-duration: 5s;
+  }
+  @keyframes chatur-css {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      top: 0px;
+      left: 160px;
+    }
+  }
+}
+@media only screen and (min-width: 361px) and (max-width: 376px) {
+  .animation-container {
+    padding: 1px;
+  }
+  .new-mobile-animation {
+    animation-duration: 5s;
+  }
+  @keyframes chatur-css {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      top: 0px;
+      left: 180px;
+    }
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 412px) {
+  .animation-container {
+    padding: 1px;
+  }
+  .new-mobile-animation {
+    animation-duration: 5s;
+  }
+  @keyframes chatur-css {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      top: 0px;
+      left: 220px;
+    }
+  }
+}
+@media only screen and (min-width: 412px) and (max-width: 415px) {
+  .animation-container {
+    padding: 1px;
+  }
+  .new-mobile-animation {
+    animation-duration: 5s;
+  }
+  @keyframes chatur-css {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      top: 0px;
+      left: 220px;
+    }
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 425px) {
+    .animation-container {
+        padding: 1px;
+      }
+      .new-mobile-animation {
+        animation-duration: 5s;
+      }
+      @keyframes chatur-css {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+        100% {
+          top: 0px;
+          left: 160px;
+        }
+      }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .animation-container {
+        padding: 1px;
+      }
+      .new-mobile-animation {
+        animation-duration: 5s;
+      }
+      @keyframes chatur-css {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+        100% {
+          top: 0px;
+          left: 520px;
+        }
+      }
+}
+@media only screen and (min-width: 769px) {
+    
+}

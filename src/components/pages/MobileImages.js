@@ -12,33 +12,33 @@ function MobileImages(url) {
 
   return (
     <div className="containerr my-3 mr-4">
-      <div className="content-tabs" style={{ border: "1.5px solid black" }}>
+      <div className="content-tabs">
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <img src={url.data[0]} className="mobile-image" alt="..." />
+          <img src={url.data[0]} className="mobile-image rounded mx-auto d-block" alt="..." />
         </div>
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <img
             src={url.data[1]}
-            className=""
+            className="img-fluid w-75"
+            // className='mobile-image rounded mx-auto d-block'
             alt="..."
-            style={{ padding: "10px", width: "inherit" }}
           />
         </div>
 
         <div
           className={toggleState === 3 ? "content  active-content" : "content"}
         >
-          <img src={url.data[2]} className="mobile-image" alt="..." />
+          <img src={url.data[2]} className="mobile-image rounded mx-auto d-block" alt="..." />
         </div>
 
         <div
           className={toggleState === 4 ? "content  active-content" : "content"}
         >
-          <img src={url.data[3]} className="mobile-image" alt="..." />
+          <img src={url.data[3]} className="mobile-image rounded mx-auto d-block" alt="..." />
         </div>
       </div>
       <div className="bloc-tabs">

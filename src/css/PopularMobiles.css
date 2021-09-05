@@ -1,3 +1,48 @@
-.columns{
+.popular-mobile{
+    width: 100px;
+    height: 200px;
+    margin: auto;
+    padding: 5px;
+}
+@media only screen and (max-width: 320px)  {
+    .popular-mobile{
+        width: 60px;
+        height: 120px;
+    }
+    .popular-mobile-card-text{
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 360px){
+    .popular-mobile{
+        width: 60px;
+        height: 120px;
+    }
+    .popular-mobile-card-text{
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 361px) and (max-width: 375px){
+    .popular-mobile{
+        width: 70px;
+        height: 140px;
+    }
+    .popular-mobile-card-text{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+    
+}
+@media only screen and (min-width: 412px) and (max-width: 414px){
+    
+}
+@media only screen and (min-width: 415px) and (max-width: 425px){
+    
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
+}
+@media only screen and (min-width: 769px){
     
 }

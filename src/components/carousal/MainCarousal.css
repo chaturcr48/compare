@@ -1,7 +1,7 @@
 .corousalImage{
     height: fit-content;
 }
-/* @media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) { 
     .corousalImage{
         height: auto;
     }
@@ -35,9 +35,9 @@
     .corousalImage{
         height: 250px;
     }
-} */
-/* @media only screen and (max-width: 769px){
+}
+@media only screen and (max-width: 769px){
     .abc{
         display: none;
     }
-} */
+}

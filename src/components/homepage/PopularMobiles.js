@@ -18,18 +18,13 @@ const PopularMobiles = () => {
               <div className="card h-100">
                 <img
                   src={item.Img_url[0]}
-                  className="card-img-top"
+                  className="card-img-top popular-mobile"
                   alt="..."
-                  style={{
-                    width: "100px",
-                    height: "200px",
-                    margin: "auto",
-                    padding: "3px",
-                  }}
+                  
                 />
                 <div className="card-body">
                   <h5 className="card-title">{item.Brand}</h5>
-                  <p className="card-text">
+                  <p className="card-text popular-mobile-card-text">
                     ({item.RAM} + {item.Internal_Storage}){" "}
                     {item.Operating_System}
                     {item.Display_Size} {item.Primary_Camera}{" "}
@@ -47,6 +42,7 @@ const PopularMobiles = () => {
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
                         alt=""
+                        className='popular-mobile-img-icon'
                         style={{ width: "20px" }}
                       ></img>
                     </a>

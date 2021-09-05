@@ -6,7 +6,7 @@ const Feedback = () => {
     <React.Fragment>
         <div className="mt-2">
           <h3>
-            <i class="bi bi-chat-right-text"></i>
+            <i className="bi bi-chat-right-text"></i>
             &nbsp;We'd love your feedback
           </h3>
           <p>

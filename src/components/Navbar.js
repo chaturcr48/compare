@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import classes from "../css/Navbar.module.css";
 import img from "../assets/synkrino.png";
 import AuthContext from "../store/auth-context";
+import "../css/Navbar.css";
 
 const Navbar = (props) => {
   const authCtx = useContext(AuthContext);
@@ -16,10 +17,7 @@ const Navbar = (props) => {
   return (
     <React.Fragment>
       <header className={classes.header}>
-        <nav
-          className="navbar navbar-expand-lg navbar-dark py-1"
-          style={{ backgroundColor: "rgb(77,88,99)" }}
-        >
+        <nav className="navbar navbar-expand-lg navbar-dark py-1">
           <div className="container-fluid">
             <NavLink className="navbar-brand fs-4" to="/">
               <img src={img} alt="" style={{ width: "35px" }} />

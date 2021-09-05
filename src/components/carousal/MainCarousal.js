@@ -7,18 +7,18 @@ import img4 from "../../assets/nav-pic3.jpg"
 
 const mainCarousalImgLink = [
   {
-    id: "1",
-    imgUrl: img1,
+    id: "0",
+    imgUrl: img2,
     ariaLabel: "Slide 1",
   },
   {
-    id: "2",
-    imgUrl: img2,
+    id: "1",
+    imgUrl: img3,
     ariaLabel: "Slide 2",
   },
   {
-    id: "3",
-    imgUrl: img3,
+    id: "2",
+    imgUrl: img4,
     ariaLabel: "Slide 3",
   },
   
@@ -55,7 +55,7 @@ const MainCarousal = () => {
           <div className="carousel-inner">
             <div className="carousel-item active corousalImage">
               <img
-                src = {img4}
+                src = {img1}
                 className="d-block w-100"
                 alt="..."
               />

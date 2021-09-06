@@ -3,6 +3,7 @@
 		"id": "0",
 		"Sales_Package": "Laptop, Power Adaptor, User Guide, Warranty Documents",
 		"Touchscreen": "No",
+		"Amazon_link":"https://www.amazon.in/gp/product/B08XMB4Z77/ref=as_li_tl?ie=UTF8&tag=ellcomp-21&camp=3638&creative=24630&linkCode=as2&creativeASIN=B08XMB4Z77&linkId=c152f3c8f7e58b0e2519856760e27617",
 		"Bluetooth": "v5.1",
 		"Operating_System": "Windows 10 Home",
 		"Graphic_Processor": "NVIDIA GeForce GTX 1650",
@@ -24,7 +25,7 @@
 		"Color": "Black",
 		"Discount": "35%",
 		"MRP_Price": "89000",
-		"Brand": "HP",
+		"Brand": "Acer",
 		"Screen_Resolution": "1920 x 1080 Pixel",
 		"Warranty_Service_Type": "Onsite",
 		"Covered_in_Warranty": "Manufacturing Defects",
@@ -65,6 +66,7 @@
 	{
 		"id": "1",
 		"Sales_Package": "Laptop, Power Adaptor, User Guide, Warranty Documents",
+		"Amazon_link" : "https://www.amazon.in/gp/product/B093VZC5X9/ref=as_li_tl?ie=UTF8&tag=ellcomp-21&camp=3638&creative=24630&linkCode=as2&creativeASIN=B093VZC5X9&linkId=f605f491f734aa149db66fde594fc555",
 		"Touchscreen": "No",
 		"Bluetooth": "v5.0",
 		"Operating_System": "Windows 10 Home",
@@ -87,7 +89,7 @@
 		"Color": "Natural Silver",
 		"Discount": "10%",
 		"MRP_Price": "45892",
-		"Brand": "acer",
+		"Brand": "HP",
 		"Screen_Resolution": "1920 x 1080 Pixel",
 		"Warranty_Service_Type": "Onsite",
 		"Covered_in_Warranty": "Manufacturing Defects",
@@ -128,6 +130,7 @@
 	{
 		"id": "2",
 		"Sales_Package": "Laptop, Power Adaptor, User Guide, Warranty Documents",
+		"Amazon_link" : "https://www.amazon.in/gp/product/B08TQQ4ZHM/ref=as_li_tl?ie=UTF8&tag=ellcomp-21&camp=3638&creative=24630&linkCode=as2&creativeASIN=B08TQQ4ZHM&linkId=283de7b8fb2970034ef80200ffaed1fa",
 		"Touchscreen": "No",
 		"Bluetooth": "v5.0",
 		"Operating_System": "Windows 10 Home",
@@ -191,6 +194,7 @@
 	{
 		"id": "3",
 		"Sales_Package": "Laptop, Power Adaptor, User Guide, Warranty Documents",
+		"Amazon_link" : "https://www.amazon.in/gp/product/B08XYKGB7X/ref=as_li_tl?ie=UTF8&tag=ellcomp-21&camp=3638&creative=24630&linkCode=as2&creativeASIN=B08XYKGB7X&linkId=75401be8dda3443fb5fa3abe95fe1c33",
 		"Touchscreen": "No",
 		"Bluetooth": "v5.0",
 		"Operating_System": "Windows 10 Home",
@@ -254,6 +258,7 @@
 	{
 		"id": "4",
 		"Sales_Package": "Laptop, Power Adaptor, User Guide, Warranty Documents",
+		"Amazon_link" : "https://www.amazon.in/gp/product/B097SZ3FXB/ref=as_li_tl?ie=UTF8&tag=ellcomp-21&camp=3638&creative=24630&linkCode=as2&creativeASIN=B097SZ3FXB&linkId=6231954daf462961f37b104330849063",
 		"Touchscreen": "No",
 		"Bluetooth": "v4.1",
 		"Operating_System": "Windows 10 Home",

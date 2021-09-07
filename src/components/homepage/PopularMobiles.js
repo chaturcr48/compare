@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/PopularMobiles.css";
 import popularMobile from "./popularMobile.json";
+import { Link } from "react-router-dom";
 
 let shopclues_url = "";
 
@@ -13,14 +14,26 @@ const PopularMobiles = () => {
           {popularMobile.map((item) => (
             <div className="col" key={item.id}>
               <div className="card h-100">
-                <img
-                  src={item.Img_url[0]}
-                  className="card-img-top popular-mobile"
-                  alt="..."
-                  
-                />
+                <Link
+                  to={"/mobiles/" + item.id}
+                  className="card-image"
+                  style={{ textAlign: "center" }}
+                >
+                  <img
+                    src={item.Img_url[0]}
+                    className="card-img-top popular-mobile"
+                    alt="..."
+                  />
+                </Link>
                 <div className="card-body">
-                  <h5 className="card-title popular-mobile-card-title">{item.Brand} {item.Model_Name}</h5>
+                  <h5 className="card-title popular-mobile-card-title">
+                    <Link
+                      to={"/mobiles/" + item.id}
+                      style={{ textDecoration: "none" }}
+                    >
+                      {item.Brand} {item.Model_Name}
+                    </Link>
+                  </h5>
                   <p className="card-text popular-mobile-card-text">
                     ({item.RAM} + {item.Internal_Storage}){" "}
                     {item.Operating_System}
@@ -39,7 +52,7 @@ const PopularMobiles = () => {
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
                         alt=""
-                        className='popular-mobile-img-icon'
+                        className="popular-mobile-img-icon"
                         style={{ width: "20px" }}
                       ></img>
                     </a>

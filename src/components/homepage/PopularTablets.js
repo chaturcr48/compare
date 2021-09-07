@@ -1,6 +1,7 @@
 import React from "react";
 import popularTablet from "./popularTablet.json";
 import "../../css/PopularTablet.css";
+import { Link } from 'react-router-dom';
 
 
 let imgUrl_amazon =
@@ -15,6 +16,7 @@ const PopulatTablets = () => {
           {popularTablet.map((item) => (
             <div className="col" key={item.id}>
               <div className="card h-100">
+              <Link to={'/tablets/'+item.id} className='card-image'>
                 <img
                   src={item.Img_url[0]}
                   className="card-img-top"
@@ -26,8 +28,10 @@ const PopulatTablets = () => {
                   }}
                   alt="..."
                 />
+                </Link>
                 <div className="card-body">
-                  <h5 className="card-title popular-tablet-card-title">{item.Brand} {item.Model_Name}</h5>
+                  <h5 className="card-title popular-tablet-card-title">
+                    <Link to={'/tablets/'+item.id} style={{textDecoration: 'none'}}>{item.Brand} {item.Model_Name} {item.id} </Link> </h5>
                   <p className="card-text popular-tablet-card-text">
                     {item.RAM} RAM {item.Processor_Type}{" "}
                     {item.Internal_Storage} Storage

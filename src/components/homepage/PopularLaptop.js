@@ -1,6 +1,7 @@
 import React from "react";
 import popularLaptop from "./popularLaptop.json";
 import "../../css/PopularLaptop.css";
+import { Link } from "react-router-dom";
 
 let shopclues_url = "";
 
@@ -13,6 +14,7 @@ const PopulatLaptop = () => {
           {popularLaptop.map((item) => (
             <div className="col" key={item.id}>
               <div className="card h-100">
+                <Link to={"/laptop/" + item.id} className='card-image'>
                 <img
                   src={item.Img_url[0]}
                   className="card-img-top img-fluid"
@@ -24,8 +26,16 @@ const PopulatLaptop = () => {
                     padding: "3px",
                   }}
                 />
+                </Link>
                 <div className="card-body">
-                  <h5 className="card-title popular-laptop-card-title">{item.Brand} {item.Series}</h5>
+                  <h5 className="card-title popular-laptop-card-title">
+                    <Link
+                      to={"/laptop/" + item.id}
+                      style={{ textDecoration: "none" }}
+                    >
+                      {item.Brand} {item.Series}
+                    </Link>{" "}
+                  </h5>
                   <p className="card-text popular-laptop-card-text">
                     {item.SSD_Capacity} {item.RAM} {item.RAM_Type}{" "}
                     {item.Graphic_Processor} {item.Screen_Size}{" "}

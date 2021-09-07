@@ -85,14 +85,16 @@ export const LapDes = (props) => {
                         style={{ width: "18px" }}
                       />
                     </a>
-                    <Link className="ml-2 px-1 goto-amazon" to="">
+                    <a className="ml-2 px-1 goto-amazon" href={Data.Amazon_link}
+                    target="_blank"
+                    rel="noreferrer noopener">
                       Amazon
                       <img
                         src="https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg"
                         alt=""
                         style={{ width: "15px" }}
                       />
-                    </Link>
+                    </a>
                     <Link className="ml-2 px-1 goto-reliance-trend" to="">
                       Reliance Digital
                       <img

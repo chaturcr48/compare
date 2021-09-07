@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import classes from "../css/Navbar.module.css";
 import img from "../assets/synkrino.png";
 import AuthContext from "../store/auth-context";
+import "../css/Navbar.css";
 
 const Navbar = (props) => {
   const authCtx = useContext(AuthContext);
@@ -16,10 +17,7 @@ const Navbar = (props) => {
   return (
     <React.Fragment>
       <header className={classes.header}>
-        <nav
-          className="navbar navbar-expand-lg navbar-dark py-1"
-          style={{ backgroundColor: "rgb(77,88,99)" }}
-        >
+        <nav className="navbar navbar-expand-lg navbar-dark py-1">
           <div className="container-fluid">
             <NavLink className="navbar-brand fs-4" to="/">
               <img src={img} alt="" style={{ width: "35px" }} />
@@ -99,7 +97,7 @@ const Navbar = (props) => {
                     data-bs-target="#signupModal"
                     style={{ color: "white" }}
                   >
-                    Signup
+                    Search
                   </button>
                 </li> */}
               </ul>
@@ -112,6 +110,15 @@ const Navbar = (props) => {
                   aria-label="input"
                   style={{ width: "400px" }}
                 />
+                <button
+                    className="btn btn-outline-secondary signup-button mr-2"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signupModal"
+                    style={{ color: "white" }}
+                  >
+                    Search
+                  </button>
                 {!isLoggedIn && (
                   <button
                     className="btn btn-outline-secondary mr-2 login-button"
@@ -127,7 +134,7 @@ const Navbar = (props) => {
                   <div>
                     <span style={{ color: "white", marginRight: "5px" }}>
                       Welcome to{" "}
-                      <em style={{ fontWeight: "bold" }}>Synkrino</em>
+                      <em style={{ fontWeight: "bold" }}>ellComp.com</em>
                     </span>
                     <button
                       className="btn btn-outline-secondary logout-button"

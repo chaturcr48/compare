@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+import img from "../../assets/Afham.jpg";
+import img1 from "../../assets/himanshu.jpg";
+import chaturImg from "../../assets/chatur-square-img.jpg";
+import "../../css/TeamDetail.css";
 
 const TeamDetail = () => {
   useEffect(() => {
@@ -6,63 +10,108 @@ const TeamDetail = () => {
   }, []);
   return (
     <React.Fragment>
-      <div className="row">
+      <section id="team" className="team section-bg">
+        <div className="container" data-aos="fade-up">
+          <div className="section-title">
+            <h3>
+              Our Hardworking <span>Team</span>
+            </h3>
+            <p>
+            </p>
+          </div>
 
-        <div className="col-lg-6">
-          <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
-            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
-            <div className="member-info ml-3">
-              <h4>Afham Fardeen</h4>
-              <span><strong>Developer</strong></span>
-              <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-              <div className="social">
-                <a href=""><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-linkedin"></i></a>
+          <div className="row">
+            <div
+              className="col-lg-3 col-md-6 d-flex align-items-stretch"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="member">
+                <div className="member-img">
+                  <img src={img} className="img-fluid" alt="" />
+                  <div className="social">
+                    <a href="www.google.com">
+                      <i className="bi bi-twitter"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-facebook"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-instagram"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h4>Afham Fardeen</h4>
+                  <span>Founder</span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-3 col-md-6 d-flex align-items-stretch"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="member">
+                <div className="member-img">
+                  <img src={chaturImg} className="img-fluid" alt="" />
+                  <div className="social">
+                    <a href="www.google.com">
+                      <i className="bi bi-twitter"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-facebook"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-instagram"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h4>Kumar Chatur Ranjan</h4>
+                  <span>Engineer</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 col-md-6 d-flex align-items-stretch"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="member">
+                <div className="member-img">
+                  <img src={img1} className="img-fluid" alt="" />
+                  <div className="social">
+                    <a href="www.google.com">
+                      <i className="bi bi-twitter"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-facebook"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-instagram"></i>
+                    </a>
+                    <a href="www.google.com">
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h4>Himanshu Kumar</h4>
+                  <span>Developer</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="col-lg-6 mt-4 mt-lg-0" >
-          <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
-            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
-            <div className="member-info ml-3">
-              <h4>K C Ranjan</h4>
-              <span><strong>Engineer</strong></span>
-              <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-              <div className="social">
-                <a href=""><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-lg-6 mt-4" >
-          <div className="member d-flex align-items-start pt-2 pb-2" style={{backgroundColor:"#ECFADF"}}>
-            <div className="pic ml-2"><img src="https://source.unsplash.com/180x180/?nature,water" className="img-fluid" alt="" style={{ borderRadius: "50%" }} /></div>
-            <div className="member-info ml-3">
-              <h4>Himanshu Kumar</h4>
-              <span><strong>Designer</strong></span>
-              <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-              <div className="social">
-                <a href=""><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-      </div>
+      </section>
     </React.Fragment>
   );
 };

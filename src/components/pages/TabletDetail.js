@@ -33,12 +33,8 @@ const TabletDetail = () => {
               <div>
                 Price:&nbsp;
                 <strong style={{ color: "green" }}>
-                  INR&nbsp; {detail.Discounted_price}
+                  INR&nbsp; {detail.MRP_Price}
                 </strong>
-                <span className="text-decoration-line-through ml-1">
-                  {" "}
-                  {detail.MRP_Price}{" "}
-                </span>
               </div>
               <div>
                 Capacity:&nbsp;{" "}
@@ -62,7 +58,7 @@ const TabletDetail = () => {
                         <b>Details</b>
                       </td>
                       <td>
-                        <b>Item Price</b>
+                        <b>Discount</b>
                       </td>
                       <td>
                         <b>Total Price</b>
@@ -76,10 +72,20 @@ const TabletDetail = () => {
                     <tr className="">
                       <td>Flipkart</td>
                       <td>Free Delivery</td>
-                      <td>Thornton</td>
-                      <td>Thornton</td>
+                      <td>{detail.Discount}</td>
+                      <td>{detail.Discounted_price}</td>
                       <td>
-                        <a href={url}>Visit</a>
+                      <a className="p-1 goto-flipkart"
+                      href={detail.Item_url}
+                      target="_blank"
+                      rel="noreferrer noopener">
+                      Flipkart
+                      <img
+                        src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
+                        alt=""
+                        style={{ width: "18px" }}
+                      />
+                    </a>
                       </td>
                     </tr>
                     <tr className="">

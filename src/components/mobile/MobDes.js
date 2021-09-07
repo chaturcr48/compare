@@ -83,14 +83,16 @@ const MobDes = (props) => {
                 </p>
                 <ul className="card-text">
                   <li className='my-1' style={{listStyle: 'none'}}>
-                    <Link className=" p-1 goto-flipkart" to="">
+                    <a className=" p-1 goto-flipkart" href={mobile.Item_url}
+                      target="_blank"
+                      rel="noreferrer noopener">
                       Flipkart
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
                         alt=""
                         style={{ width: "18px" }}
                       />
-                    </Link>
+                    </a>
                     <Link className="ml-2 p-1 goto-amazon" to="">
                       Amazon
                       <img

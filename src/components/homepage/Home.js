@@ -1,7 +1,8 @@
 import React from "react";
 import MainCarousal from "../carousal/MainCarousal";
+import LatestMobile from "../mobile/NewestArrival/LatestMobile";
 //import MobileSlider from "./MobileSlider";
-import PopulatLaptop from "./PopularLaptop";
+import PopularLaptop from "./PopularLaptop";
 import PopularMobiles from "./PopularMobiles";
 import PopulatTablets from "./PopularTablets";
 // import PopularTelevision from "./PopularTelevision";
@@ -11,8 +12,9 @@ const Home = () => {
         <React.Fragment>
             <MainCarousal />
             {/* <MobileSlider /> */}
+            <LatestMobile />
             <PopularMobiles />
-            <PopulatLaptop />
+            <PopularLaptop />
             {/* <PopularTelevision /> */}
             <PopulatTablets />
             

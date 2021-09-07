@@ -1,34 +1,36 @@
 import React from "react";
-import popularLaptop from "./popularLaptop.json";
-import "../../css/PopularLaptop.css";
+import latestMobile from "./LatestMobile.json";
+import "../../../css/LatestMobile.css";
 
-let shopclues_url = "";
+let imgUrl_amazon =
+  "https://www.amazon.in/dp/B089MS8XQ3/ref=s9_acsd_al_bw_c2_x_1_i?pf_rd_m=A1K21FY43GMZF8&pf_rd_s=merchandised-search-4&pf_rd_r=YT17BG8KJ2RJ0C7HK1J9&pf_rd_t=101&pf_rd_p=0d9bd1b8-0a59-4839-a3f9-38a902ab3e28&pf_rd_i=21634722031";
 
-const PopulatLaptop = () => {
+const LatestMobile = () => {
   return (
     <React.Fragment>
       <div className="container mt-2">
-        <h3>Popular Laptops</h3>
-        <div className="row row-cols-1 row-cols-md-5 g-1">
-          {popularLaptop.map((item) => (
+        <h4>Latest Mobile Phones</h4>
+        <div className="animation-container">
+          <div className="new-mobile-animation">
+            <span className='animation-text'>New</span>
+            <span className='animation-text'>New</span>
+            <span className='animation-text'>New</span>
+          </div>
+        </div>
+        <div className="row row-cols-2 row-cols-md-6 g-1">
+          {latestMobile.map((item) => (
             <div className="col" key={item.id}>
               <div className="card h-100">
                 <img
                   src={item.Img_url[0]}
-                  className="card-img-top img-fluid"
+                  className="card-img-top popular-mobile"
                   alt="..."
-                  style={{
-                    // width: "200px",
-                    // height: "170px",
-                    margin: "auto",
-                    padding: "3px",
-                  }}
                 />
                 <div className="card-body">
-                  <h5 className="card-title popular-laptop-card-title">{item.Brand} {item.Series}</h5>
-                  <p className="card-text popular-laptop-card-text">
-                    {item.SSD_Capacity} {item.RAM} {item.RAM_Type}{" "}
-                    {item.Graphic_Processor} {item.Screen_Size}{" "}
+                  <h5 className="card-title">{item.Brand} {item.Model_Name}</h5>
+                  <p className="card-text popular-mobile-card-text">
+                    Rs {item.Discounted_price} ({item.RAM}+
+                    {item.Internal_Storage}) {item.Primary_Camera} {item.Color}
                   </p>
                 </div>
                 <ul className="list-group list-group-flush">
@@ -42,6 +44,7 @@ const PopulatLaptop = () => {
                       <img
                         src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
                         alt=""
+                        className="popular-mobile-img-icon"
                         style={{ width: "20px" }}
                       ></img>
                     </a>
@@ -58,7 +61,7 @@ const PopulatLaptop = () => {
                       ></img>
                     </a>
                     <a
-                      href={shopclues_url}
+                      href={imgUrl_amazon}
                       className="card-link"
                       target="_blank"
                       rel="noreferrer noopener"
@@ -79,4 +82,4 @@ const PopulatLaptop = () => {
     </React.Fragment>
   );
 };
-export default PopulatLaptop;
+export default LatestMobile;

@@ -1,49 +1,39 @@
 import React from "react";
 import "./MainCarousal.css";
+import img1 from "../../assets/nav-pic.jpg"
+import img2 from "../../assets/nav-pic1.jpg"
+import img3 from "../../assets/nav-pic2.jpg"
+import img4 from "../../assets/nav-pic3.jpg"
 
 const mainCarousalImgLink = [
   {
-    id: "2",
-    imgUrl:
-      "https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg",
+    id: "0",
+    imgUrl: img2,
+    ariaLabel: "Slide 1",
+  },
+  {
+    id: "1",
+    imgUrl: img3,
     ariaLabel: "Slide 2",
   },
   {
-    id: "3",
-    imgUrl:
-      "https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg",
+    id: "2",
+    imgUrl: img4,
     ariaLabel: "Slide 3",
   },
-  {
-    id: "4",
-    imgUrl:
-      "https://i.pcmag.com/imagery/roundups/02naaOkVLe7DIiejFUyDPJp-31..1588859331.jpg",
-    ariaLabel: "Slide 4",
-  },
-  {
-    id: "5",
-    imgUrl:
-      "https://i.pcmag.com/imagery/roundups/02naaOkVLe7DIiejFUyDPJp-31..1588859331.jpg",
-    ariaLabel: "Slide 5",
-  },
-  {
-    id: "6",
-    imgUrl:
-      "https://i.pcmag.com/imagery/roundups/02naaOkVLe7DIiejFUyDPJp-31..1588859331.jpg",
-    ariaLabel: "Slide 6",
-  },
+  
 ];
 
 const MainCarousal = () => {
   return (
     <React.Fragment>
-      <div className="">
+      <div className="mb-4">
         <div
           id="carouselExampleCaptions"
-          className="carousel slide "
+          className="carousel slide mb-2"
           data-bs-ride="carousel"
         >
-          <div className="carousel-indicators">
+          {/* <div className="carousel-indicators">
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
@@ -55,26 +45,25 @@ const MainCarousal = () => {
               <button
                 type="button"
                 data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="0"
+                data-bs-slide-to="1"
                 className="active"
                 aria-label={item.ariaLabel}
                 key={item.id}
               ></button>
             ))}
-          </div>
+          </div> */}
           <div className="carousel-inner">
             <div className="carousel-item active corousalImage">
               <img
-                src="https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS.jpg"
+                src = {img1}
                 className="d-block w-100"
                 alt="..."
-                // style={{height: '350px'}}
               />
-              <div className="carousel-caption d-none d-md-block">
-                <h3>Compare products specifications</h3>
-                <p>
+              <div className="carousel-caption d-none d-md-block " style={{"color":'black'}}>
+                {/* <h4 style={{"color"}}>ellComp - Compare electronic products features and price</h4> */}
+                {/* <p>
                   Compare laptops laptops, phone and tablets price and features.
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -84,12 +73,11 @@ const MainCarousal = () => {
                   src={item.imgUrl}
                   className="d-block w-100"
                   alt="imageNotFound..."
-                  // style={{height: '350px'}}
                 />
-                <div className="carousel-caption d-none d-md-block">
+                {/* <div className="carousel-caption d-none d-md-block" style={{"color":'black'}}>
                   <h3>Compare product price.</h3>
                   <p>Technology,News,Development and Trends.</p>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

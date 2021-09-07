@@ -16,27 +16,34 @@
 .intcolor3{
     color: rgb(173, 35, 162);
 }
-.intcolor4{
-    color: rgb(214, 211, 48);
+.icon-size{
+    font-size: 30px;
 }
-.intcolor5{
-    color: rgba(248, 24, 24, 0.836);
+@media only screen and (max-width: 320px) {
+    .icon-size{
+        font-size: 15px;
+    }
 }
-.intcolor1:hover{
-    color: green;
+@media only screen and (min-width: 321px) and (max-width: 360px){
+    .icon-size{
+        font-size: 20px;
+    }
 }
-.intcolor2:hover{
-    color: rgb(38, 180, 216);
+@media only screen and (min-width: 361px) and (max-width: 375px){
+    
 }
-.intcolor3:hover{
-    color: rgb(173, 35, 162);
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+
 }
-.intcolor4:hover{
-    color: rgb(214, 211, 48);
+@media only screen and (min-width: 412px) and (max-width: 414px){
+
 }
-.intcolor5:hover{
-    color: rgba(248, 24, 24, 0.836);
+@media only screen and (min-width: 415px) and (max-width: 425px){
+
 }
-/* .float{
-    float: right;
-} */
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
+}
+@media only screen and (min-width: 769px){
+    
+}

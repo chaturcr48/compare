@@ -4,10 +4,9 @@ import "./Feedback.css";
 const Feedback = () => {
   return (
     <React.Fragment>
-      <div className="container mt-2">
-        <div className="center">
+        <div className="mt-2">
           <h3>
-          <i class="bi bi-chat-right-text"></i>
+            <i className="bi bi-chat-right-text"></i>
             &nbsp;We'd love your feedback
           </h3>
           <p>
@@ -17,42 +16,40 @@ const Feedback = () => {
           </p>
           <h4>What's your opinion of this webpage?</h4>
 
-          <div style={{width:"115%"}}>
-            <button type="button" className="btn btn-light intcolor1">
+          <div>
+            <button type="button" className="btn btn-light">
               <i
-                className="bi bi-emoji-heart-eyes"
-                style={{ fontSize: "30px", color: "green" }}
+                className="bi bi-emoji-heart-eyes icon-size"
+                style={{ color: "green" }}
               ></i>
             </button>
-          
-            <button type="button" className="btn btn-light intcolor2">
+
+            <button type="button" className="btn btn-light">
               <i
-                className="bi bi-emoji-smile"
-                style={{ fontSize: "30px", color: "rgb(38, 180, 216)" }}
+                className="bi bi-emoji-smile icon-size"
+                style={{ color: "rgb(38, 180, 216)" }}
               ></i>
             </button>
-            <button type="button" className="btn btn-light intcolor3">
+            <button type="button" className="btn btn-light">
               <i
-                className="bi bi-emoji-neutral"
-                style={{ fontSize: "30px", color: "rgb(173, 35, 162)" }}
+                className="bi bi-emoji-neutral icon-size"
+                style={{ color: "rgb(173, 35, 162)" }}
               ></i>
-              
             </button>
-            <button type="button" className="btn btn-light intcolor4">
+            <button type="button" className="btn btn-light">
               <i
-                className="bi bi-emoji-frown"
-                style={{ fontSize: "30px", color: "rgb(214, 211, 48)" }}
+                className="bi bi-emoji-frown icon-size"
+                style={{ color: "rgb(214, 211, 48)" }}
               ></i>
-              
             </button>
-            <button type="button" className="btn btn-light intcolor5">
+            <button type="button" className="btn btn-light">
               <i
-                className="bi bi-emoji-angry"
-                style={{ fontSize: "30px", color: "rgba(248, 24, 24, 0.836)" }}
+                className="bi bi-emoji-angry icon-size"
+                style={{ color: "rgba(248, 24, 24, 0.836)" }}
               ></i>
-              
             </button>
-          </div><br/>
+          </div>
+          <br />
           <h4>Please leave your feedback below.</h4>
           <textarea
             className="form-control mb-2"
@@ -61,9 +58,12 @@ const Feedback = () => {
             placeholder="Your feedback is valued for us...."
           ></textarea>
 
-          <input className="btn btn-primary float" type="submit" value="Submit" />
+          <input
+            className="btn btn-secondary float"
+            type="submit"
+            value="Submit"
+          />
         </div>
-      </div>
     </React.Fragment>
   );
 };

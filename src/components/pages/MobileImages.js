@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./image.css";
+import "./MobileImages.css";
 
-function Images(url) {
+function MobileImages(url) {
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
@@ -12,48 +12,33 @@ function Images(url) {
 
   return (
     <div className="containerr my-3 mr-4">
-      <div className="content-tabs" style={{ border: "1.5px solid black" }}>
+      <div className="content-tabs">
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <img
-            src={url.data[0]}
-            // className="big-img within img-fluid"
-            alt="..."
-            style={{ padding: "10px", width: "inherit" }}
-          />
+          <img src={url.data[0]} className="mobile-image rounded mx-auto d-block" alt="..." />
         </div>
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <img
             src={url.data[1]}
-            // className="big-img within img-fluid"
+            className="img-fluid w-75"
+            // className='mobile-image rounded mx-auto d-block'
             alt="..."
-            style={{ padding: "10px", width: "inherit" }}
           />
         </div>
 
         <div
           className={toggleState === 3 ? "content  active-content" : "content"}
         >
-          <img
-            src={url.data[2]}
-            // className="big-img within img-fluid"
-            alt="..."
-            style={{ padding: "10px", width: "inherit" }}
-          />
+          <img src={url.data[2]} className="mobile-image rounded mx-auto d-block" alt="..." />
         </div>
 
         <div
           className={toggleState === 4 ? "content  active-content" : "content"}
         >
-          <img
-            src={url.data[3]}
-            // className="big-img within img-fluid"
-            alt="..."
-            style={{ padding: "10px", width: "inherit" }}
-          />
+          <img src={url.data[3]} className="mobile-image rounded mx-auto d-block" alt="..." />
         </div>
       </div>
       <div className="bloc-tabs">
@@ -96,4 +81,4 @@ function Images(url) {
   );
 }
 
-export default Images;
+export default MobileImages;

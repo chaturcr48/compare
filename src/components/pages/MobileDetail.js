@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import MobileData from "../mobile/mobileData.json";
-import Images from "./Images";
+import MobileImages from "./MobileImages.js";
 
 let url={}
 
@@ -15,7 +15,7 @@ const MobileDetail = () => {
     <React.Fragment>
       <div className="container mt-2">
         <div className="row">
-          <Images data={detail.Img_url} />
+          <MobileImages data={detail.Img_url} />
           <div className="col">
             <div className="row py-2">
               <div>
@@ -63,7 +63,7 @@ const MobileDetail = () => {
                         <b>Details</b>
                       </td>
                       <td>
-                        <b>Item Price</b>
+                        <b>Discount</b>
                       </td>
                       <td>
                         <b>Total Price</b>
@@ -77,10 +77,22 @@ const MobileDetail = () => {
                     <tr className="">
                       <td>Flipkart</td>
                       <td>Free Delivery</td>
-                      <td>Thornton</td>
-                      <td>Thornton</td>
+                      <td>{detail.Discount}</td>
+                      <td>{detail.Discounted_price}</td>
                       <td>
-                        <a href={url}>Visit</a>
+                      <a
+                          className="px-1 goto-flipkart"
+                          href={detail.Item_url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          Flipkart
+                          <img
+                            src="https://seeklogo.com/images/F/flipkart-logo-3F33927DAA-seeklogo.com.png"
+                            alt=""
+                            style={{ width: "18px" }}
+                          />
+                        </a>
                       </td>
                     </tr>
                     <tr className="">

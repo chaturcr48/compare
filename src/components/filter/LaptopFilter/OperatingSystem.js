@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const fos = [
   { id: "1", os: "Window Os" },
@@ -8,12 +8,30 @@ const fos = [
   { id: "5", os: "Chrome OS" },
 ];
 
-const OperatingSystem = () => {
+const OperatingSystem = (props) => {
+  const[os, setOS] = useState({
+    Windows: false,
+    Linux: false,
+    Ubuntu: false,
+    Mac: false,
+    Dos: false,
+    Chrome: false,
+  });
+  const checkClick = (event) => {
+    let { value, checked } = event.target;
+    setOS({ ...os, [value]: checked });
+  }
+  const applyFilter = () => {
+    props.filterByOS(os);
+  }
+
   return (
     <React.Fragment>
       {fos.map((range) => (
         <div className="form-check" key={range.id}>
           <input
+            value={range.os}
+            onInput={checkClick}
             className="form-check-input"
             type="checkbox"
             name="flexRadioDefault"
@@ -29,6 +47,7 @@ const OperatingSystem = () => {
         data-bs-toggle="collapse"
         data-bs-target="#collapseSeven"
         aria-controls="collapseSeven"
+        onClick={applyFilter}
       >
         Apply OS
       </button>

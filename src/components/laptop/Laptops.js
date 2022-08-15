@@ -86,6 +86,13 @@ const Laptops = () => {
       }
     });
   };
+  const filterByOS = (Data, os) => {
+    return Data.filter((Data) => {
+      const laptopOS = Data.Operating_System.toLowerCase();
+      const query = os.toLowerCase();
+      return laptopOS.includes(query);
+    });
+  };
 
   const brandHandler = (brand, Data) => {
     let brandData = [];
@@ -176,13 +183,32 @@ const Laptops = () => {
       return weightData;
     }
   };
+  const osHandler = (os, ud) => {
+    let osData = [];
+    let key = Object.keys(os);
+    let value = Object.values(os);
+    let filterData = [];
+    let dataFeedToOS = ud;
+    for (let i = 0; i < key.length; i++) {
+      if (value[i] === true) {
+        filterData = filterByOS(dataFeedToOS, key[i]);
+        osData = [...osData, ...filterData];
+      }
+    }
+    if (osData.length === 0) {
+      return ud;
+    } else {
+      return osData;
+    }
+  };
 
-  const applyAllFilter = (brand, ram, price, ssd, weight) => {
+  const applyAllFilter = (brand, ram, price, ssd, weight, os) => {
     ud = brandHandler(brand, Data);
     ud = ramHandler(ram, ud);
     ud = priceHandler(price, ud);
     ud = ssdHandler(ssd, ud);
     ud = weightHandler(weight, ud);
+    ud = osHandler(os, ud);
     setFeedableData(ud);
   };
 
@@ -211,7 +237,7 @@ const Laptops = () => {
           </div>
           {/* </div> */}
         </div>
-      </div>
+      </div> 
     </React.Fragment>
   );
 };

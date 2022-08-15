@@ -1,3 +1,21 @@
+/* .center{
+
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    margin-top: -300px;
+    width: 50%;
+} */
+
+.intcolor1{
+    color: green;
+}
+.intcolor2{
+    color: rgb(38, 180, 216);
+}
+.intcolor3{
+    color: rgb(173, 35, 162);
+}
 .icon-size{
     font-size: 30px;
 }
